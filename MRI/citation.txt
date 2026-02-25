@@ -1,0 +1,8 @@
+@misc{Sorour_MRI_Brain_Tumor_BBoxes_2024,
+  author       = {Ahmed Sorour},
+  title        = {MRI for Brain Tumor with Bounding Boxes},
+  year         = {2024},
+  howpublished = {Kaggle dataset},
+  url          = {https://www.kaggle.com/datasets/ahmedsorour1/mri-for-brain-tumor-with-bounding-boxes},
+  note         = {Accessed: 2025-11-27}
+}

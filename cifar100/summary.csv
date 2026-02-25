@@ -1,0 +1,69 @@
+timestamp,model,seed,exp_name,save_dir,epoch,metrics/precision(B),metrics/recall(B),metrics/mAP50(B),metrics/mAP50-95(B),val/box_loss,val/cls_loss,val/dfl_loss,lr/pg0,lr/pg1,lr/pg2,best_path,last_path,status,error
+2025-12-11 20:38:11,yolo11s,0,yolo11s_s0,E:\Project\Database\cifar100\yolo11s_s0,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:12,yolo11s,1,yolo11s_s1,E:\Project\Database\cifar100\yolo11s_s1,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:12,yolo11s,2,yolo11s_s2,E:\Project\Database\cifar100\yolo11s_s2,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:12,yolo11s,3,yolo11s_s3,E:\Project\Database\cifar100\yolo11s_s3,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:13,yolo11s,4,yolo11s_s4,E:\Project\Database\cifar100\yolo11s_s4,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:13,yolo11n,0,yolo11n_s0,E:\Project\Database\cifar100\yolo11n_s0,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:14,yolo11n,1,yolo11n_s1,E:\Project\Database\cifar100\yolo11n_s1,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:14,yolo11n,2,yolo11n_s2,E:\Project\Database\cifar100\yolo11n_s2,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:14,yolo11n,3,yolo11n_s3,E:\Project\Database\cifar100\yolo11n_s3,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:15,yolo11n,4,yolo11n_s4,E:\Project\Database\cifar100\yolo11n_s4,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:15,yolov8n,0,yolov8n_s0,E:\Project\Database\cifar100\yolov8n_s0,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:15,yolov8n,1,yolov8n_s1,E:\Project\Database\cifar100\yolov8n_s1,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:16,yolov8n,2,yolov8n_s2,E:\Project\Database\cifar100\yolov8n_s2,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:16,yolov8n,3,yolov8n_s3,E:\Project\Database\cifar100\yolov8n_s3,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-11 20:38:16,yolov8n,4,yolov8n_s4,E:\Project\Database\cifar100\yolov8n_s4,,,,,,,,,,,,,,train_error,"RuntimeError: Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' error  
+Dataset 'E://Project/Database/cifar100/cifar100_yolo_det/cifar100_fullbox.yaml' images not found , missing path 'E:\Project\Database\cifar100_yolo_det\images\val'
+Note dataset download directory is 'E:\Project\ultralytics_own\datasets'. You can update this in 'C:\Users\hansc\AppData\Roaming\Ultralytics\settings.json'"
+2025-12-12 01:19:32,yolo11s,0,yolo11s_s0,E:\Project\Database\cifar100\yolo11s_s0,268.0000,0.0047,0.5525,0.0118,0.0063,2.0442,,2.2267,0.0004,0.0004,0.0004,E:\Project\Database\cifar100\yolo11s_s0\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s0\weights\last.pt,ok,
+2025-12-12 06:07:45,yolo11s,1,yolo11s_s1,E:\Project\Database\cifar100\yolo11s_s1,299.0000,0.7835,0.0773,0.1457,0.1247,1.0175,,1.4791,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s1\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s1\weights\last.pt,ok,
+2025-12-12 11:27:06,yolo11s,2,yolo11s_s2,E:\Project\Database\cifar100\yolo11s_s2,297.0000,0.0057,0.0021,0.0030,0.0010,1.6913,4.9575,3.1499,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s2\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s2\weights\last.pt,ok,
+2025-12-12 13:56:36,yolo11s,3,yolo11s_s3,E:\Project\Database\cifar100\yolo11s_s3,141.0000,0.8194,0.7703,0.8447,0.8429,0.0641,0.7011,0.8981,0.0056,0.0056,0.0056,E:\Project\Database\cifar100\yolo11s_s3\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s3\weights\last.pt,train_error,"AcceleratorError: CUDA error: unknown error
+Search for `cudaErrorUnknown' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions."
+2025-12-12 19:46:12,yolo11n,0,yolo11n_s0,E:\Project\Database\cifar100\yolo11n_s0,300.0000,0.4223,0.5725,0.5064,0.3978,1.8309,,0.9581,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11n_s0\weights\best.pt,E:\Project\Database\cifar100\yolo11n_s0\weights\last.pt,ok,
+2025-12-13 02:29:09,yolo11n,1,yolo11n_s1,E:\Project\Database\cifar100\yolo11n_s1,300.0000,0.4356,0.5767,0.5758,0.5217,1.3841,,0.7819,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11n_s1\weights\best.pt,E:\Project\Database\cifar100\yolo11n_s1\weights\last.pt,ok,
+2025-12-13 06:30:58,yolo11n,2,yolo11n_s2,E:\Project\Database\cifar100\yolo11n_s2,300.0000,0.4237,0.5594,0.5601,0.4783,1.6897,,0.8405,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11n_s2\weights\best.pt,E:\Project\Database\cifar100\yolo11n_s2\weights\last.pt,ok,
+2025-12-13 10:32:52,yolo11n,3,yolo11n_s3,E:\Project\Database\cifar100\yolo11n_s3,300.0000,0.4801,0.5693,0.5911,0.5465,1.3292,,0.8239,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11n_s3\weights\best.pt,E:\Project\Database\cifar100\yolo11n_s3\weights\last.pt,ok,
+2025-12-13 14:32:54,yolo11n,4,yolo11n_s4,E:\Project\Database\cifar100\yolo11n_s4,300.0000,0.4053,0.5466,0.5402,0.4163,1.9019,,0.9506,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11n_s4\weights\best.pt,E:\Project\Database\cifar100\yolo11n_s4\weights\last.pt,ok,
+2025-12-13 18:57:32,yolo11s,0,yolo11s_s0,E:\Project\Database\cifar100\yolo11s_s0,300.0000,0.5287,0.5928,0.6319,0.4948,1.5893,,1.6606,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s0\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s0\weights\last.pt,ok,
+2025-12-13 23:24:10,yolo11s,1,yolo11s_s1,E:\Project\Database\cifar100\yolo11s_s1,300.0000,0.5429,0.6017,0.6146,0.4784,1.5966,,2.1952,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s1\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s1\weights\last.pt,ok,
+2025-12-14 03:53:33,yolo11s,2,yolo11s_s2,E:\Project\Database\cifar100\yolo11s_s2,300.0000,0.5536,0.6207,0.6474,0.5303,1.5039,,2.1556,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s2\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s2\weights\last.pt,ok,
+2025-12-14 08:26:41,yolo11s,3,yolo11s_s3,E:\Project\Database\cifar100\yolo11s_s3,300.0000,0.4941,0.6239,0.5850,0.4688,1.5643,,0.9179,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s3\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s3\weights\last.pt,ok,
+2025-12-14 12:57:11,yolo11s,4,yolo11s_s4,E:\Project\Database\cifar100\yolo11s_s4,300.0000,0.5357,0.6054,0.6251,0.5031,1.5690,,1.6696,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolo11s_s4\weights\best.pt,E:\Project\Database\cifar100\yolo11s_s4\weights\last.pt,ok,
+2025-12-14 17:01:23,yolov8n,0,yolov8n_s0,E:\Project\Database\cifar100\yolov8n_s0,300.0000,0.5321,0.5788,0.5968,0.5420,1.4193,,0.9472,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolov8n_s0\weights\best.pt,E:\Project\Database\cifar100\yolov8n_s0\weights\last.pt,ok,
+2025-12-14 21:29:55,yolov8n,1,yolov8n_s1,E:\Project\Database\cifar100\yolov8n_s1,300.0000,0.4866,0.5564,0.5711,0.5105,1.3213,,0.8044,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolov8n_s1\weights\best.pt,E:\Project\Database\cifar100\yolov8n_s1\weights\last.pt,ok,
+2025-12-15 02:13:29,yolov8n,2,yolov8n_s2,E:\Project\Database\cifar100\yolov8n_s2,300.0000,0.4431,0.5730,0.5507,0.4977,1.3921,,0.9019,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolov8n_s2\weights\best.pt,E:\Project\Database\cifar100\yolov8n_s2\weights\last.pt,ok,
+2025-12-15 06:19:01,yolov8n,3,yolov8n_s3,E:\Project\Database\cifar100\yolov8n_s3,300.0000,0.4595,0.5763,0.5704,0.5031,1.4638,,0.8268,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolov8n_s3\weights\best.pt,E:\Project\Database\cifar100\yolov8n_s3\weights\last.pt,ok,
+2025-12-15 10:12:06,yolov8n,4,yolov8n_s4,E:\Project\Database\cifar100\yolov8n_s4,300.0000,0.4355,0.5546,0.5477,0.4738,1.6475,,1.0972,0.0001,0.0001,0.0001,E:\Project\Database\cifar100\yolov8n_s4\weights\best.pt,E:\Project\Database\cifar100\yolov8n_s4\weights\last.pt,ok,

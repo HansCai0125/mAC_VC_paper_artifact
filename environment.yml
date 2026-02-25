@@ -1,0 +1,17 @@
+name: mac-metrics
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - pillow
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.8
+  - pip:
+      - ultralytics
