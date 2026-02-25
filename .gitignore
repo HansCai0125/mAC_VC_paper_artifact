@@ -179,3 +179,45 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Project data & outputs
+data/
+result/
+results/
+runs/
+
+# Dataset folders (if kept locally)
+cifar100/cifar-100-python/
+cifar100/cifar100_yolo_det/
+MRI/images/
+MRI/labels/
+MRI/Train/
+MRI/Val/
+VisDrone/images/
+VisDrone/labels/
+VisDrone/VisDrone2019-DET-train/
+VisDrone/VisDrone2019-DET-val/
+
+# Training artifacts
+**/metrics/
+**/weights/
+**/results.csv
+**/results.png
+**/mac_curves.png
+**/*_curve.png
+**/*_compare.png
+**/*_mean_curve.png
+**/*_summary*.csv
+**/train_batch*.jpg
+**/val_batch*.jpg
+
+# Large model weights
+**/*.pt
+**/*.onnx
+**/*.engine
+**/*.ckpt
+**/*.pth
+**/*.ptl
+
+# IDE configs
+.idea/
