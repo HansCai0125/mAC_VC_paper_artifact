@@ -9,12 +9,10 @@ class EPICallback:
         self.lam = float(lam)
         self.out_csv = out_csv
         self.prefer_map50 = bool(prefer_map50)
-        self.mac_csv = mac_csv  # ★ 新增：只读这个
+        self.mac_csv = mac_csv
         self._debug_once = False
 
-    # ---- 统一入口：把 on_val_end 传入的 obj 拆成 (trainer, validator) ----
     def _split(self, obj):
-        # 如果 obj 看起来像 Validator（有 metrics），就当作 validator
         if hasattr(obj, "metrics") and not hasattr(obj, "optimizer"):
             v = obj
             t = getattr(v, "trainer", None)
@@ -23,14 +21,13 @@ class EPICallback:
             v = getattr(t, "validator", None)
         return t, v
 
-    # ---- 读取 mAP：依次尝试 box.map50/map → metrics.map50/map → trainer.metrics(dict) → state ----
     def _get_map(self, obj) -> float:
         t, v = self._split(obj)
 
-        # 1) validator.metrics 优先
+        # 1) validator.metrics first
         metrics = getattr(v, "metrics", None)
         if metrics is not None:
-            # 1a) 新结构：metrics.box.map50 / metrics.box.map
+            # 1a) new：metrics.box.map50 / metrics.box.map
             box = getattr(metrics, "box", None)
             if box is not None:
                 if self.prefer_map50 and hasattr(box, "map50"):
@@ -39,14 +36,14 @@ class EPICallback:
                 if hasattr(box, "map"):
                     try: return float(box.map)
                     except Exception: pass
-            # 1b) 旧结构：metrics.map50 / metrics.map
+            # 1b) old：metrics.map50 / metrics.map
             if self.prefer_map50 and hasattr(metrics, "map50"):
                 try: return float(metrics.map50)
                 except Exception: pass
             if hasattr(metrics, "map"):
                 try: return float(metrics.map)
                 except Exception: pass
-            # 1c) 某些版本把数据放 results_dict
+            # 1c) other version: put in results_dict
             rd = getattr(metrics, "results_dict", None)
             if isinstance(rd, dict):
                 keys_50 = ["metrics/mAP50", "map50", "mAP50"]
@@ -61,7 +58,6 @@ class EPICallback:
                         try: return float(rd[k])
                         except Exception: pass
 
-        # 2) trainer.metrics 可能是 dict
         tm = getattr(t, "metrics", None)
         if isinstance(tm, dict):
             keys_50 = ["metrics/mAP50", "map50", "mAP50"]
@@ -76,18 +72,15 @@ class EPICallback:
                     try: return float(tm[k])
                     except Exception: pass
 
-        # 3) 兜底：state
         st = getattr(t, "state", {}) if t is not None else {}
         if isinstance(st, dict):
             if "mAP" in st:
                 try: return float(st["mAP"])
                 except Exception: pass
-            # 有些人会把 map50 写成这个 key
             if "map50" in st:
                 try: return float(st["map50"])
                 except Exception: pass
 
-        # 首次拿不到时，打印一次字段调试，帮助定位
         if not self._debug_once:
             self._debug_once = True
             try:
@@ -138,7 +131,6 @@ class EPICallback:
                     return float(inf) / 1000.0
                 except Exception:
                     pass
-        # 兜底 trainer.state
         st = getattr(t, "state", {}) if t is not None else {}
         if isinstance(st, dict):
             if "latency_s" in st:
@@ -147,46 +139,34 @@ class EPICallback:
             if "latency_ms" in st:
                 try: return float(st["latency_ms"]) / 1000.0
                 except Exception: pass
-        return 1e-3  # 最后兜底，避免除零
+        return 1e-3
 
     def _get_epoch(self, obj) -> int:
-        """尽可能稳健地获取当前 epoch。优先 trainer.epoch，其次 validator.epoch，再兜底 state/metrics。"""
-        # 先拆 trainer / validator
         t, v = self._split(obj)
 
-        # 1) 直接从 trainer.epoch
         if t is not None:
             e = getattr(t, "epoch", None)
             if isinstance(e, (int, float)):
                 return int(e)
-
-        # 2) 再从 validator.epoch
         if v is not None:
             e = getattr(v, "epoch", None)
             if isinstance(e, (int, float)):
                 return int(e)
-
-        # 3) 某些版本把 epoch 放进 trainer.state
         st = getattr(t, "state", {}) if t is not None else {}
         if isinstance(st, dict) and "epoch" in st:
             try:
                 return int(st["epoch"])
             except Exception:
                 pass
-
-        # 4) 极端兜底：若 trainer.metrics 是 dict 也试一下
         tm = getattr(t, "metrics", None)
         if isinstance(tm, dict) and "epoch" in tm:
             try:
                 return int(tm["epoch"])
             except Exception:
                 pass
-
-        # 5) 实在拿不到，就返回 0（避免 None）
         return 0
 
     def _read_mac_from_csv(self, epoch: int):
-        """从 mac_csv 精确读取指定 epoch 的 mAC 和 avg_preds。找不到返回 (None, None)。"""
         try:
             if not os.path.exists(self.mac_csv):
                 return None, None
@@ -195,13 +175,11 @@ class EPICallback:
                 r = csv.DictReader(f)
                 last_row = None
                 for row in r:
-                    # 允许 epoch 列是字符串
                     try:
                         e = int(float(row.get("epoch", 0)))
                     except Exception:
                         continue
                     if e == epoch:
-                        # 命中当前 epoch
                         try:
                             mac = float(row.get("mAC", 0.0))
                         except Exception:
@@ -211,9 +189,8 @@ class EPICallback:
                         except Exception:
                             ap = None
                         return mac, ap
-                    # 没命中，记录一下，必要时可用最近一行兜底
                     last_row = row
-                # 精确匹配失败：可选策略——返回最后一行（如果你希望“最近值兜底”）
+
                 if last_row is not None:
                     try:
                         mac = float(last_row.get("mAC", 0.0))
@@ -232,10 +209,8 @@ class EPICallback:
         epoch = int(getattr(trainer, "epoch", 0))
         mAP = self._get_map(trainer)
 
-        # ★ 先从我们自己的 mAC CSV 读
         mAC, avg_preds = self._read_mac_from_csv(epoch)
 
-        # 读不到再温和回退（可选）
         if mAC is None or avg_preds is None:
             v = getattr(trainer, "validator", None)
             rd = getattr(getattr(v, "metrics", None), "results_dict", None)
@@ -278,7 +253,6 @@ class EPICallback:
         except Exception as e:
             print(f"[EPI DEBUG] write CSV failed: {e}")
 
-    # ---- 事件：验证结束，计算并落盘（支持 obj=validator 或 trainer） ----
     def on_val_end(self, obj):
         mAP = self._get_map(obj)
         mAC = self._get_mac(obj)
@@ -289,21 +263,17 @@ class EPICallback:
         denom = max(1e-12, avg_preds * latency_s)
         epi = combined / denom
 
-        # 对外暴露
         t, _ = self._split(obj)
         if t is not None:
             if not hasattr(t, "state"):
                 t.state = {}
             t.state["EPI"] = float(epi)
 
-        # ✅ 统一用稳健的 epoch
         epoch = self._get_epoch(obj)
 
-        # 打印
         print(f"[EPI] epoch={epoch} mAP={mAP:.3f} mAC={mAC:.3f} avg={avg_preds:.2f} "
               f"lat={latency_s * 1000:.2f}ms EPI={epi:.4f} (α={self.alpha}, λ={self.lam})")
 
-        # 追加 CSV
         try:
             os.makedirs(os.path.dirname(self.out_csv), exist_ok=True)
             write_hdr = not os.path.exists(self.out_csv)
