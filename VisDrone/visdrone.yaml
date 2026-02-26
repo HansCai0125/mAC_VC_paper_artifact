@@ -1,4 +1,4 @@
-path: E:\Project\Database\VisDrone  # 注意用 / 或转义 \
+path: E:\Project\Database\VisDrone
 train: images/train
 val: images/val
 

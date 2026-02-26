@@ -1,7 +1,7 @@
 path: E:\Project\Database\MRI
 train: images/train
 val: images/val
-nc: 4  # 类别数量
+nc: 4
 names: [  "glioma",
           "meningioma",
           "pituitary",
