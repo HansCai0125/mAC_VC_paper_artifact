@@ -19,7 +19,6 @@ def _load_csv(path, required_cols):
         for sep in seps:
             try:
                 df = pd.read_csv(path, encoding=enc, sep=sep, engine="python")
-                # 统一列名去空格
                 df.columns = [str(c).strip() for c in df.columns]
                 missing = [c for c in required_cols if c not in df.columns]
                 if not missing:
@@ -28,8 +27,8 @@ def _load_csv(path, required_cols):
                 last_err = e
                 continue
     raise ValueError(
-        f"无法解析 CSV: {path}. 最后错误: {last_err}. "
-        f"请确认编码为 UTF-8/GBK，分隔符为 逗号/分号/制表符，并包含列 {required_cols}."
+        f"Failed to parse CSV: {path}. Last error: {last_err}. "
+        f"Please ensure encoding is UTF-8/GBK, delimiter is comma/semicolon/tab, and columns include {required_cols}."
     )
 
 def main():
@@ -45,7 +44,7 @@ def main():
 
     acc = _load_csv(args.accuracy, ["model", "mAP", "mAC"])
     apc = _load_csv(args.avgpreds, ["model", "avg_preds"])
-    lat = _load_csv(args.latency, ["model"])  # 后面会把 latency_* 统一成秒
+    lat = _load_csv(args.latency, ["model"])  # latency_* will be normalized to seconds below
 
     # normalize latency to seconds
     if "latency_s" in lat.columns:

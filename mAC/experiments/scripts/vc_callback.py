@@ -1,7 +1,7 @@
 import os, csv
 import math
 import matplotlib
-matplotlib.use("Agg")           # 无显示环境也能存图
+matplotlib.use("Agg")           # Save figures in headless environments
 import numpy as np
 import pandas as pd
 import os
@@ -14,11 +14,11 @@ class VCCallback:
     VC50 = 2*mAP50*mAC/(mAP50+mAC+eps)
     VC50_95 = 2*mAP50_95*mAC/(mAP50_95+mAC+eps)
 
-    读：
-      - mac_epoch.csv（最后一行）：mAC, avg_preds
-      - validator.metrics：mAP50 / mAP50-95（兼容多版本）
-      - validator.speed['inference']：latency/ms（可选）
-    写：
+    Read:
+      - mac_epoch.csv (last row): mAC, avg_preds
+      - validator.metrics: mAP50 / mAP50-95 (compatible across versions)
+      - validator.speed['inference']: latency/ms (optional)
+    Write:
       - vc_epoch.csv：epoch, mAC, mAP50, mAP50-95, VC50, VC50_95, avg_preds, latency_ms
     """
 
@@ -78,7 +78,7 @@ class VCCallback:
 
     def _safe_maps(self, validator):
         """
-        兼容多版本结构获取 mAP：
+        Get mAP with multi-version compatible structure:
         - metrics.box.map50 / metrics.box.map
         - metrics.map50 / metrics.map
         - metrics.results_dict['metrics/mAP50'], ['metrics/mAP50-95'] / 'map50' / 'map'
@@ -116,7 +116,7 @@ class VCCallback:
                             try: m5095 = float(rd[k]); break
                             except: pass
 
-        # 兜底
+        # Fallback
         if m50 is None:   m50 = 0.0
         if m5095 is None: m5095 = 0.0
         return m50, m5095
@@ -193,20 +193,21 @@ class VCCallback:
 
     def on_train_end(self, trainer):
         """
-        训练/验证全部结束后，根据 vc_epoch.csv（以及可选的 mac_epoch.csv、epi_results.csv）生成图表。
-        输出文件将保存在 vc_epoch.csv 同目录。
+        After all training/validation is finished, generate plots from vc_epoch.csv
+        (and optional mac_epoch.csv, epi_results.csv).
+        Output files are saved in the same directory as vc_epoch.csv.
         """
         out_dir = os.path.dirname(self.out_csv) if self.out_csv else "."
         os.makedirs(out_dir, exist_ok=True)
 
-        # 读 vc_epoch.csv（必须）
+        # Read vc_epoch.csv (required)
         try:
             df_vc = pd.read_csv(self.out_csv)
         except Exception as e:
             print(f"[VC PLOT] read {self.out_csv} failed: {e}")
             return
 
-        # 可选：尝试读取 mac_epoch.csv（为了画趋势时对齐长度）
+        # Optional: try reading mac_epoch.csv (for trend-length alignment)
         df_mac = None
         if os.path.exists(self.mac_csv):
             try:
@@ -214,7 +215,7 @@ class VCCallback:
             except Exception:
                 df_mac = None
 
-        # 可选：尝试读取 EPI（若你想在趋势图上顺带看看 EPI）
+        # Optional: try reading EPI (if you want to overlay it in trend plots)
         epi_csv_guess = os.path.join(out_dir, "epi_results.csv")
         df_epi = None
         if os.path.exists(epi_csv_guess):
@@ -223,20 +224,20 @@ class VCCallback:
             except Exception:
                 df_epi = None
 
-        # 统一长度（以 vc 行数为准）
+        # Align lengths using vc row count as the reference
         n = len(df_vc)
         if df_mac is not None and len(df_mac) >= n:
             df_mac = df_mac.iloc[:n].reset_index(drop=True)
         if df_epi is not None and len(df_epi) >= n:
             df_epi = df_epi.iloc[:n].reset_index(drop=True)
 
-        # ---- 图 1：趋势对比（mAC / VC / mAP50 / mAP50-95 ；可选叠加 EPI）----
+        # ---- Plot 1: trend comparison (mAC / VC / mAP50 / mAP50-95; optional EPI overlay) ----
         try:
             self._plot_trend(df_vc, df_epi, out_dir)
         except Exception as e:
             print(f"[VC PLOT] trend failed: {e}")
 
-        # ---- 图 2：相关性散点（mAC vs mAP50, VC vs mAP50）----
+        # ---- Plot 2: correlation scatter (mAC vs mAP50, VC vs mAP50) ----
         try:
             self._plot_scatter(df_vc, out_dir)
         except Exception as e:
@@ -249,15 +250,15 @@ class VCCallback:
 
         print(f"[VC PLOT] all figures saved to {out_dir}")
 
-    # --------- 趋势图 ----------
+    # --------- Trend Plot ----------
     def _plot_trend(self, df_vc: 'pd.DataFrame', df_epi: 'pd.DataFrame|None', out_dir: str):
         xs = range(len(df_vc))
         plt.figure(figsize=(10, 6))
         plt.plot(xs, df_vc["mAC"], marker="o", label="mAC")
-        # ✅ 这里用 VC50（不再是 VC）
+        # Use VC50 here (not VC)
         plt.plot(xs, df_vc["VC50"], marker="s", label="VC50")
         plt.plot(xs, df_vc["mAP50"], marker="^", label="mAP@50")
-        # mAP50-95 列名做个容错
+        # Tolerant handling for mAP50-95 column names
         for cand in ("mAP50-95", "mAP50_95", "map50_95", "map5095", "mAP50-90"):
             if cand in df_vc.columns:
                 plt.plot(xs, df_vc[cand], marker="x", label=cand.replace("_", "@").replace("map", "mAP"))
@@ -281,7 +282,7 @@ class VCCallback:
     def _plot_scatter(self, df_vc: 'pd.DataFrame', out_dir: str):
         x = pd.to_numeric(df_vc["mAP50"], errors="coerce")
         y_mac = pd.to_numeric(df_vc["mAC"], errors="coerce")
-        # ✅ 这里也换成 VC50
+        # Use VC50 here as well
         y_vc = pd.to_numeric(df_vc["VC50"], errors="coerce")
 
         mask_mac = x.notna() & y_mac.notna()
@@ -319,22 +320,22 @@ class VCCallback:
         plt.close()
 
     def _plot_vc_compare(self, df_vc, out_dir: str):
-        # 兼容老列名：若没有 VC50 列就用 VC 列
+        # Backward compatibility: if VC50 is missing, use VC
         vc_mac = pd.to_numeric(df_vc.get("VC50", df_vc.get("VC_mAC", df_vc.get("VC"))), errors="coerce").fillna(0.0)
         vc_m50 = pd.to_numeric(df_vc.get("VC50_95", df_vc.get("VC_mAP95", pd.Series([np.nan] * len(df_vc)))), errors="coerce")
         vc_m95 = vc_m50
         xs = np.arange(len(df_vc))
 
-        # 统计指标（散点标题里展示）
+        # Summary stats displayed in scatter title
         valid_mask = ~(vc_mac.isna() | vc_m50.isna())
         r = float(np.corrcoef(vc_m50[valid_mask], vc_mac[valid_mask])[0, 1]) if valid_mask.sum() >= 2 else float("nan")
         mae = float(np.mean(np.abs(vc_mac[valid_mask] - vc_m50[valid_mask]))) if valid_mask.sum() >= 1 else float("nan")
 
-        # 3 子图：趋势 / 散点（等比例轴）/ 差值-epoch
+        # 3 subplots: trend / scatter (equal axis) / delta-vs-epoch
         fig = plt.figure(figsize=(15, 5))
         gs = fig.add_gridspec(1, 3, width_ratios=[1.3, 1, 1])
 
-        # (a) 趋势
+        # (a) Trend
         ax0 = fig.add_subplot(gs[0, 0])
         ax0.plot(xs, vc_mac, marker="o", label="VC50")
         ax0.plot(xs, vc_m50, marker="s", label="VC50_95")
@@ -346,7 +347,7 @@ class VCCallback:
         ax0.grid(True, linestyle="--", alpha=0.35)
         ax0.legend()
 
-        # (b) 散点：VC50_95 vs VC50（等比例轴 + y=x）
+        # (b) Scatter: VC50_95 vs VC50 (equal axis + y=x)
         ax1 = fig.add_subplot(gs[0, 1])
         ax1.scatter(vc_m50, vc_mac, alpha=0.85)
         ax1.plot([0, 1], [0, 1], linestyle="--", label="y = x")
@@ -359,7 +360,7 @@ class VCCallback:
         ax1.grid(True, linestyle="--", alpha=0.35)
         ax1.legend()
 
-        # (c) 差值曲线：Δ=VC50−VC50_95
+        # (c) Gap curve: Delta=VC50-VC50_95
         ax2 = fig.add_subplot(gs[0, 2])
         delta = (vc_mac - vc_m50).astype(float)
         ax2.plot(xs, delta, marker="o")
