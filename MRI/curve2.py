@@ -14,7 +14,7 @@ from config import RESULT_ROOT
 
 # Root directory per dataset (must contain folders like yolo11n_s0, yolo11s_s0)
 DATASET_ROOTS = {
-    # "CaWeed10": Path(r"E:\Project\Database\CaWeed10"),  #replace with your real CaWeed10 experiment root containing vc_epoch.csv
+    # "CaWeed10": Path(r"E:\Project\Database\CaWeed10"),
     "BTD": RESULT_ROOT / "MRI",
 }
 
