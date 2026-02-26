@@ -5,7 +5,7 @@ This repository contains code and experiment scripts for computing **mAC**, **EP
 ## Repository Structure
 - `mAC/` Core mAC implementation and callbacks.
 - `cifar100/`, `MRI/`, `VisDrone/` Dataset-specific scripts and utilities.
-- `train.py` Example training entrypoint (writes outputs to `result/`).
+- `train.py` Unified training entrypoint with CLI options.
 - `config.py` Centralized path configuration.
 - `environment.yml` Conda environment definition.
 
@@ -26,15 +26,29 @@ This repository contains code and experiment scripts for computing **mAC**, **EP
    - `DATA_ROOT` (default: `./data`)
    - `RESULT_ROOT` (default: `./result`)
    - `MAC_ROOT` (default: `./mAC`)
-3. Run training:
+3. Run training (defaults to CIFAR100):
    ```bash
    python train.py
    ```
+4. Run a specific dataset/model:
+   ```bash
+   python train.py --dataset mri --models yolov8n --seeds 0,1,2,3,4
+   python train.py --dataset visdrone --models yolo11n --epochs 100 --device 0
+   ```
+5. Preview resolved config only:
+   ```bash
+   python train.py --dataset cifar100 --dry-run
+   ```
 
-Outputs are written to `result/<model>_s<seed>/metrics/` unless `RESULT_ROOT` is set.
+Outputs are written to `result/<dataset>/<model>_s<seed>/metrics/` unless `RESULT_ROOT`/`--project` is set.
 
 ## Dataset Paths
-By default, `train.py` uses dataset files within the repository root. If your datasets are stored elsewhere, set `DATA_ROOT` to your dataset root before running.
+`train.py` resolves dataset YAML in this order:
+1. `--data` explicit path (if provided).
+2. Repository-local preset path.
+3. `DATA_ROOT` preset path.
+
+You can always override with `--data /abs/path/to/your.yaml`.
 
 ## Results Included
 This repository includes selected summary CSVs and plots under dataset folders (e.g., `cifar100/`, `MRI/`, `VisDrone/`) for reference.
