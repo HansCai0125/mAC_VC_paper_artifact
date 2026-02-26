@@ -90,13 +90,13 @@ def read_last_row(csv_path: Path):
 
 
 def _clean_num(val):
-    """把空串/NaN/None 统一转为空串，其他保留原样（或四舍五入）"""
+    """Normalize empty string/NaN/None to empty; keep others as-is (or rounded)."""
     if val is None:
         return ""
     s = str(val).strip()
     if s == "" or s.lower() == "nan":
         return ""
-    # 可选：对数值做一下四舍五入，便于阅读
+    # Optional: round numeric values for readability
     try:
         x = float(s)
         if math.isfinite(x):
@@ -108,14 +108,14 @@ def _clean_num(val):
 
 def append_summary(model_name: str, seed: int, save_dir: Path, status: str = "ok", err_msg: str = ""):
     """
-    写入汇总 summary.csv
-    - 若 results.csv 存在：读最后一行
-    - 若不存在：写占位（空）但附带状态与错误信息
+    Write aggregated summary.csv
+    - If results.csv exists: read the last row
+    - If not: write a placeholder row with status and error details
     """
     results_csv = save_dir / "results.csv"
     item = read_last_row(results_csv)
 
-    # 提取 best/last 权重路径
+    # Extract best/last checkpoint paths
     wdir = save_dir / "weights"
     best_pt = (wdir / "best.pt").resolve() if (wdir / "best.pt").exists() else None
     last_pt = (wdir / "last.pt").resolve() if (wdir / "last.pt").exists() else None
@@ -165,18 +165,18 @@ def set_global_seed(seed: int):
     torch.cuda.manual_seed_all(seed)
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
-    # 如需“更强”确定性，可开启（会降速）：
+    # Enable this for stronger determinism (slower):
     # torch.use_deterministic_algorithms(True)
 
 
 def safe_load_model(model_name: str):
     """
-    按顺序加载模型：
-    1) 本地同名 .pt
-    2) 直接名称（Ultralytics hub/内置别名）
-    失败返回 None
+    Load model in order:
+    1) Local .pt with the same name
+    2) Direct model name (Ultralytics hub/built-in alias)
+    Return None on failure
     """
-    # 先尝试本地 .pt
+    # Try local .pt first
     try:
         local_pt = model_name if model_name.endswith('.pt') else model_name + ".pt"
         if os.path.exists(local_pt):
@@ -184,7 +184,7 @@ def safe_load_model(model_name: str):
     except Exception:
         pass
 
-    # 再尝试直接名称
+    # Then try direct model name
     try:
         return YOLO(model_name)
     except Exception as e:
@@ -194,8 +194,8 @@ def safe_load_model(model_name: str):
 
 def attach_callbacks(model: YOLO, exp_metrics_dir: Path):
     """
-    为当前模型实例挂载 mAC / EPI / VC 回调，并把输出写到 exp_metrics_dir 下
-    每个 (model, seed) 都要新实例 + 新回调，避免累积
+    Attach mAC / EPI / VC callbacks to current model instance and write outputs under exp_metrics_dir
+    Use a fresh model instance + fresh callbacks for each (model, seed) to avoid accumulation
     """
     exp_metrics_dir.mkdir(parents=True, exist_ok=True)
 
@@ -231,7 +231,7 @@ def attach_callbacks(model: YOLO, exp_metrics_dir: Path):
 
 
 def dump_hparams(save_root: Path, model_name: str, seed: int, train_args: dict):
-    """把本次 run 的关键超参保存为 hparams.json，便于复现实验"""
+    """Save key run hyperparameters to hparams.json for reproducibility."""
     out = {
         "model": model_name,
         "seed": seed,
@@ -242,7 +242,7 @@ def dump_hparams(save_root: Path, model_name: str, seed: int, train_args: dict):
         json.dump(out, f, ensure_ascii=False, indent=2)
 
 
-# ========== 主流程 ==========
+# ========== Main Flow ==========
 
 def main():
     print(f"[INFO] Project dir: {PROJECT_DIR}")
@@ -254,41 +254,41 @@ def main():
         print(f"\n[MODEL] ===== {m} =====")
 
         for s in SEEDS:
-            # 1) 每个 (m, s) 创建全新 YOLO 实例，避免回调/状态累积
+            # 1) Create a fresh YOLO instance per (m, s) to avoid callback/state accumulation
             model = safe_load_model(m)
             if model is None:
                 if m not in failed_models:
                     failed_models.append(m)
                 print(f"[SKIP] {m} (cannot load)")
-                # 即便某次加载失败，也写入一行占位，方便排查
+                # Even if model loading fails, write a placeholder row for debugging
                 save_root = PROJECT_DIR / f"{m}_s{s}"
                 save_root.mkdir(parents=True, exist_ok=True)
                 append_summary(m, s, save_root, status="load_failed", err_msg="model load failed")
                 continue
 
-            # 2) 固定随机性
+            # 2) Fix randomness
             set_global_seed(s)
 
-            # 3) 准备保存目录（干净）
+            # 3) Prepare a clean output directory
             exp_name = f"{m}_s{s}"
             save_root = PROJECT_DIR / exp_name
             if save_root.exists():
                 shutil.rmtree(save_root, ignore_errors=True)
             save_root.mkdir(parents=True, exist_ok=True)
 
-            # 4) 回调输出目录
+            # 4) Callback output directory
             metrics_dir = save_root / "metrics"
             attach_callbacks(model, metrics_dir)
 
-            # 5) 记录本次训练的关键超参
-            #    注意：Ultralytics 内部会把部分参数覆盖/推断，这里保存的是“入参”
+            # 5) Record key hyperparameters for this training run
+            #    Note: Ultralytics may override/infer some values internally; this stores input arguments
             train_args = dict(COMMON_KW)
             dump_hparams(save_root, m, s, train_args)
 
             print(f"[TRAIN] Model={m} | Seed={s} | Save={save_root}")
             status, err = "ok", ""
 
-            # 6) 训练（注意部分增强参数在不同版本可能不支持，错误也会在这里捕捉）
+            # 6) Train (some augmentation args may be unsupported across versions; exceptions are handled here)
             try:
                 _ = model.train(
                     **COMMON_KW,
@@ -301,16 +301,16 @@ def main():
                 )
             except Exception as e:
                 status, err = "train_error", f"{type(e).__name__}: {e}"
-                # 落盘错误信息，避免丢诊断
+                # Persist error details to disk for diagnostics
                 err_log = save_root / "error.txt"
                 with open(err_log, "w", encoding="utf-8") as f:
                     f.write(f"{type(e).__name__}: {e}\n")
                 print(f"[ERROR] {m} s={s} -> {e}")
 
-            # 7) 汇总（有无 results.csv 都写）
+            # 7) Append summary (with or without results.csv)
             append_summary(m, s, save_root, status=status, err_msg=err)
 
-            # 8) 额外把 best/last 的绝对路径记录（weights_paths.txt）
+            # 8) Also record absolute best/last paths (weights_paths.txt)
             wdir = save_root / "weights"
             best_pt = wdir / "best.pt"
             last_pt = wdir / "last.pt"
@@ -323,9 +323,9 @@ def main():
         for mm in sorted(set(failed_models)):
             print("  -", mm)
 
-    print("\n[FINISHED] 全部训练完成。")
-    print(f"汇总文件: {SUMMARY_CSV}")
-    print("每个实验的 mAC/EPI/VC CSV 在各自目录的 metrics/ 下。")
+    print("\n[FINISHED] All training runs are complete.")
+    print(f"Summary file: {SUMMARY_CSV}")
+    print("Per-experiment mAC/EPI/VC CSV files are under each run's metrics/ directory.")
 
 
 if __name__ == "__main__":
