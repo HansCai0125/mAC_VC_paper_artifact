@@ -3,7 +3,7 @@ from typing import List, Tuple, Optional, Dict
 import numpy as np
 
 
-# ---------- 基础数据结构 ----------
+# ---------- Basic Data Structure ----------
 @dataclass
 class Box:
     x1: float
@@ -16,45 +16,49 @@ class Box:
     def area(self) -> float:
         return max(0.0, self.x2 - self.x1) * max(0.0, self.y2 - self.y1)
 
+
 def intersect(a: Box, b: Box) -> Optional[Box]:
-    """返回 a∩b 的矩形（若无交集则 None）。"""
-    x1 = max(a.x1, b.x1); y1 = max(a.y1, b.y1)
-    x2 = min(a.x2, b.x2); y2 = min(a.y2, b.y2)
+    """Return rectangle a∩b; return None if there is no overlap."""
+    x1 = max(a.x1, b.x1)
+    y1 = max(a.y1, b.y1)
+    x2 = min(a.x2, b.x2)
+    y2 = min(a.y2, b.y2)
     if x2 <= x1 or y2 <= y1:
         return None
     return Box(x1, y1, x2, y2)
 
+
 def union_area(rects: List[Box]) -> float:
     """
-    稳定版：x-切片法。对任意一组轴对齐矩形，精确计算并集面积。
-    复杂度 O(K^2)（K为矩形数），但K通常很小；对评测足够快且更不容易踩边界坑。
+    Stable x-slicing method. Precisely computes union area for axis-aligned rectangles.
+    Complexity is O(K^2) (K = number of rectangles), but K is usually small and robust for evaluation.
     """
-    # 过滤非法矩形
+    # Filter invalid rectangles
     rects = [r for r in rects if r.x2 > r.x1 and r.y2 > r.y1]
     if not rects:
         return 0.0
 
-    # 1) 收集所有x边界并排序
+    # 1) Collect and sort all x boundaries
     xs = sorted({r.x1 for r in rects} | {r.x2 for r in rects})
     area = 0.0
 
-    # 2) 在每个相邻x切片上累加 y 覆盖长度 * 切片宽度
+    # 2) For each adjacent x-slice, accumulate y-covered length * slice width
     for i in range(len(xs) - 1):
         xL, xR = xs[i], xs[i + 1]
         dx = xR - xL
         if dx <= 0:
             continue
 
-        # 2.1 当前x切片里“活跃”的矩形：与该切片有交
+        # 2.1 Rectangles active in this x-slice (overlap with current slice)
         intervals = []
         for r in rects:
-            if r.x1 < xR and r.x2 > xL:     # 与当前x条相交
+            if r.x1 < xR and r.x2 > xL:  # Overlaps current x-slice
                 intervals.append((r.y1, r.y2))
 
         if not intervals:
             continue
 
-        # 2.2 合并y区间求覆盖长度
+        # 2.2 Merge y-intervals to get covered y-length
         intervals.sort()
         covered_y = 0.0
         cur_s, cur_e = None, None
@@ -65,7 +69,7 @@ def union_area(rects: List[Box]) -> float:
                 cur_s, cur_e = y1, y2
             else:
                 if y1 <= cur_e:
-                    cur_e = max(cur_e, y2)   # 扩展
+                    cur_e = max(cur_e, y2)  # Extend
                 else:
                     covered_y += (cur_e - cur_s)
                     cur_s, cur_e = y1, y2
@@ -76,10 +80,9 @@ def union_area(rects: List[Box]) -> float:
 
     return area
 
-
-    # 辅助：根据 active 覆盖区间计算 y 覆盖长度
+    # Helper: compute y-covered length from active intervals
     def y_covered_length(intervals: List[Tuple[float, float, int]]) -> float:
-        # 将 count>0 的区间合并求长度
+        # Merge and sum intervals where count>0
         if not intervals:
             return 0.0
         segs = []
@@ -100,20 +103,20 @@ def union_area(rects: List[Box]) -> float:
         total += (cur_e - cur_s)
         return total
 
-    # 我们维护一个“多重区间”列表：用离散化更新 counts
-    # 为了简单可靠，每个事件点后重建一次 active（规模通常很小）
+    # Maintain a multi-interval list; update counts via discretized segments
+    # For simplicity and robustness, rebuild active segments after each event point (usually small scale)
     counts: List[Tuple[float, float, int]] = []  # (y1,y2,count)
 
     def add_interval(y1, y2, delta):
         nonlocal counts
-        # 简单实现：将现有区间拆分到不重叠段后更新计数
+        # Simple implementation: split existing intervals into non-overlapping segments, then update counts
         new = []
         inserted = False
         for a, b, c in counts:
             if y2 <= a or y1 >= b:
                 new.append((a, b, c))
                 continue
-            # 有重叠，拆成最多三段
+            # Overlap exists, split into at most three segments
             if y1 > a:
                 new.append((a, y1, c))
                 a = y1
@@ -125,7 +128,7 @@ def union_area(rects: List[Box]) -> float:
             inserted = True
         if not inserted:
             new.append((y1, y2, delta))
-        # 合并相邻相同 count 段
+        # Merge adjacent segments with the same count
         new.sort()
         merged = []
         for a, b, c in new:
@@ -148,13 +151,14 @@ def union_area(rects: List[Box]) -> float:
 
     return area
 
-# ---------- 单个 GT 的 Coverage ----------
+
+# ---------- Coverage for One GT ----------
 def coverage_for_one_gt(gt: Box, preds: List[Box]) -> float:
     """Coverage(G_i, P(G_i)) = |⋃_j (P_j ∩ G_i)| / |G_i|"""
     gt_area = gt.area()
     if gt_area <= 0:
         return 0.0
-    # 先把所有预测框裁剪到 GT 内部，再做并集
+    # First clip all predicted boxes to GT, then compute union
     clipped: List[Box] = []
     for p in preds:
         inter = intersect(p, gt)
@@ -163,8 +167,9 @@ def coverage_for_one_gt(gt: Box, preds: List[Box]) -> float:
     cov_area = union_area(clipped)
     return float(cov_area / gt_area)
 
-# ---------- 一张图上的 mAC / 命中 ----------
-#parameters
+
+# ---------- mAC / Hit on One Image ----------
+# parameters
 def image_ac(
     gts: List[Box],
     preds: List[Box],
@@ -173,9 +178,9 @@ def image_ac(
     class_aware: bool = True
 ) -> Tuple[float, List[float], List[bool]]:
     """
-    返回 (mAC, per_gt_coverages, per_gt_detected_flags).
-    - 若 class_aware=True，仅用同类预测框计算覆盖；否则忽略类别。
-    - 可通过 score_thresh 过滤低分预测。
+    Return (mAC, per_gt_coverages, per_gt_detected_flags).
+    - If class_aware=True, only same-class predictions are used for coverage; otherwise class is ignored.
+    - Low-score predictions can be filtered by score_thresh.
     """
     if score_thresh is not None:
         preds = [p for p in preds if (p.conf is None or p.conf >= score_thresh)]
@@ -193,7 +198,8 @@ def image_ac(
     mAC = float(np.mean(coverages)) if coverages else 0.0
     return mAC, coverages, detected
 
-# ---------- 多图聚合 ----------
+
+# ---------- Multi-image Aggregation ----------
 def dataset_mac(
     dataset: List[Tuple[List[Box], List[Box]]],
     tau: float = 0.5,
@@ -202,7 +208,7 @@ def dataset_mac(
 ) -> Dict[str, float]:
     """
     dataset: [(gts_img0, preds_img0), (gts_img1, preds_img1), ...]
-    返回整体 mAC 与召回(按 tau 判定)。
+    Return dataset-level mAC and recall (judged by tau).
     """
     all_cov = []
     tp = 0

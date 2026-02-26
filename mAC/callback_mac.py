@@ -15,7 +15,7 @@ class MACCallback:
         self.tau = tau
         self.score_thresh = score_thresh
         self.class_aware = class_aware
-        self.mac_out_csv = mac_out_csv  # ★ 新增：我们自己的 CSV
+        self.mac_out_csv = mac_out_csv  # Added: project-owned CSV output
         self.reset()
 
     def reset(self):
