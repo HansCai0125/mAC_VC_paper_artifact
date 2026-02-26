@@ -254,41 +254,30 @@ def main():
         print(f"\n[MODEL] ===== {m} =====")
 
         for s in SEEDS:
-            # 1) 每个 (m, s) 创建全新 YOLO 实例，避免回调/状态累积
             model = safe_load_model(m)
             if model is None:
                 if m not in failed_models:
                     failed_models.append(m)
                 print(f"[SKIP] {m} (cannot load)")
-                # 即便某次加载失败，也写入一行占位，方便排查
                 save_root = PROJECT_DIR / f"{m}_s{s}"
                 save_root.mkdir(parents=True, exist_ok=True)
                 append_summary(m, s, save_root, status="load_failed", err_msg="model load failed")
                 continue
 
-            # 2) 固定随机性
             set_global_seed(s)
 
-            # 3) 准备保存目录（干净）
             exp_name = f"{m}_s{s}"
             save_root = PROJECT_DIR / exp_name
             if save_root.exists():
                 shutil.rmtree(save_root, ignore_errors=True)
             save_root.mkdir(parents=True, exist_ok=True)
-
-            # 4) 回调输出目录
             metrics_dir = save_root / "metrics"
             attach_callbacks(model, metrics_dir)
-
-            # 5) 记录本次训练的关键超参
-            #    注意：Ultralytics 内部会把部分参数覆盖/推断，这里保存的是“入参”
             train_args = dict(COMMON_KW)
             dump_hparams(save_root, m, s, train_args)
 
             print(f"[TRAIN] Model={m} | Seed={s} | Save={save_root}")
             status, err = "ok", ""
-
-            # 6) 训练（注意部分增强参数在不同版本可能不支持，错误也会在这里捕捉）
             try:
                 _ = model.train(
                     **COMMON_KW,
@@ -333,6 +322,6 @@ if __name__ == "__main__":
 
 
 
-#        'yolo11s','yolo11m','yolo12n','yolo12s',
+#     'yolo11s','yolo11m','yolo12n','yolo12s',
 #     'yolov8n','yolov8s','yolov9s', 'yolov9t', 'yolov10n', 'yolov5nu', 'yolov10s', 'yolov5n6u',  'yolov3-sppu',
 #     'yolov5s6u',
