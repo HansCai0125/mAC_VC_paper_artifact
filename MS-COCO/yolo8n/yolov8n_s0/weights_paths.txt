@@ -1,0 +1,2 @@
+best: E:\Project\Database\MS-COCO\yolov8n_s0\weights\best.pt
+last: E:\Project\Database\MS-COCO\yolov8n_s0\weights\last.pt
