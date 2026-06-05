@@ -1,6 +1,6 @@
 # mAC / VC / EPI Metrics
 
-This repository contains code and experiment scripts for computing **mAC**, **EPI**, and **VC** metrics with YOLO models across CIFAR-100, MRI, and VisDrone datasets. The repo also includes selected result summaries and plots for reference.
+This repository contains code and experiment scripts for computing **mAC**, **EPI**, and **VC** metrics with YOLO models and RT-DETR model across CIFAR-100, MRI, and VisDrone datasets. The repo also includes selected result summaries and plots for reference.
 
 ## Repository Structure
 - `mAC/` Core mAC implementation and callbacks.
