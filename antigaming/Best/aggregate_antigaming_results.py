@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 # =========================
 # USER CONFIG
 # =========================
-ROOT_DIR = Path(r"F:\mAC_VC_EPI\antigaming")
+ROOT_DIR = Path(__file__).resolve().parents[1]
 SEARCH_SUBDIR = "Best"
 OUTPUT_DIRNAME = "_summary"
 MAKE_PLOTS = True

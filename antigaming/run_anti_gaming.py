@@ -17,19 +17,19 @@ import yaml
 
 # ============================================================
 # IDE direct-run defaults
-# Set USE_IDE_DEFAULTS = True to run directly in PyCharm/IDE
+# Set USE_IDE_DEFAULTS = False to run directly in PyCharm/IDE
 # ============================================================
-USE_IDE_DEFAULTS = True
+USE_IDE_DEFAULTS = False
 
 IDE_DEFAULTS = {
-    "data": r"D:\Desktop\antigaming\MSCOCO\data.yaml",
-    "model": r"D:\Desktop\antigaming\best.pt",
+    "data": "data/example.yaml",
+    "model": "yolo11n.pt",
     "split": "val",
     "attack": "threshold",   # shrink / expand / duplicate / threshold
     "severities": "",
     "baseline_json": "",
-    "cache_dir": r"D:\Desktop\antigaming\runs\anti_gaming_cache",
-    "out_csv": r"D:\Desktop\antigaming\runs\anti_gaming\visdrone_shrink.csv",
+    "cache_dir": "runs/anti_gaming_cache",
+    "out_csv": "runs/anti_gaming/results.csv",
     "device": "0",
     "conf_export": 0.001,
     "iou_export": 0.95,

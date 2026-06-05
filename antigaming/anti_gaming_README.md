@@ -16,10 +16,10 @@ It does **not retrain** the detector. Instead, it:
 
 ## Inputs expected
 
-- A YOLO dataset YAML like `E:\Project\Database\MRI\MRI.yaml`
+- A YOLO dataset YAML like `data/MRI/MRI.yaml`
 - A model path/name that Ultralytics can load, such as:
   - `yolo11n.pt`
-  - `E:\Project\Database\MS-COCO\yolo11n_s0\weights\best.pt`
+  - `path/to/your/best.pt`
   - `rtdetr-l.pt`
 
 ## First recommended run
@@ -28,13 +28,13 @@ Use MRI + YOLO11n_s0 first.
 
 ```bash
 python run_anti_gaming.py \
-  --data "E:\Project\Database\MRI\MRI.yaml" \
-  --model "E:\Project\Database\MS-COCO\yolo11n_s0\weights\best.pt" \
+  --data "data/MRI/MRI.yaml" \
+  --model "path/to/your/best.pt" \
   --split val \
   --attack shrink \
   --device 0 \
-  --cache-dir "runs\anti_gaming_cache" \
-  --out-csv "runs\anti_gaming\mri_yolo11n_shrink.csv"
+  --cache-dir "runs/anti_gaming_cache" \
+  --out-csv "runs/anti_gaming\mri_yolo11n_shrink.csv"
 ```
 
 ## Then run the other attacks
@@ -42,37 +42,37 @@ python run_anti_gaming.py \
 ### Expand
 ```bash
 python run_anti_gaming.py \
-  --data "E:\Project\Database\MRI\MRI.yaml" \
-  --model "E:\Project\Database\MS-COCO\yolo11n_s0\weights\best.pt" \
+  --data "data/MRI/MRI.yaml" \
+  --model "path/to/your/best.pt" \
   --split val \
   --attack expand \
   --device 0 \
-  --baseline-json "runs\anti_gaming_cache\best_MRI_val_baseline.json" \
-  --out-csv "runs\anti_gaming\mri_yolo11n_expand.csv"
+  --baseline-json "runs/anti_gaming_cache\best_MRI_val_baseline.json" \
+  --out-csv "runs/anti_gaming\mri_yolo11n_expand.csv"
 ```
 
 ### Duplicate flooding
 ```bash
 python run_anti_gaming.py \
-  --data "E:\Project\Database\MRI\MRI.yaml" \
-  --model "E:\Project\Database\MS-COCO\yolo11n_s0\weights\best.pt" \
+  --data "data/MRI/MRI.yaml" \
+  --model "path/to/your/best.pt" \
   --split val \
   --attack duplicate \
   --device 0 \
-  --baseline-json "runs\anti_gaming_cache\best_MRI_val_baseline.json" \
-  --out-csv "runs\anti_gaming\mri_yolo11n_duplicate.csv"
+  --baseline-json "runs/anti_gaming_cache\best_MRI_val_baseline.json" \
+  --out-csv "runs/anti_gaming\mri_yolo11n_duplicate.csv"
 ```
 
 ### Threshold sweep
 ```bash
 python run_anti_gaming.py \
-  --data "E:\Project\Database\MRI\MRI.yaml" \
-  --model "E:\Project\Database\MS-COCO\yolo11n_s0\weights\best.pt" \
+  --data "data/MRI/MRI.yaml" \
+  --model "path/to/your/best.pt" \
   --split val \
   --attack threshold \
   --device 0 \
-  --baseline-json "runs\anti_gaming_cache\best_MRI_val_baseline.json" \
-  --out-csv "runs\anti_gaming\mri_yolo11n_threshold.csv"
+  --baseline-json "runs/anti_gaming_cache\best_MRI_val_baseline.json" \
+  --out-csv "runs/anti_gaming\mri_yolo11n_threshold.csv"
 ```
 
 ## Recommended default severities

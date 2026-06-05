@@ -6,7 +6,7 @@ import os, csv
 
 @dataclass
 class AvgPredsCallback:
-    out_csv: str = r"E:\Project\mAC\experiments\logs\avgpreds_epoch.csv"
+    out_csv: str = "outputs/avgpreds_epoch.csv"
     _counts: List[int] = field(default_factory=list, init=False)
 
     def _count_boxes_in_pred(self, pred):

@@ -1,10 +1,10 @@
 # mAC / VC / EPI Metrics
 
-This repository contains code and experiment scripts for computing **mAC**, **EPI**, and **VC** metrics with YOLO models and RT-DETR model across CIFAR-100, MRI, and VisDrone datasets. The repo also includes selected result summaries and plots for reference.
+This repository contains code and experiment scripts for computing **mAC**, **EPI**, and **VC** metrics with YOLO models and RT-DETR model across CIFAR-100, BTD/MRI, MSCOCO, and VisDrone datasets. The repo also includes selected result summaries and plots for reference.
 
 ## Repository Structure
 - `mAC/` Core mAC implementation and callbacks.
-- `cifar100/`, `MRI/`, `VisDrone/` Dataset-specific scripts and utilities.
+- `cifar100/`, `BTD/`, `MSCOCO/`, `VisDrone/` Dataset-specific scripts and selected result artifacts.
 - `train.py` Unified training entrypoint with CLI options.
 - `config.py` Centralized path configuration.
 - `environment.yml` Conda environment definition.
@@ -51,7 +51,7 @@ Outputs are written to `result/<dataset>/<model>_s<seed>/metrics/` unless `RESUL
 You can always override with `--data /abs/path/to/your.yaml`.
 
 ## Results Included
-This repository includes selected summary CSVs and plots under dataset folders (e.g., `cifar100/`, `MRI/`, `VisDrone/`) for reference.
+This repository includes selected summary CSVs and plots under dataset folders (e.g., `cifar100/`, `BTD/`, `MSCOCO/`, `VisDrone/`) for reference. Model weights, caches, and local run metadata are intentionally excluded.
 
 ## License
 See `LICENSE`.

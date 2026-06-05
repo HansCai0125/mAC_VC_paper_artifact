@@ -1,4 +1,4 @@
-# E:\Project\mAC\scripts\epi_eval_v2.py
+# EPI evaluation utility
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # EPI = (alpha * mAP + lambda * mAC) / (Avg#Predictions * Latency_s)

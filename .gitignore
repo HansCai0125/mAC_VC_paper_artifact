@@ -221,3 +221,13 @@ VisDrone/VisDrone2019-DET-val/
 
 # IDE configs
 .idea/
+
+# Paper repo cleanup
+**/anti_gaming_cache/
+**/weights_paths.txt
+**/args.yaml
+**/hparams.json
+**/error.txt
+**/train_batch*.png
+**/val_batch*.png
+*.swp

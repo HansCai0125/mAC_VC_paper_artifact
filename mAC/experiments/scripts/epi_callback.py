@@ -2,9 +2,9 @@ import os, csv
 
 class EPICallback:
     def __init__(self, alpha: float = 0.5, lam: float = 0.5,
-                 out_csv: str = r"E:\Project\mAC\experiments\test_file\epi_results.csv",
+                 out_csv: str = "outputs/epi_results.csv",
                  prefer_map50: bool = True,
-                 mac_csv: str = r"E:\Project\mAC\experiments\test_file\mac_epoch.csv"):
+                 mac_csv: str = "outputs/mac_epoch.csv"):
         self.alpha = float(alpha)
         self.lam = float(lam)
         self.out_csv = out_csv

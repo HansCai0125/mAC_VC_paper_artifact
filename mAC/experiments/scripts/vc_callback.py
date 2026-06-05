@@ -24,8 +24,8 @@ class VCCallback:
 
     def __init__(self,
                  epsilon: float = 0.0,
-                 out_csv: str = r"E:\Project\mAC\experiments\test_file\vc_epoch.csv",
-                 mac_csv: str = r"E:\Project\mAC\experiments\test_file\mac_epoch.csv",
+                 out_csv: str = "outputs/vc_epoch.csv",
+                 mac_csv: str = "outputs/mac_epoch.csv",
                  prefer_map50: bool = True):
         self.epsilon = float(epsilon)
         self.out_csv = out_csv

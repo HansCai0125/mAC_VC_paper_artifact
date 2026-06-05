@@ -11,7 +11,7 @@ Array = Union[np.ndarray, "torch.Tensor"]
 
 class MACCallback:
     def __init__(self, tau: float = 0.5, score_thresh: float = 0.25, class_aware: bool = True,
-                 mac_out_csv: str = r"E:\Project\mAC\experiments\test_file\mac_epoch.csv"):
+                 mac_out_csv: str = "outputs/mac_epoch.csv"):
         self.tau = tau
         self.score_thresh = score_thresh
         self.class_aware = class_aware
