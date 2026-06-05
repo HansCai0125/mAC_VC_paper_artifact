@@ -16,6 +16,13 @@ This repository contains code and experiment scripts for computing **mAC**, **EP
   - `VC50 = 2 * mAP50 * mAC / (mAP50 + mAC + eps)`
   - `VC50_95 = 2 * mAP50_95 * mAC / (mAP50_95 + mAC + eps)`
 
+## Installable Code
+The installable code package is maintained in [HansCai0125/mac-vc-epi](https://github.com/HansCai0125/mac-vc-epi).
+
+```bash
+pip install git+https://github.com/HansCai0125/mac-vc-epi.git
+```
+
 ## Quick Start
 1. Create the environment:
    ```bash
