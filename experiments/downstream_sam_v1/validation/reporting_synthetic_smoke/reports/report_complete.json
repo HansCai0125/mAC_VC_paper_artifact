@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "report_version": "downstream-sam-report-1.0",
+  "n_runs": 6,
+  "n_images_per_run": 4,
+  "models": [
+    "yolov8n",
+    "yolo11n",
+    "yolo11s"
+  ],
+  "budgets": [
+    10,
+    20,
+    40
+  ],
+  "all_model_groups_have_five_seeds": false,
+  "primary_endpoint": "macro_class_foreground_mIoU_after_image_pixel_aggregation",
+  "class_rule": "Include classes with nonzero pooled union, including false-positive-only classes.",
+  "seed_aggregation": "Arithmetic mean of independently computed seed endpoints; sample SD uses ddof=1.",
+  "bootstrap_scope": "Paired image-level percentile 95% intervals for differences of mean seed mIoU. The same resampled image multiplicities are used for all seeds and policies. Calibration choices, fitted detectors, and SAM are held fixed; these intervals do not quantify recalibration or retraining uncertainty.",
+  "bootstrap_reps": 20,
+  "bootstrap_seed": 20261026,
+  "interval_method": "pointwise percentile 95%; no simultaneous-coverage or multiplicity-adjusted claim",
+  "mask_ap_rows_received": 0,
+  "mask_ap_complete": false,
+  "files": {
+    "per_run_metrics": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\validation\\reporting_synthetic_smoke\\reports\\per_run_metrics.csv",
+    "model_summary": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\validation\\reporting_synthetic_smoke\\reports\\model_summary.csv",
+    "paired_differences": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\validation\\reporting_synthetic_smoke\\reports\\paired_differences.csv"
+  },
+  "plots": {
+    "status": "complete",
+    "files": [
+      "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\validation\\reporting_synthetic_smoke\\reports\\budget_vs_miou.png",
+      "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\validation\\reporting_synthetic_smoke\\reports\\budget_vs_miou.pdf"
+    ]
+  },
+  "efficacy_conclusion": "Not inferred automatically; inspect paired effects, costs, and consistency."
+}

@@ -1,0 +1,33 @@
+\begin{table*}[t]
+\centering
+\caption{Operating-point and ownership sensitivity over five seeded runs. Score entries and owner-change rates are mean $\pm$ sample SD; $\Delta VC$ is the difference of five-seed means.}
+\label{tab:protocol_robustness}
+\small
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+\multicolumn{6}{l}{\emph{(a) F1-selected operating point}} \\
+Dataset & Model & $\theta_{F1}$ & F1 & $mAC$ & $VC$ \\
+\midrule
+MS COCO & YOLOv8n & $0.25$ & $0.5339\pm0.0087$ & $0.4845\pm0.0100$ & $0.3742\pm0.0092$ \\
+MS COCO & YOLO11n & $0.20$ & $0.5516\pm0.0062$ & $0.5258\pm0.0129$ & $0.4000\pm0.0093$ \\
+MS COCO & YOLO11s & $0.30$ & $0.5966\pm0.0088$ & $0.5526\pm0.0043$ & $0.4362\pm0.0080$ \\
+VisDrone & YOLOv8n & $0.20$ & $0.5242\pm0.0014$ & $0.4643\pm0.0016$ & $0.3585\pm0.0013$ \\
+VisDrone & YOLO11n & $0.20$ & $0.5247\pm0.0028$ & $0.4653\pm0.0018$ & $0.3591\pm0.0014$ \\
+VisDrone & YOLO11s & $0.25$ & $0.5757\pm0.0017$ & $0.4929\pm0.0022$ & $0.3942\pm0.0017$ \\
+VisDrone & RT-DETR-L & $0.45$ & $0.6806\pm0.0023$ & $0.6033\pm0.0047$ & $0.4887\pm0.0025$ \\
+\midrule
+\multicolumn{6}{l}{\emph{(b) Ownership rule at $\theta=0.25$}} \\
+Dataset & Model & $VC_{\mathrm{IoU}}$ & $VC_{\mathrm{intersection}}$ & $\Delta VC$ & Changed owners (\%) \\
+\midrule
+MS COCO & YOLOv8n & $0.3742\pm0.0092$ & $0.3665\pm0.0088$ & $-0.0077$ & $8.12\pm0.19$ \\
+MS COCO & YOLO11n & $0.3898\pm0.0095$ & $0.3818\pm0.0092$ & $-0.0079$ & $7.83\pm0.21$ \\
+MS COCO & YOLO11s & $0.4423\pm0.0096$ & $0.4329\pm0.0096$ & $-0.0094$ & $8.55\pm0.26$ \\
+VisDrone & YOLOv8n & $0.3481\pm0.0010$ & $0.3473\pm0.0010$ & $-0.0008$ & $2.36\pm0.16$ \\
+VisDrone & YOLO11n & $0.3490\pm0.0015$ & $0.3482\pm0.0015$ & $-0.0008$ & $2.37\pm0.16$ \\
+VisDrone & YOLO11s & $0.3942\pm0.0017$ & $0.3934\pm0.0016$ & $-0.0008$ & $2.28\pm0.15$ \\
+VisDrone & RT-DETR-L & $0.4605\pm0.0024$ & $0.4588\pm0.0024$ & $-0.0017$ & $2.98\pm0.09$ \\
+\bottomrule
+\end{tabular}}
+\end{table*}

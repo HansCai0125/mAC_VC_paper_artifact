@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "matrix_version": "vc-v1-formal-matrix-0.1.0",
+  "full_run_version": "vc-v1-full-cache-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "matrix_fingerprint": "916baa3f128416d7f82a8bd680511a11e8586944669af951b5811aa67deb5141",
+  "completed_combinations": 30,
+  "reused_combinations": 2,
+  "newly_managed_combinations": 28,
+  "aggregation": {
+    "run_count": 30,
+    "threshold_row_count": 570,
+    "primary_group_count": 6,
+    "threshold_group_count": 114,
+    "files": [
+      "matrix_runs.csv",
+      "matrix_thresholds.csv",
+      "aggregate_primary.csv",
+      "aggregate_thresholds.csv"
+    ]
+  },
+  "completed_at": "2026-09-11T16:35:22.691280+00:00"
+}

@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering
+\caption{Foreground-mask validation on MS COCO. Values are mean $\pm$ sample standard deviation over five training seeds.}
+\label{tab:mask_grounded_validity}
+\begin{tabular}{lcccccc}
+\hline
+Model & MaskAC & $r(AC,\mathrm{MaskAC})$ & $P(\Delta_b>.05)$ & $P(\Delta_b>.05,\Delta_m>.05)$ & $P(\Delta_m>.05\mid\Delta_b>.05)$ & Box-only $\Delta$ \\
+\hline
+YOLOv8n & 0.5009 $\pm$ 0.0103 & 0.994 $\pm$ 0.000 & 4.61 $\pm$ 0.11 & 2.02 $\pm$ 0.07 & 43.77 $\pm$ 1.19 & 2.59 $\pm$ 0.08 \\
+YOLO11n & 0.5150 $\pm$ 0.0125 & 0.994 $\pm$ 0.000 & 4.69 $\pm$ 0.02 & 2.09 $\pm$ 0.04 & 44.62 $\pm$ 0.76 & 2.60 $\pm$ 0.04 \\
+YOLO11s & 0.5944 $\pm$ 0.0048 & 0.993 $\pm$ 0.000 & 5.51 $\pm$ 0.19 & 2.37 $\pm$ 0.13 & 42.93 $\pm$ 0.95 & 3.14 $\pm$ 0.06 \\
+\hline
+\end{tabular}
+\end{table*}

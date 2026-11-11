@@ -1,0 +1,203 @@
+{
+  "status": "passed",
+  "created_at": "2026-10-27T01:29:51Z",
+  "settings": {
+    "dataset_root": "E:/Project/Database/MS-COCO",
+    "split_seed": 20261026,
+    "calibration_images": 1000,
+    "expected_images": 5000,
+    "pilot_images": 100,
+    "thresholds": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "budgets": [
+      10,
+      20,
+      40
+    ],
+    "primary_budget": 20,
+    "models": [
+      "yolov8n",
+      "yolo11n",
+      "yolo11s"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fixed_theta": 0.25,
+    "sam_model": "vit_b",
+    "batch_size": 16,
+    "device": "auto",
+    "bootstrap_reps": 2000,
+    "bootstrap_seed": 20261026,
+    "compute_mask_ap": true,
+    "compute_ap_model_selection": true
+  },
+  "n_sources": 15,
+  "n_images": 5000,
+  "sources": [
+    {
+      "run_id": "yolov8n_seed0",
+      "model": "yolov8n",
+      "seed": 0,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0\\filtered_predictions.json",
+      "source_fingerprint": "44ab74cbb973874934065490295b0d914f9685ed8ce2888fe77857193be8a906",
+      "declared_sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2",
+      "sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2"
+    },
+    {
+      "run_id": "yolov8n_seed1",
+      "model": "yolov8n",
+      "seed": 1,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1\\filtered_predictions.json",
+      "source_fingerprint": "ee4f48d01e74c8f91324eaf5e32d36b0a9959fc227f5ab1e5ae82e41426a5878",
+      "declared_sha256": "c2637b5dcf401a13f18dd557af7e5d7efa947e2ff37e996998f5e4a78f868adf",
+      "sha256": "c2637b5dcf401a13f18dd557af7e5d7efa947e2ff37e996998f5e4a78f868adf"
+    },
+    {
+      "run_id": "yolov8n_seed2",
+      "model": "yolov8n",
+      "seed": 2,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2\\filtered_predictions.json",
+      "source_fingerprint": "6d980a3e80f0fdae535f4f87968d0b9b8829f9c6f9a10206c6836cb9e2c5c8f8",
+      "declared_sha256": "0bb62539147842775675ec29ab354e06520f318f432f9e106533a51c657cc902",
+      "sha256": "0bb62539147842775675ec29ab354e06520f318f432f9e106533a51c657cc902"
+    },
+    {
+      "run_id": "yolov8n_seed3",
+      "model": "yolov8n",
+      "seed": 3,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3\\filtered_predictions.json",
+      "source_fingerprint": "e8a41f2395c0ea70bd5a2ae3b606639824dcca8cf40ee8f66df85d3c565c51b5",
+      "declared_sha256": "b347724a85127a7790521c244d3e10ec9863c5a909701ed2ed9f18a8500d11b2",
+      "sha256": "b347724a85127a7790521c244d3e10ec9863c5a909701ed2ed9f18a8500d11b2"
+    },
+    {
+      "run_id": "yolov8n_seed4",
+      "model": "yolov8n",
+      "seed": 4,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4\\filtered_predictions.json",
+      "source_fingerprint": "30ffb020ed1aaaeeddaf0e2d2908764d824caca2ee1362492c1ee8593c69e384",
+      "declared_sha256": "fd5a5c04eefff6a9546bf0e78dcd541b86f4ece4e680dac564a2e76d6d0db78f",
+      "sha256": "fd5a5c04eefff6a9546bf0e78dcd541b86f4ece4e680dac564a2e76d6d0db78f"
+    },
+    {
+      "run_id": "yolo11n_seed0",
+      "model": "yolo11n",
+      "seed": 0,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco\\filtered_predictions.json",
+      "source_fingerprint": "435cfcd58f838f0fc80a828e1ac8be4e7ca266fa53cdafc1c9d2064c414b8fb1",
+      "declared_sha256": "f6da1e71ea9213830e6f01ecf7d34cfcdf5721d6305c85aa66b0bb20df7dda6f",
+      "sha256": "f6da1e71ea9213830e6f01ecf7d34cfcdf5721d6305c85aa66b0bb20df7dda6f"
+    },
+    {
+      "run_id": "yolo11n_seed1",
+      "model": "yolo11n",
+      "seed": 1,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1\\filtered_predictions.json",
+      "source_fingerprint": "6eda82b2378464c4a74ec7cac4cb220af8569af4be2f29af5ee89a29e67cead7",
+      "declared_sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6",
+      "sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6"
+    },
+    {
+      "run_id": "yolo11n_seed2",
+      "model": "yolo11n",
+      "seed": 2,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2\\filtered_predictions.json",
+      "source_fingerprint": "743a68c85deb84ee739741b9969db5a3c1eb55b7bab8c3284f6fba569b40ad94",
+      "declared_sha256": "08f6df40fee7a6be2c7776202dc9777ea0fe4821d0dde0c4f4c538a4c407d175",
+      "sha256": "08f6df40fee7a6be2c7776202dc9777ea0fe4821d0dde0c4f4c538a4c407d175"
+    },
+    {
+      "run_id": "yolo11n_seed3",
+      "model": "yolo11n",
+      "seed": 3,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3\\filtered_predictions.json",
+      "source_fingerprint": "38225e42ef7670a263d0e20b1f7b70ef594aec94b95ddcae19d4bb280f875194",
+      "declared_sha256": "e6aaa9e0edcd5fc29ec7b8cee271331b9ece9538ba6c286b95e791879d6c75cf",
+      "sha256": "e6aaa9e0edcd5fc29ec7b8cee271331b9ece9538ba6c286b95e791879d6c75cf"
+    },
+    {
+      "run_id": "yolo11n_seed4",
+      "model": "yolo11n",
+      "seed": 4,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4\\filtered_predictions.json",
+      "source_fingerprint": "333823ff3c39ca37064db8247cd3f09f13a4bc54b181b4ee36fb76aa840ae9e2",
+      "declared_sha256": "6e490b4fa0a86dc34eddb5500aebf9c79bee334be629942883e7c61b1ec0876f",
+      "sha256": "6e490b4fa0a86dc34eddb5500aebf9c79bee334be629942883e7c61b1ec0876f"
+    },
+    {
+      "run_id": "yolo11s_seed0",
+      "model": "yolo11s",
+      "seed": 0,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0\\filtered_predictions.json",
+      "source_fingerprint": "efd8861c63c207c97965cbd1afe89fb39bf0318ce1b617dcd7b0ef24f0df6aee",
+      "declared_sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1",
+      "sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1"
+    },
+    {
+      "run_id": "yolo11s_seed1",
+      "model": "yolo11s",
+      "seed": 1,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1\\filtered_predictions.json",
+      "source_fingerprint": "d49fe0f0476d31b516c9d60288a943f749e8f2c1cb256255f7e2dae6b70963f8",
+      "declared_sha256": "b30c4508df9117e7b06a0296a2decb53cd53cd0b43e2ef8427f5a1f2905be686",
+      "sha256": "b30c4508df9117e7b06a0296a2decb53cd53cd0b43e2ef8427f5a1f2905be686"
+    },
+    {
+      "run_id": "yolo11s_seed2",
+      "model": "yolo11s",
+      "seed": 2,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2\\filtered_predictions.json",
+      "source_fingerprint": "24a11d629b2bd25794d0dfdaa9b27983eaa59e304e22e512ff2393a4b6d88fb2",
+      "declared_sha256": "6c4ab2eb84ea44ffa0f88459d03c1d1abe832c79fd60a41c35c8004344107134",
+      "sha256": "6c4ab2eb84ea44ffa0f88459d03c1d1abe832c79fd60a41c35c8004344107134"
+    },
+    {
+      "run_id": "yolo11s_seed3",
+      "model": "yolo11s",
+      "seed": 3,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3\\filtered_predictions.json",
+      "source_fingerprint": "32eccd94711275eb7da799f3b5afbee15d6501a2e03023af7ab2ea089b0cc2ea",
+      "declared_sha256": "20061deacdd6c6a6ad9a70824d41f6783b14e6ee1b711ad605a6fc1e3f42a659",
+      "sha256": "20061deacdd6c6a6ad9a70824d41f6783b14e6ee1b711ad605a6fc1e3f42a659"
+    },
+    {
+      "run_id": "yolo11s_seed4",
+      "model": "yolo11s",
+      "seed": 4,
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4\\filtered_predictions.json",
+      "source_fingerprint": "554ddf64abd338fa0b956e5debaf062cbe95d975e4e70c13c851a92a6971468d",
+      "declared_sha256": "80f0a28188f02393ce7a5ac2ccd97f5d05873f0e405cc35abd06f9a7d318c5cf",
+      "sha256": "80f0a28188f02393ce7a5ac2ccd97f5d05873f0e405cc35abd06f9a7d318c5cf"
+    }
+  ],
+  "annotation_file": "E:\\Project\\Database\\MS-COCO\\annotations\\instances_val2017.json",
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "image_inventory_sha256": "c4c72a2e58a74f47f0e479b4b5e560bfb1cd12f5bcfdf59bcee2e509cd10a592",
+  "free_bytes": 1010777980928,
+  "source_content_hashes_checked": true,
+  "no_model_loaded": true
+}

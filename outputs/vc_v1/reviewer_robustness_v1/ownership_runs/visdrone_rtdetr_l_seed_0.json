@@ -1,0 +1,22 @@
+{
+  "n_images": 548,
+  "n_gt": 38602,
+  "n_pred": 48894,
+  "n_assigned": 35404,
+  "n_orphan": 13490,
+  "n_ambiguous": 14307,
+  "n_owner_changed": 429,
+  "owner_change_rate_ambiguous": 0.029985321870413084,
+  "owner_change_rate_assigned": 0.012117274884193877,
+  "VC_max_iou": 0.4636024863020068,
+  "VC_max_intersection": 0.4619847231759596,
+  "dataset": "visdrone",
+  "model": "rtdetr_l",
+  "seed": 0,
+  "theta": 0.25,
+  "source_sha256": "19e268d6b585b36d2ee0c432e9b06fd19ae61ea6d00496cbd493bcfc0dbabe14",
+  "source_bytes": 48474621,
+  "delta_VC": -0.001617763126047167,
+  "absolute_delta_VC": 0.001617763126047167,
+  "version": "reviewer-robustness-1.0.0"
+}

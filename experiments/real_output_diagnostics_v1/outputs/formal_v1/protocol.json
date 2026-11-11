@@ -1,0 +1,965 @@
+{
+  "version": "real-output-diagnostics-1.0.0",
+  "settings": {
+    "theta": 0.25,
+    "budget": 20,
+    "bootstrap": 2000,
+    "translations": 200,
+    "cv_folds": 5,
+    "cv_repeats": 10,
+    "random_seed": 20261027,
+    "gain_threshold": 0.05,
+    "area_relative_epsilon": 1e-09,
+    "min_stratum_images": 20,
+    "min_stratum_targets": 60,
+    "coarsening_deltas": [
+      0.0,
+      0.25,
+      0.5
+    ],
+    "smoke": false,
+    "smoke_images": 12
+  },
+  "sources": [
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 0,
+      "model_id": "yolov8n_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0\\analysis",
+      "run_fingerprint": "44ab74cbb973874934065490295b0d914f9685ed8ce2888fe77857193be8a906",
+      "cache_sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 1,
+      "model_id": "yolov8n_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1\\analysis",
+      "run_fingerprint": "ee4f48d01e74c8f91324eaf5e32d36b0a9959fc227f5ab1e5ae82e41426a5878",
+      "cache_sha256": "c2637b5dcf401a13f18dd557af7e5d7efa947e2ff37e996998f5e4a78f868adf",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 2,
+      "model_id": "yolov8n_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2\\analysis",
+      "run_fingerprint": "6d980a3e80f0fdae535f4f87968d0b9b8829f9c6f9a10206c6836cb9e2c5c8f8",
+      "cache_sha256": "0bb62539147842775675ec29ab354e06520f318f432f9e106533a51c657cc902",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 3,
+      "model_id": "yolov8n_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3\\analysis",
+      "run_fingerprint": "e8a41f2395c0ea70bd5a2ae3b606639824dcca8cf40ee8f66df85d3c565c51b5",
+      "cache_sha256": "b347724a85127a7790521c244d3e10ec9863c5a909701ed2ed9f18a8500d11b2",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 4,
+      "model_id": "yolov8n_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4\\analysis",
+      "run_fingerprint": "30ffb020ed1aaaeeddaf0e2d2908764d824caca2ee1362492c1ee8593c69e384",
+      "cache_sha256": "fd5a5c04eefff6a9546bf0e78dcd541b86f4ece4e680dac564a2e76d6d0db78f",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 0,
+      "model_id": "yolo11n_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco\\analysis",
+      "run_fingerprint": "435cfcd58f838f0fc80a828e1ac8be4e7ca266fa53cdafc1c9d2064c414b8fb1",
+      "cache_sha256": "f6da1e71ea9213830e6f01ecf7d34cfcdf5721d6305c85aa66b0bb20df7dda6f",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 1,
+      "model_id": "yolo11n_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1\\analysis",
+      "run_fingerprint": "6eda82b2378464c4a74ec7cac4cb220af8569af4be2f29af5ee89a29e67cead7",
+      "cache_sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 2,
+      "model_id": "yolo11n_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2\\analysis",
+      "run_fingerprint": "743a68c85deb84ee739741b9969db5a3c1eb55b7bab8c3284f6fba569b40ad94",
+      "cache_sha256": "08f6df40fee7a6be2c7776202dc9777ea0fe4821d0dde0c4f4c538a4c407d175",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 3,
+      "model_id": "yolo11n_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3\\analysis",
+      "run_fingerprint": "38225e42ef7670a263d0e20b1f7b70ef594aec94b95ddcae19d4bb280f875194",
+      "cache_sha256": "e6aaa9e0edcd5fc29ec7b8cee271331b9ece9538ba6c286b95e791879d6c75cf",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 4,
+      "model_id": "yolo11n_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4\\analysis",
+      "run_fingerprint": "333823ff3c39ca37064db8247cd3f09f13a4bc54b181b4ee36fb76aa840ae9e2",
+      "cache_sha256": "6e490b4fa0a86dc34eddb5500aebf9c79bee334be629942883e7c61b1ec0876f",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 0,
+      "model_id": "yolo11s_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0\\analysis",
+      "run_fingerprint": "efd8861c63c207c97965cbd1afe89fb39bf0318ce1b617dcd7b0ef24f0df6aee",
+      "cache_sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 1,
+      "model_id": "yolo11s_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1\\analysis",
+      "run_fingerprint": "d49fe0f0476d31b516c9d60288a943f749e8f2c1cb256255f7e2dae6b70963f8",
+      "cache_sha256": "b30c4508df9117e7b06a0296a2decb53cd53cd0b43e2ef8427f5a1f2905be686",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 2,
+      "model_id": "yolo11s_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2\\analysis",
+      "run_fingerprint": "24a11d629b2bd25794d0dfdaa9b27983eaa59e304e22e512ff2393a4b6d88fb2",
+      "cache_sha256": "6c4ab2eb84ea44ffa0f88459d03c1d1abe832c79fd60a41c35c8004344107134",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 3,
+      "model_id": "yolo11s_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3\\analysis",
+      "run_fingerprint": "32eccd94711275eb7da799f3b5afbee15d6501a2e03023af7ab2ea089b0cc2ea",
+      "cache_sha256": "20061deacdd6c6a6ad9a70824d41f6783b14e6ee1b711ad605a6fc1e3f42a659",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 4,
+      "model_id": "yolo11s_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4\\analysis",
+      "run_fingerprint": "554ddf64abd338fa0b956e5debaf062cbe95d975e4e70c13c851a92a6971468d",
+      "cache_sha256": "80f0a28188f02393ce7a5ac2ccd97f5d05873f0e405cc35abd06f9a7d318c5cf",
+      "n_images": 5000,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 0,
+      "model_id": "yolov8n_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0\\analysis",
+      "run_fingerprint": "53db86571181fd8e37a429de09de7b22de44dfa714e2deb427df52f7b21ce285",
+      "cache_sha256": "c782eb766ea30aad07abad7789bf8ed4063b2d834ac8a52c74050ac254dbe773",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 1,
+      "model_id": "yolov8n_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1\\analysis",
+      "run_fingerprint": "c49ccd8a73a7f88dc7daf92f2b8e9618236fc6c2ab2d00bcef3cde9afb4ff083",
+      "cache_sha256": "60fd0d0cfa2eae63939a095e3addaec9f2126106cbf2daa9bfd877b041c6039d",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 2,
+      "model_id": "yolov8n_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2\\analysis",
+      "run_fingerprint": "99d89d3265cd9d701fd88cdb35f0201bc27465b04af1a0d63b12dd5167ab99b8",
+      "cache_sha256": "0e1bc4d53d24dc981becca1073ff6e56ef86637965e1ff2714d085f2e594c018",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 3,
+      "model_id": "yolov8n_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3\\analysis",
+      "run_fingerprint": "f139bd31f964de23815e465e3fcda3f4e1df4c924fcb51506c3cb9d3676a3a61",
+      "cache_sha256": "3847e49bc33005f283bfebf0559a5d7a0118f720151fe16fa08520206a985616",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 4,
+      "model_id": "yolov8n_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4\\analysis",
+      "run_fingerprint": "036d32436076ecc0e3bd534d7ce42f3799f321e009afcb08b4869da0fda3cfa5",
+      "cache_sha256": "54fc7b4e8a4474edbf6426567f8ff905aa52cb588bbc14c22fbaabda532ba152",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 0,
+      "model_id": "yolo11n_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone\\analysis",
+      "run_fingerprint": "edafafb9b500e21103dd86ef4fd147ed0726fcc75aca326f9567ca2f3ded388a",
+      "cache_sha256": "6dc0ff4ad226d833d544e7f993b88d0f719f10b0e961a152cbe9ae6a0ffe5c16",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 1,
+      "model_id": "yolo11n_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1\\analysis",
+      "run_fingerprint": "d6c0dad3adc39a47a88e38c5e1ceb54f31aff2604c3c8ca3d8734fcf34dc3fc0",
+      "cache_sha256": "26b25d6fb4b83fa4ce59e5032c8b32e793b1de81eac603f74bdf21cdcc7cfeaf",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 2,
+      "model_id": "yolo11n_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2\\analysis",
+      "run_fingerprint": "fd982cd95567df86067c066fd174bad2df5043ccaa6b65a8bae200b24450cdfc",
+      "cache_sha256": "9931c4b944a9e923e7b282df8dedb1067203851ee5ccebc84f447b7f9a5f6985",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 3,
+      "model_id": "yolo11n_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3\\analysis",
+      "run_fingerprint": "5f8c3350fd8472aecf2063bca25ebda7f697c73b4132a9c556b22b8b0470ae54",
+      "cache_sha256": "595cf9c19467d33bd8887f142e7c50f62d0d7fec22423664e4e5a3a39b3cf2ae",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 4,
+      "model_id": "yolo11n_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4\\analysis",
+      "run_fingerprint": "134d44638132647a602ceb9ed849a61d556330e0bb2319d0c21bf1ed9ef7e1be",
+      "cache_sha256": "ca940bda79246fc2712032b2ade83e6d63124f7c0b34ff25d261575d2e582c63",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 0,
+      "model_id": "yolo11s_seed0",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0\\analysis",
+      "run_fingerprint": "305b73c5241204b4c60020b6427daa8c65c179dbba619ad772e75504ab6832b0",
+      "cache_sha256": "1ca60a5d6bc5d5f81c684ea25a5050ab8ed7fb15ffd5935eaf19ab17949af3e3",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 1,
+      "model_id": "yolo11s_seed1",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1\\analysis",
+      "run_fingerprint": "eb3394b08fef957b17d4cbb96c8edebd1aa9f4646996efc36434b66c2b2f1c75",
+      "cache_sha256": "e900bd988ec5c4f9fce981f421e8943002a7f006db15859a401f68af791cbbe9",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 2,
+      "model_id": "yolo11s_seed2",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2\\analysis",
+      "run_fingerprint": "d5bbbc6779f09361832740cf1310c755782ec5630fa0599e7b987d01c1d4606c",
+      "cache_sha256": "aecddf092541b175362aa8ff6508524a18d7c95611fcbb22cdd3b9378665033d",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 3,
+      "model_id": "yolo11s_seed3",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3\\analysis",
+      "run_fingerprint": "93946ae72d52c1341c821ac82516f461b6b4ed5dae768eaa4b6b3fbf93f59baa",
+      "cache_sha256": "4023e6bca0f1f3fe3e0b9aed473a5586c51645e47a54a7a296fe2a2ee267593f",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 4,
+      "model_id": "yolo11s_seed4",
+      "run_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4",
+      "prediction_file": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4\\filtered_predictions.json",
+      "analysis_directory": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4\\analysis",
+      "run_fingerprint": "1c7cc32b16ebc3bb5a2da042ced9871de998df5ce16498c3b294aa6e9634855d",
+      "cache_sha256": "2de00579f08e9d4c765dc6bdc6d09fe78bd1c00a5883505d455bf98cd0032e59",
+      "n_images": 548,
+      "source_suite": "formal_matrix_v1"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "E:\\Project\\Database\\MS-COCO\\annotations\\instances_val2017.json",
+      "size": 19987840,
+      "mtime_ns": 1504306952000000000
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\protocol.json",
+      "size": 17227,
+      "mtime_ns": 1793064627447936500
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\split.json",
+      "size": 64126,
+      "mtime_ns": 1793064627457651200
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\complete.json",
+      "size": 2308,
+      "mtime_ns": 1793068147642126300
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\cache.sqlite",
+      "size": 391139328,
+      "mtime_ns": 1793068147644495100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0\\filtered_predictions.json",
+      "size": 219747527,
+      "mtime_ns": 1789138166182990900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolov8n\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5370239,
+      "mtime_ns": 1790027565912772600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolov8n\\seed_0\\per_gt_mask_validity.csv",
+      "size": 9715371,
+      "mtime_ns": 1790044756030438600
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolov8n_seed0.npz",
+      "size": 862843,
+      "mtime_ns": 1793066181206848900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1\\filtered_predictions.json",
+      "size": 195960934,
+      "mtime_ns": 1789138641419047000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolov8n\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5288158,
+      "mtime_ns": 1790027568802662400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolov8n\\seed_1\\per_gt_mask_validity.csv",
+      "size": 9577272,
+      "mtime_ns": 1790044764663250600
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolov8n_seed1.npz",
+      "size": 838013,
+      "mtime_ns": 1793066182688670000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2\\filtered_predictions.json",
+      "size": 210802726,
+      "mtime_ns": 1789139113434587100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolov8n\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5289412,
+      "mtime_ns": 1790027571857258300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolov8n\\seed_2\\per_gt_mask_validity.csv",
+      "size": 9581448,
+      "mtime_ns": 1790044773589815300
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolov8n_seed2.npz",
+      "size": 862533,
+      "mtime_ns": 1793066184006983800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3\\filtered_predictions.json",
+      "size": 203095695,
+      "mtime_ns": 1789139596491971600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolov8n\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5294081,
+      "mtime_ns": 1790027574761775900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolov8n\\seed_3\\per_gt_mask_validity.csv",
+      "size": 9587842,
+      "mtime_ns": 1790044782465307600
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolov8n_seed3.npz",
+      "size": 840870,
+      "mtime_ns": 1793066185456477700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4\\filtered_predictions.json",
+      "size": 208594467,
+      "mtime_ns": 1789140076795785600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolov8n\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5286367,
+      "mtime_ns": 1790027577763056300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolov8n\\seed_4\\per_gt_mask_validity.csv",
+      "size": 9574316,
+      "mtime_ns": 1790044791407905300
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolov8n_seed4.npz",
+      "size": 844863,
+      "mtime_ns": 1793066186811591500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco\\filtered_predictions.json",
+      "size": 189462991,
+      "mtime_ns": 1789133844773447200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11n\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5327549,
+      "mtime_ns": 1790027580799322300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11n\\seed_0\\per_gt_mask_validity.csv",
+      "size": 9645762,
+      "mtime_ns": 1790044800020435200
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11n_seed0.npz",
+      "size": 842318,
+      "mtime_ns": 1793066188139254600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1\\filtered_predictions.json",
+      "size": 203265042,
+      "mtime_ns": 1789140568080951000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11n\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5399171,
+      "mtime_ns": 1790027583827479600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11n\\seed_1\\per_gt_mask_validity.csv",
+      "size": 9764706,
+      "mtime_ns": 1790044809070678900
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11n_seed1.npz",
+      "size": 853183,
+      "mtime_ns": 1793066189414165600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2\\filtered_predictions.json",
+      "size": 203265042,
+      "mtime_ns": 1789141054159129200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11n\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5399171,
+      "mtime_ns": 1790027586660465800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11n\\seed_2\\per_gt_mask_validity.csv",
+      "size": 9764706,
+      "mtime_ns": 1790044817980856500
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11n_seed2.npz",
+      "size": 853182,
+      "mtime_ns": 1793066190706940100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3\\filtered_predictions.json",
+      "size": 189462991,
+      "mtime_ns": 1789141533223249500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11n\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5327549,
+      "mtime_ns": 1790027589485685000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11n\\seed_3\\per_gt_mask_validity.csv",
+      "size": 9645762,
+      "mtime_ns": 1790044826647444200
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11n_seed3.npz",
+      "size": 842317,
+      "mtime_ns": 1793066192015943700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4\\filtered_predictions.json",
+      "size": 182771937,
+      "mtime_ns": 1789141999935099900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11n\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5321990,
+      "mtime_ns": 1790027592217832400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11n\\seed_4\\per_gt_mask_validity.csv",
+      "size": 9636771,
+      "mtime_ns": 1790044835260486300
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11n_seed4.npz",
+      "size": 823732,
+      "mtime_ns": 1793066193385853500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0\\filtered_predictions.json",
+      "size": 167407129,
+      "mtime_ns": 1789142462689759400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11s\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5667273,
+      "mtime_ns": 1790027594942571500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11s\\seed_0\\per_gt_mask_validity.csv",
+      "size": 10219463,
+      "mtime_ns": 1790044844760682000
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11s_seed0.npz",
+      "size": 828379,
+      "mtime_ns": 1793066194976241500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1\\filtered_predictions.json",
+      "size": 165807021,
+      "mtime_ns": 1789142898502525100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11s\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5652726,
+      "mtime_ns": 1790027597603705100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11s\\seed_1\\per_gt_mask_validity.csv",
+      "size": 10206879,
+      "mtime_ns": 1790044854444946100
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11s_seed1.npz",
+      "size": 851254,
+      "mtime_ns": 1793066196386493400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2\\filtered_predictions.json",
+      "size": 165807021,
+      "mtime_ns": 1789143332091029800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11s\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5652726,
+      "mtime_ns": 1790027600280920400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11s\\seed_2\\per_gt_mask_validity.csv",
+      "size": 10206879,
+      "mtime_ns": 1790044864175505500
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11s_seed2.npz",
+      "size": 851258,
+      "mtime_ns": 1793066197706243300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3\\filtered_predictions.json",
+      "size": 165807021,
+      "mtime_ns": 1789143766947678500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11s\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5652726,
+      "mtime_ns": 1790027602916881200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11s\\seed_3\\per_gt_mask_validity.csv",
+      "size": 10206879,
+      "mtime_ns": 1790044873829420900
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11s_seed3.npz",
+      "size": 851260,
+      "mtime_ns": 1793066199021974500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4\\filtered_predictions.json",
+      "size": 165807021,
+      "mtime_ns": 1789144201452059500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\mscoco\\yolo11s\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5652726,
+      "mtime_ns": 1790027605527254100
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1\\runs\\mscoco\\yolo11s\\seed_4\\per_gt_mask_validity.csv",
+      "size": 10206879,
+      "mtime_ns": 1790044883528707100
+    },
+    {
+      "path": "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\outputs\\formal_v1\\per_image\\yolo11s_seed4.npz",
+      "size": 851255,
+      "mtime_ns": 1793066200315843800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0\\filtered_predictions.json",
+      "size": 67954942,
+      "mtime_ns": 1789138434476794600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolov8n\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5549523,
+      "mtime_ns": 1790027607441450600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1\\filtered_predictions.json",
+      "size": 69522825,
+      "mtime_ns": 1789138900656814000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolov8n\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5548318,
+      "mtime_ns": 1790027609542857400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2\\filtered_predictions.json",
+      "size": 67368655,
+      "mtime_ns": 1789139386453349200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolov8n\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5565449,
+      "mtime_ns": 1790027611516756700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3\\filtered_predictions.json",
+      "size": 68489526,
+      "mtime_ns": 1789139866206173700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolov8n\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5555039,
+      "mtime_ns": 1790027613500586900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4\\filtered_predictions.json",
+      "size": 69324294,
+      "mtime_ns": 1789140348892051300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolov8n\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5562922,
+      "mtime_ns": 1790027615493878700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone\\filtered_predictions.json",
+      "size": 68063096,
+      "mtime_ns": 1789134124423477300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11n\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5567538,
+      "mtime_ns": 1790027617463736200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1\\filtered_predictions.json",
+      "size": 71559678,
+      "mtime_ns": 1789140838500631000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11n\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5557476,
+      "mtime_ns": 1790027619535987900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2\\filtered_predictions.json",
+      "size": 66092539,
+      "mtime_ns": 1789141322036197400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11n\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5538673,
+      "mtime_ns": 1790027621533453700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3\\filtered_predictions.json",
+      "size": 66981072,
+      "mtime_ns": 1789141786366160900
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11n\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5564307,
+      "mtime_ns": 1790027623497569800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4\\filtered_predictions.json",
+      "size": 70224059,
+      "mtime_ns": 1789142250475296400
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11n\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5564204,
+      "mtime_ns": 1790027625512595800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0\\filtered_predictions.json",
+      "size": 55994414,
+      "mtime_ns": 1789142697478525000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11s\\seed_0\\per_gt_collective_gain.csv",
+      "size": 5800775,
+      "mtime_ns": 1790027627599090000
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1\\filtered_predictions.json",
+      "size": 55425933,
+      "mtime_ns": 1789143130826666800
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11s\\seed_1\\per_gt_collective_gain.csv",
+      "size": 5799085,
+      "mtime_ns": 1790027629674122600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2\\filtered_predictions.json",
+      "size": 57866953,
+      "mtime_ns": 1789143564604630300
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11s\\seed_2\\per_gt_collective_gain.csv",
+      "size": 5777296,
+      "mtime_ns": 1790027631586366200
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3\\filtered_predictions.json",
+      "size": 54127371,
+      "mtime_ns": 1789143999004531500
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11s\\seed_3\\per_gt_collective_gain.csv",
+      "size": 5818490,
+      "mtime_ns": 1790027633518849700
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4\\filtered_predictions.json",
+      "size": 53938013,
+      "mtime_ns": 1789144433747424600
+    },
+    {
+      "path": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1\\runs\\visdrone\\yolo11s\\seed_4\\per_gt_collective_gain.csv",
+      "size": 5804189,
+      "mtime_ns": 1790027635393258700
+    }
+  ],
+  "code_sha256": {
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\__init__.py": "138942541bf50a6a0ebbd3495b1d7410cae9c06792a2522be617d667d6744b2e",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\common.py": "fa84f2930de2463745cdf19f52c2d471f2dab301ebb7f5e275d55a16a867a98e",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\masks.py": "a4b06537178bb9f3ae6d0ab56f589b96cc612ba0901b6bb41e4fc25b1dadd734",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\pipeline.py": "f8204224d58f8cdc8867e28b1a1d4dbd87cebfa28b28bcc5f41c615b16fd5942",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\protocol.py": "bb1a5a3182a842ccaca54fc7dd8d452e9e87297a835082ac5fe18b557320e68d",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\reporting.py": "16ce5e51a6184f2f7524b3ed4d6e581e38cfd88330b2e7727a1ecf31709b507a",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\selection.py": "f09069b8909c4be7a5560feca537b635e0368effbaabdf6e60ee5522f1c8fbd0",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\setup_runtime.py": "a7829adc3c4a3c9255dad35921cae3d74898a87b5403dd282b32d3a443e45afd",
+    "E:\\Project\\mAC\\experiments\\downstream_sam_v1\\downstream\\storage.py": "6f672d67e4716db5acf689ce676f0ea9e259d4cd7387c21981a0337a6ea38f90",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\__init__.py": "1fe467d5e4f4a46f46096e2f1dff311125aa5a800e764d018088bdd9aa858e69",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\common.py": "2255f8a1d802c4345286b1a45d6c77360d14c333433182ca27c17a7ad5de7e1c",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\geometry.py": "81301e11972393b868c2d21bfbfda32f77c4ab337ef47bc23fb7df6f7f675803",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\masks.py": "cac3dd96edcb056df4dd755f3a85326df7cd817220d7770db5fd527b20e23be4",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\pipeline.py": "c98e7aaf86cd8d11acc67ba68634914fd4526c535cb1d9a41bc9721db6666683",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\report.py": "314fc9b2eb0c3dbb51944899fcda13fab7a38b9c53215725c11a36bf8f60daf4",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\diagnostics\\statistics.py": "9860ed52cf9726f3891e783c2c7b8942152a04bb070f852ad748d256857d0c55",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\run_checks.py": "9a961600d12c2feae9e382ac45c1b7091a0e57ea9630608876e91b50d3285ee6",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\run_experiment.py": "040f8e853b2a6d8569cc3994453b39d04ca81d31bfe2508a9e0ccc554b887637",
+    "E:\\Project\\mAC\\experiments\\real_output_diagnostics_v1\\tests\\test_diagnostics.py": "ae77e0c03ef4c3f16432a62d855e81b69175178772bd6511d158f967918d7b1d",
+    "E:\\Project\\mAC\\region_eval\\__init__.py": "2294b2a99956be6ac634ba3d2ade85673bd6c1a1ef62873d35baef53e8348817",
+    "E:\\Project\\mAC\\region_eval\\__main__.py": "09a9dd0c6f8107401e4f6f3336c15a32cf88eb2a349d1dc522165d2bc4a50cee",
+    "E:\\Project\\mAC\\region_eval\\cache_registry.py": "3ad440b597d96ab95a190c79b98fc315145e4e9f01dea7b3c4b1352c1c45113d",
+    "E:\\Project\\mAC\\region_eval\\case_analysis.py": "8fdb86fcfd07a744e30324194cfc2b4a989710f7df0cd37e61e7de2d0d24901a",
+    "E:\\Project\\mAC\\region_eval\\coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+    "E:\\Project\\mAC\\region_eval\\collective_fragmentation.py": "82e7e5f51b64890fe4db3e838622e4073b9da4c6f91aef1a7b11630396b6a53e",
+    "E:\\Project\\mAC\\region_eval\\diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+    "E:\\Project\\mAC\\region_eval\\direct_metric_comparison.py": "4b78d272ab4cf67e4afebde5554e54d7dba7683835de9d87d51274975f92ec57",
+    "E:\\Project\\mAC\\region_eval\\five_seed_paper_results.py": "b044eadae4f90b18128c658d4155a31f2619dbd2b5a986773cedaab182383f4b",
+    "E:\\Project\\mAC\\region_eval\\fixed_checkpoint_analysis.py": "d17b44509549fa60f750d21be6d1d67e17d7a01aaf3175c9d44a543f3e3d5979",
+    "E:\\Project\\mAC\\region_eval\\fragment_analysis.py": "b56c52892064f8be2e5da7440aacf382166836143454209b9482c37f3ae21314",
+    "E:\\Project\\mAC\\region_eval\\fragment_audit.py": "14bc8cd89f5c2324b5ca4c4f524cf4f2bd0d8b9c08ba8468540d651686786ac5",
+    "E:\\Project\\mAC\\region_eval\\gaming.py": "aee8b5664bab45cb163de78582b7c6f7555a9752492a45d1374b748095871901",
+    "E:\\Project\\mAC\\region_eval\\gaming_formal.py": "a4dc1ccfaaa1a5c2aa93392b2469213c33a253c7e6eb51f7e3e5da3c537e9f9c",
+    "E:\\Project\\mAC\\region_eval\\gaming_from_best.py": "5aae46ebabcc2053d38ea4439bafe0a1bf6b296c4aef96489e1daf81a1544354",
+    "E:\\Project\\mAC\\region_eval\\gaming_full_ap.py": "5a9477bd74b3fa9e14645ea6e66141e1c2433dbf49e80b29c4a62ffaa5a42f16",
+    "E:\\Project\\mAC\\region_eval\\geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+    "E:\\Project\\mAC\\region_eval\\mask_grounded_validity.py": "4b0d8368b1b4c44eed147275b086541619bd18219172c9a336ec6f1364e96076",
+    "E:\\Project\\mAC\\region_eval\\mask_grounded_validity_exact.py": "047816a7fb722c70502adffd9781ebddd6a252f5d155a007477be8ada9c9e76c",
+    "E:\\Project\\mAC\\region_eval\\matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+    "E:\\Project\\mAC\\region_eval\\natural_collective_gain.py": "f7aa3e15170438c43746bbda293bf4b7fc03baa6def28ede53bdf82d671dc38f",
+    "E:\\Project\\mAC\\region_eval\\offline.py": "6d144db46932ea2d9885fe4a4debf4a4e8b6dbaf710893b6985a26f99e4905ee",
+    "E:\\Project\\mAC\\region_eval\\paper_figures_ivc.py": "c9ce2821a2060ff10556b6e19a9ed90065d46c1a7138fcf4c6209a1c42188a30",
+    "E:\\Project\\mAC\\region_eval\\paper_results.py": "4513e01c9dceffae5467aa52797fc84c8a80af7aa1bcc10bf91ea881bd468518",
+    "E:\\Project\\mAC\\region_eval\\responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+    "E:\\Project\\mAC\\region_eval\\reviewer_robustness.py": "3315ee65b427322ed64d56cf03d81ee611bad83caf372ed3edccfcc744c5f824",
+    "E:\\Project\\mAC\\region_eval\\rtdetr_paper_results.py": "5613e2f70962e8a6b44cb7207e9f3408122feea186226c3f03cc6d3bcb2f6f27",
+    "E:\\Project\\mAC\\region_eval\\rtdetr_seeded_training.py": "becf3ec6e86fe6a15d872f2d6d0c2dd6c8540e793b2da41c29484efde918ea06",
+    "E:\\Project\\mAC\\region_eval\\seeded_training.py": "1d8a5c992d815181df5860460b6623b48987b866cefdd97502299c36d97caa82",
+    "E:\\Project\\mAC\\region_eval\\vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+    "E:\\Project\\mAC\\region_eval\\vc_incremental_value.py": "1a4ad6582be527e03a3bcfe52f083185d12695162119f237c4e147e143a7354e",
+    "E:\\Project\\mAC\\region_eval\\vc_matrix.py": "5e135f305d9bf9d3f41b2f2b777521d5fc2f0288a41cb2c4b2b80415bded1d4e",
+    "E:\\Project\\mAC\\region_eval\\vc_refinement.py": "feae9d21d4fc071ec38499f375a8c2630c35f8897486104bac9a2c78e2421f96",
+    "E:\\Project\\mAC\\region_eval\\vc_rtdetr_coco5.py": "9642183ba33aaa631040ec8c43e1ecb51beeed15acb24ae7c7cfba3357d8ea55",
+    "E:\\Project\\mAC\\region_eval\\vc_rtdetr_full.py": "679dafc924bfb85e7f3cc4fde3ee97f754657bf418091c3ec8ae9e297983da4d",
+    "E:\\Project\\mAC\\region_eval\\vc_rtdetr_run.py": "ff8ff0feab9745abfa6718632c9ab8d1dccebb15b81c882d4e18d64f491985ad",
+    "E:\\Project\\mAC\\region_eval\\vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+    "E:\\Project\\mAC\\region_eval\\vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+    "E:\\Project\\mAC\\region_eval\\vc_yolo_coco5.py": "a44b1f57b0e57f578c4e63c8ed33e6a1273005728cff68e73217785b8e63fe94",
+    "E:\\Project\\mAC\\region_eval\\visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64",
+    "E:\\Project\\mAC\\region_eval\\visdrone_run.py": "09ee5c3cfd26708976dcce6a4f106444a7d0607618b8e4c144776857c87194cc"
+  },
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "analysis_plan_sha256": "f3ee6fadc3e26068312327bd474ec6d98c2a153af5a12aa1bdc3f0c0cfafa895",
+  "runtime": {
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "3.0.2",
+      "pycocotools": "2.0.11"
+    }
+  },
+  "fingerprint": "3e1deb9c058ecb6eb6e385746acf46ac6c776d4b6ada8c4d826c53855c1077e4"
+}

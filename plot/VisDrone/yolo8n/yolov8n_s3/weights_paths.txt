@@ -1,0 +1,2 @@
+best: E:\Project\Database\VisDrone\yolov8n_s3\weights\best.pt
+last: E:\Project\Database\VisDrone\yolov8n_s3\weights\last.pt

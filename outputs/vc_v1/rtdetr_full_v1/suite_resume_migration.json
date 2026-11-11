@@ -1,0 +1,12 @@
+{
+  "status": "accepted_analysis_resume_migration",
+  "scope": "suite",
+  "reason": "Preserve completed inference shards after adding support for the native RT-DETR no-NMS postprocessing stage.",
+  "cached_fingerprint": "56209160dd8c53170291859bccef74a65ef1fa872b46b7d7f07de6ba9fdc878c",
+  "current_fingerprint": "c3c2d49a24d9dbe0d7316d25261a5c1f03b52405b738683eb91bc4e26425c9fc",
+  "accepted_source_sha256": {
+    "region_eval/offline.py": "6d144db46932ea2d9885fe4a4debf4a4e8b6dbaf710893b6985a26f99e4905ee",
+    "region_eval/vc_rtdetr_run.py": "ff8ff0feab9745abfa6718632c9ab8d1dccebb15b81c882d4e18d64f491985ad"
+  },
+  "migrated_at": "2026-09-16T03:35:39.757805+00:00"
+}

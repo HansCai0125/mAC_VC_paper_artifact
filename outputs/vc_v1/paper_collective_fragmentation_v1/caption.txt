@@ -1,0 +1,1 @@
+Controlled collective fragmentation on MS COCO and VisDrone. Top: union support is fixed while the number of fragments K increases. Bottom: K=16 while the retained support fraction rho varies. Scores are normalized to the unsplit controlled baseline; lines and shaded bands show the mean and range across evaluated runs. One minus LRP is plotted so that higher values are better.

@@ -1,0 +1,13 @@
+{
+  "smoke": false,
+  "primary_family": 12,
+  "seed_SD": "sample SD, ddof=1",
+  "bootstrap": "paired image-cluster percentile; conditional on frozen strata, detectors, reference draws and CV fits",
+  "p_values": "one-sided recentered bootstrap approximation; Holm across A3/B1/B2/C1 x three models",
+  "cv": "5 image folds x 10 repetitions in formal mode; mean repeated OOF squared errors, no clipping",
+  "unimplemented_optional": [
+    "D1 true crowd with unfiltered predictions",
+    "E1/E2 exploratory FP and selector-set attribution",
+    "F top-k qualitative panels"
+  ]
+}

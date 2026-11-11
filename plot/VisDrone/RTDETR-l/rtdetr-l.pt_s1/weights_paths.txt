@@ -1,0 +1,2 @@
+best: E:\Project\Database\VisDrone\rtdetr-l.pt_s1\weights\best.pt
+last: E:\Project\Database\VisDrone\rtdetr-l.pt_s1\weights\last.pt

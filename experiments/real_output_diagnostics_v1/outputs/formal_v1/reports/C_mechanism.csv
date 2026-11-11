@@ -1,0 +1,10 @@
+﻿model,outcome,units,delta_R2,interpretation
+yolov8n,foreground_recall,146630,0.0034322340083566983,descriptive mechanism; no primary significance claim
+yolov8n,owner_mask_iou_iou,146630,0.029594374512298842,descriptive mechanism; no primary significance claim
+yolov8n,owner_mask_iou_intersection,146630,0.05430513667743656,descriptive mechanism; no primary significance claim
+yolo11n,foreground_recall,146630,0.003964692671832593,descriptive mechanism; no primary significance claim
+yolo11n,owner_mask_iou_iou,146630,0.030127015919207505,descriptive mechanism; no primary significance claim
+yolo11n,owner_mask_iou_intersection,146630,0.05479777973268408,descriptive mechanism; no primary significance claim
+yolo11s,foreground_recall,146630,0.0036892908175505564,descriptive mechanism; no primary significance claim
+yolo11s,owner_mask_iou_iou,146630,0.033852190756454695,descriptive mechanism; no primary significance claim
+yolo11s,owner_mask_iou_intersection,146630,0.06311322064171926,descriptive mechanism; no primary significance claim

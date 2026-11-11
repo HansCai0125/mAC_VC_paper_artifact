@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "exact_version": "vc-v1-mask-grounded-exact-0.2.0",
+  "natural_analysis_version": "vc-v1-natural-collective-gain-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "theta": 0.25,
+  "n_runs": 15,
+  "n_models": 3,
+  "n_configured_seed_runs_per_model": 5,
+  "n_gt_per_run": 36335,
+  "n_coco_annotations": 36781,
+  "n_coco_categories": 80,
+  "selected_crowd_annotations": 0,
+  "geometry_method": "continuous COCO polygon clipping against disjoint axis-aligned rectangle-union cells",
+  "geometry_area_relative_error_mean": 1.6426220492582433e-13,
+  "geometry_area_relative_error_max": 4.273696601105024e-11,
+  "annotation_file": "E:\\Project\\Database\\MS-COCO\\annotations\\instances_val2017.json",
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_exact_v1",
+  "training": false,
+  "inference": false
+}

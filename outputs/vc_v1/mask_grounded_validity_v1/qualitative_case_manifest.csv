@@ -1,0 +1,5 @@
+﻿case_type,model,seed,image_id,gt_id,annotation_id,class_id,AC,MaskAC,CollectiveGain,MaskCollectiveGain,VC,image_path
+Foreground-confirmed collective coverage,yolo11s,0,000000186929,gt_1556664,1556664,49,0.9254171239771336,0.9722978054283175,0.6889364683937781,0.7049565871333834,0.9576754555908684,E:\Project\Database\MS-COCO\images\val\000000186929.jpg
+Box collective gain exceeds foreground gain,yolo11s,0,000000509451,gt_1299663,1299663,0,0.9265622692845304,1.0,0.61926137187695,0.27151623625671184,0.0,E:\Project\Database\MS-COCO\images\val\000000509451.jpg
+Box AC exceeds foreground coverage,yolo11s,0,000000513041,gt_1497370,1497370,40,0.6142691780942893,0.05524618991793669,0.0,0.0,0.0,E:\Project\Database\MS-COCO\images\val\000000513041.jpg
+Foreground coverage exceeds box AC,yolo11s,0,000000437239,gt_603948,603948,29,0.056969292207481606,0.977818853974122,0.024856689606726573,0.42051756007393726,0.10729545644912643,E:\Project\Database\MS-COCO\images\val\000000437239.jpg

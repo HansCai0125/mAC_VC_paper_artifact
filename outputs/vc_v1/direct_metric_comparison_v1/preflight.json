@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "comparison_version": "vc-v1-direct-metric-comparison-0.1.2",
+  "natural_analysis_version": "vc-v1-natural-collective-gain-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "theta": 0.25,
+  "n_runs": 35,
+  "n_model_groups": 7,
+  "n_per_gt_bytes": 199848296,
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\direct_metric_comparison_v1",
+  "training": false,
+  "inference": false
+}

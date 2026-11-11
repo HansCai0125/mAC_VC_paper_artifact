@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "full_ap_version": "vc-v1-full-diagnostic-ap-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "protocol_fingerprint": "3ae6341a53580779ce3e4de4c351147e7800e055f0da9eada768142ddd8aa167",
+  "completed_runs": 18,
+  "run_rows": 540,
+  "aggregate_rows": 180,
+  "training": false,
+  "inference": false,
+  "result_files": {
+    "protocol.json": "da6ebcde988efda9b4a750dd9611854096af60cc3782dca780c335ee815814ee",
+    "gaming_runs.csv": "a7a7d4c09848a0d5cf98bf2c71916cf9e92e8c26786b3f54baff5435445cda0d",
+    "gaming_aggregate.csv": "432c8c0195de61c2e492011503a5920ccdb4b952c6377f3dcb19875c86f59dc3",
+    "README.md": "caa284600bc1c607ceca1724e06dededfc716cc7e6e2a2278db7f092498b5570"
+  },
+  "completed_at": "2026-09-19T18:19:18.921707+00:00"
+}

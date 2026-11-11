@@ -1,0 +1,289 @@
+{
+  "status": "passed",
+  "version": "reviewer-robustness-1.0.0",
+  "n_runs": 35,
+  "n_settings": 7,
+  "runs": [
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0\\filtered_predictions.json",
+      "cache_bytes": 219747527,
+      "cache_sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 195960934,
+      "cache_sha256": "c2637b5dcf401a13f18dd557af7e5d7efa947e2ff37e996998f5e4a78f868adf"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 210802726,
+      "cache_sha256": "0bb62539147842775675ec29ab354e06520f318f432f9e106533a51c657cc902"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 203095695,
+      "cache_sha256": "b347724a85127a7790521c244d3e10ec9863c5a909701ed2ed9f18a8500d11b2"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 208594467,
+      "cache_sha256": "fd5a5c04eefff6a9546bf0e78dcd541b86f4ece4e680dac564a2e76d6d0db78f"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco\\filtered_predictions.json",
+      "cache_bytes": 189462991,
+      "cache_sha256": "f6da1e71ea9213830e6f01ecf7d34cfcdf5721d6305c85aa66b0bb20df7dda6f"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 203265042,
+      "cache_sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 203265042,
+      "cache_sha256": "08f6df40fee7a6be2c7776202dc9777ea0fe4821d0dde0c4f4c538a4c407d175"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 189462991,
+      "cache_sha256": "e6aaa9e0edcd5fc29ec7b8cee271331b9ece9538ba6c286b95e791879d6c75cf"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 182771937,
+      "cache_sha256": "6e490b4fa0a86dc34eddb5500aebf9c79bee334be629942883e7c61b1ec0876f"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0\\filtered_predictions.json",
+      "cache_bytes": 167407129,
+      "cache_sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 165807021,
+      "cache_sha256": "b30c4508df9117e7b06a0296a2decb53cd53cd0b43e2ef8427f5a1f2905be686"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 165807021,
+      "cache_sha256": "6c4ab2eb84ea44ffa0f88459d03c1d1abe832c79fd60a41c35c8004344107134"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 165807021,
+      "cache_sha256": "20061deacdd6c6a6ad9a70824d41f6783b14e6ee1b711ad605a6fc1e3f42a659"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 165807021,
+      "cache_sha256": "80f0a28188f02393ce7a5ac2ccd97f5d05873f0e405cc35abd06f9a7d318c5cf"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0\\filtered_predictions.json",
+      "cache_bytes": 67954942,
+      "cache_sha256": "c782eb766ea30aad07abad7789bf8ed4063b2d834ac8a52c74050ac254dbe773"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 69522825,
+      "cache_sha256": "60fd0d0cfa2eae63939a095e3addaec9f2126106cbf2daa9bfd877b041c6039d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 67368655,
+      "cache_sha256": "0e1bc4d53d24dc981becca1073ff6e56ef86637965e1ff2714d085f2e594c018"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 68489526,
+      "cache_sha256": "3847e49bc33005f283bfebf0559a5d7a0118f720151fe16fa08520206a985616"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 69324294,
+      "cache_sha256": "54fc7b4e8a4474edbf6426567f8ff905aa52cb588bbc14c22fbaabda532ba152"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone\\filtered_predictions.json",
+      "cache_bytes": 68063096,
+      "cache_sha256": "6dc0ff4ad226d833d544e7f993b88d0f719f10b0e961a152cbe9ae6a0ffe5c16"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 71559678,
+      "cache_sha256": "26b25d6fb4b83fa4ce59e5032c8b32e793b1de81eac603f74bdf21cdcc7cfeaf"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 66092539,
+      "cache_sha256": "9931c4b944a9e923e7b282df8dedb1067203851ee5ccebc84f447b7f9a5f6985"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 66981072,
+      "cache_sha256": "595cf9c19467d33bd8887f142e7c50f62d0d7fec22423664e4e5a3a39b3cf2ae"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 70224059,
+      "cache_sha256": "ca940bda79246fc2712032b2ade83e6d63124f7c0b34ff25d261575d2e582c63"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0\\filtered_predictions.json",
+      "cache_bytes": 55994414,
+      "cache_sha256": "1ca60a5d6bc5d5f81c684ea25a5050ab8ed7fb15ffd5935eaf19ab17949af3e3"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 55425933,
+      "cache_sha256": "e900bd988ec5c4f9fce981f421e8943002a7f006db15859a401f68af791cbbe9"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 57866953,
+      "cache_sha256": "aecddf092541b175362aa8ff6508524a18d7c95611fcbb22cdd3b9378665033d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 54127371,
+      "cache_sha256": "4023e6bca0f1f3fe3e0b9aed473a5586c51645e47a54a7a296fe2a2ee267593f"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 53938013,
+      "cache_sha256": "2de00579f08e9d4c765dc6bdc6d09fe78bd1c00a5883505d455bf98cd0032e59"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "rtdetr_l",
+      "seed": 0,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\rtdetr_full_v1\\runs\\visdrone\\rtdetr_l\\seed_0\\filtered_predictions.json",
+      "cache_bytes": 48474621,
+      "cache_sha256": "19e268d6b585b36d2ee0c432e9b06fd19ae61ea6d00496cbd493bcfc0dbabe14"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "rtdetr_l",
+      "seed": 1,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\rtdetr_full_v1\\runs\\visdrone\\rtdetr_l\\seed_1\\filtered_predictions.json",
+      "cache_bytes": 48539548,
+      "cache_sha256": "a4ff48c3fc34b58a9f7b9d555163bce5973225fa969da7d6d77a6cfbaeb7259f"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "rtdetr_l",
+      "seed": 2,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\rtdetr_full_v1\\runs\\visdrone\\rtdetr_l\\seed_2\\filtered_predictions.json",
+      "cache_bytes": 48453837,
+      "cache_sha256": "ede8378de3c745a46e3d939f3b86cb63c050c17b5d341aefc9459573b9d2b447"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "rtdetr_l",
+      "seed": 3,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\rtdetr_full_v1\\runs\\visdrone\\rtdetr_l\\seed_3\\filtered_predictions.json",
+      "cache_bytes": 48387703,
+      "cache_sha256": "ced12c9baac6f22423fe33feba86abc350efbf4aca14e71af081286eaea58e5b"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "rtdetr_l",
+      "seed": 4,
+      "cache": "E:\\Project\\mAC\\outputs\\vc_v1\\rtdetr_full_v1\\runs\\visdrone\\rtdetr_l\\seed_4\\filtered_predictions.json",
+      "cache_bytes": 48436020,
+      "cache_sha256": "4c38fd679779756b21af7dc8e920edeecd18000ffa1655532a26c7402b8568f8"
+    }
+  ],
+  "note": "All analyses reuse existing complete-validation caches; no training or inference."
+}

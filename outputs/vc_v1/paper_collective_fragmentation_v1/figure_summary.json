@@ -1,0 +1,26 @@
+{
+  "source": "E:\\Project\\mAC\\outputs\\vc_v1\\collective_fragmentation_v1\\fragmentation_runs.csv",
+  "source_sha256": "fd13876c02f41f6e45516023cfd3269abcbfcff26cac707bf3f305d760a77fcb",
+  "protocol_fingerprint": "5883e4535901516f90bbc9ddd3b3171d18c8e274d87cc8765a6dcac29d2cb76c",
+  "figure_pdf": "E:\\Project\\mAC\\outputs\\vc_v1\\paper_collective_fragmentation_v1\\collective_fragmentation_response.pdf",
+  "figure_png": "E:\\Project\\mAC\\outputs\\vc_v1\\paper_collective_fragmentation_v1\\collective_fragmentation_response.png",
+  "plot_data": "E:\\Project\\mAC\\outputs\\vc_v1\\paper_collective_fragmentation_v1\\collective_fragmentation_plot_data.csv",
+  "aggregation": {
+    "mscoco": "mean and range across 3 fixed model checkpoints",
+    "visdrone": "mean and range across 15 model-seed runs"
+  },
+  "normalization": "each score divided by the controlled unsplit K=1 baseline",
+  "fixed_union_max_absolute_normalized_mAC_deviation": 0.0,
+  "fixed_union_max_absolute_normalized_VC_deviation": 0.016575271377257783,
+  "retention_monotonicity": {
+    "normalized_mAC": {
+      "passed": 18,
+      "total": 18
+    },
+    "normalized_VC": {
+      "passed": 18,
+      "total": 18
+    }
+  },
+  "training_or_inference_performed": false
+}

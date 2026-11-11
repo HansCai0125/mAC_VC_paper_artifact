@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "incremental_value_version": "vc-v1-incremental-value-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "protocol_fingerprint": "2dae762a3b0a807fbd6daaa50a498850d53e8e6fc56b98a7029cf2ed6b725687",
+  "source_runs": 18,
+  "canonical_rows": 29,
+  "real_projection_rows": 90,
+  "aggregate_projection_rows": 30,
+  "maximum_formula_error": 2.220446049250313e-16,
+  "training": false,
+  "inference": false,
+  "completed_at": "2026-09-22T03:24:25.126615+00:00",
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\incremental_value_v1"
+}

@@ -1,0 +1,171 @@
+{
+  "fragmentation_version": "vc-v1-collective-fragmentation-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "source_matrix_fingerprint": "916baa3f128416d7f82a8bd680511a11e8586944669af951b5811aa67deb5141",
+  "source_code": {
+    "collective_fragmentation.py": "82e7e5f51b64890fe4db3e838622e4073b9da4c6f91aef1a7b11630396b6a53e",
+    "gaming.py": "aee8b5664bab45cb163de78582b7c6f7555a9752492a45d1374b748095871901",
+    "matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+    "responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+    "vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334"
+  },
+  "source_runs": [
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 0,
+      "run_fingerprint": "44ab74cbb973874934065490295b0d914f9685ed8ce2888fe77857193be8a906",
+      "cache_sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 0,
+      "run_fingerprint": "53db86571181fd8e37a429de09de7b22de44dfa714e2deb427df52f7b21ce285",
+      "cache_sha256": "c782eb766ea30aad07abad7789bf8ed4063b2d834ac8a52c74050ac254dbe773"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 1,
+      "run_fingerprint": "c49ccd8a73a7f88dc7daf92f2b8e9618236fc6c2ab2d00bcef3cde9afb4ff083",
+      "cache_sha256": "60fd0d0cfa2eae63939a095e3addaec9f2126106cbf2daa9bfd877b041c6039d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 2,
+      "run_fingerprint": "99d89d3265cd9d701fd88cdb35f0201bc27465b04af1a0d63b12dd5167ab99b8",
+      "cache_sha256": "0e1bc4d53d24dc981becca1073ff6e56ef86637965e1ff2714d085f2e594c018"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 3,
+      "run_fingerprint": "f139bd31f964de23815e465e3fcda3f4e1df4c924fcb51506c3cb9d3676a3a61",
+      "cache_sha256": "3847e49bc33005f283bfebf0559a5d7a0118f720151fe16fa08520206a985616"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 4,
+      "run_fingerprint": "036d32436076ecc0e3bd534d7ce42f3799f321e009afcb08b4869da0fda3cfa5",
+      "cache_sha256": "54fc7b4e8a4474edbf6426567f8ff905aa52cb588bbc14c22fbaabda532ba152"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 1,
+      "run_fingerprint": "6eda82b2378464c4a74ec7cac4cb220af8569af4be2f29af5ee89a29e67cead7",
+      "cache_sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 0,
+      "run_fingerprint": "edafafb9b500e21103dd86ef4fd147ed0726fcc75aca326f9567ca2f3ded388a",
+      "cache_sha256": "6dc0ff4ad226d833d544e7f993b88d0f719f10b0e961a152cbe9ae6a0ffe5c16"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 1,
+      "run_fingerprint": "d6c0dad3adc39a47a88e38c5e1ceb54f31aff2604c3c8ca3d8734fcf34dc3fc0",
+      "cache_sha256": "26b25d6fb4b83fa4ce59e5032c8b32e793b1de81eac603f74bdf21cdcc7cfeaf"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 2,
+      "run_fingerprint": "fd982cd95567df86067c066fd174bad2df5043ccaa6b65a8bae200b24450cdfc",
+      "cache_sha256": "9931c4b944a9e923e7b282df8dedb1067203851ee5ccebc84f447b7f9a5f6985"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 3,
+      "run_fingerprint": "5f8c3350fd8472aecf2063bca25ebda7f697c73b4132a9c556b22b8b0470ae54",
+      "cache_sha256": "595cf9c19467d33bd8887f142e7c50f62d0d7fec22423664e4e5a3a39b3cf2ae"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 4,
+      "run_fingerprint": "134d44638132647a602ceb9ed849a61d556330e0bb2319d0c21bf1ed9ef7e1be",
+      "cache_sha256": "ca940bda79246fc2712032b2ade83e6d63124f7c0b34ff25d261575d2e582c63"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 0,
+      "run_fingerprint": "efd8861c63c207c97965cbd1afe89fb39bf0318ce1b617dcd7b0ef24f0df6aee",
+      "cache_sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 0,
+      "run_fingerprint": "305b73c5241204b4c60020b6427daa8c65c179dbba619ad772e75504ab6832b0",
+      "cache_sha256": "1ca60a5d6bc5d5f81c684ea25a5050ab8ed7fb15ffd5935eaf19ab17949af3e3"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 1,
+      "run_fingerprint": "eb3394b08fef957b17d4cbb96c8edebd1aa9f4646996efc36434b66c2b2f1c75",
+      "cache_sha256": "e900bd988ec5c4f9fce981f421e8943002a7f006db15859a401f68af791cbbe9"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 2,
+      "run_fingerprint": "d5bbbc6779f09361832740cf1310c755782ec5630fa0599e7b987d01c1d4606c",
+      "cache_sha256": "aecddf092541b175362aa8ff6508524a18d7c95611fcbb22cdd3b9378665033d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 3,
+      "run_fingerprint": "93946ae72d52c1341c821ac82516f461b6b4ed5dae768eaa4b6b3fbf93f59baa",
+      "cache_sha256": "4023e6bca0f1f3fe3e0b9aed473a5586c51645e47a54a7a296fe2a2ee267593f"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 4,
+      "run_fingerprint": "1c7cc32b16ebc3bb5a2da042ced9871de998df5ce16498c3b294aa6e9634855d",
+      "cache_sha256": "2de00579f08e9d4c765dc6bdc6d09fe78bd1c00a5883505d455bf98cd0032e59"
+    }
+  ],
+  "purpose": "test whether regional metrics retain graded collective-support information after one-to-one matching saturates",
+  "primary_theta": 0.25,
+  "matching_iou": 0.5,
+  "support_definition": "prediction intersect frozen matched owner GT",
+  "fragmentation_q": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "fragmentation_counts": [
+    1,
+    4,
+    9,
+    16
+  ],
+  "retention_q": 4,
+  "retention_levels": [
+    1.0,
+    0.8,
+    0.6,
+    0.4,
+    0.2
+  ],
+  "tile_rule": "regular q-by-q support partition; each tile is centre-shrunk by sqrt(rho) so total retained area equals rho times support",
+  "confidence_rule": "every fragment inherits its parent confidence",
+  "non_target_rule": "all GT and non-target predictions remain unchanged",
+  "diagnostic_ap_role": "fixed-theta AP on controlled cached outputs; not official dataset AP",
+  "training": false,
+  "inference": false,
+  "protocol_fingerprint": "5883e4535901516f90bbc9ddd3b3171d18c8e274d87cc8765a6dcac29d2cb76c"
+}

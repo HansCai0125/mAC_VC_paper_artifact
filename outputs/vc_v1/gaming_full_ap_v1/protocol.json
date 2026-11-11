@@ -1,0 +1,337 @@
+{
+  "full_ap_version": "vc-v1-full-diagnostic-ap-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "purpose": "complete diagnostic mAP50:95 response curves for the formal controlled anti-gaming experiment",
+  "source_matrix_fingerprint": "916baa3f128416d7f82a8bd680511a11e8586944669af951b5811aa67deb5141",
+  "source_formal_output": "E:\\Project\\mAC\\outputs\\vc_v1\\gaming_formal_v1",
+  "source_formal_protocol_fingerprint": "89ca7213897d7c99bfd5550a1b40f4b40d36e9ad8c9a86bfbabad7fee35504f7",
+  "source_code": {
+    "gaming.py": "aee8b5664bab45cb163de78582b7c6f7555a9752492a45d1374b748095871901",
+    "gaming_formal.py": "a4dc1ccfaaa1a5c2aa93392b2469213c33a253c7e6eb51f7e3e5da3c537e9f9c",
+    "gaming_full_ap.py": "5a9477bd74b3fa9e14645ea6e66141e1c2433dbf49e80b29c4a62ffaa5a42f16"
+  },
+  "source_runs": [
+    {
+      "dataset": "mscoco",
+      "model": "yolov8n",
+      "seed": 0,
+      "run_fingerprint": "44ab74cbb973874934065490295b0d914f9685ed8ce2888fe77857193be8a906",
+      "cache_sha256": "c92835dfbf7385b8612e9ddd8aefd4129730b49f395968ddb0a818554bccb9e2"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 0,
+      "run_fingerprint": "53db86571181fd8e37a429de09de7b22de44dfa714e2deb427df52f7b21ce285",
+      "cache_sha256": "c782eb766ea30aad07abad7789bf8ed4063b2d834ac8a52c74050ac254dbe773"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 1,
+      "run_fingerprint": "c49ccd8a73a7f88dc7daf92f2b8e9618236fc6c2ab2d00bcef3cde9afb4ff083",
+      "cache_sha256": "60fd0d0cfa2eae63939a095e3addaec9f2126106cbf2daa9bfd877b041c6039d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 2,
+      "run_fingerprint": "99d89d3265cd9d701fd88cdb35f0201bc27465b04af1a0d63b12dd5167ab99b8",
+      "cache_sha256": "0e1bc4d53d24dc981becca1073ff6e56ef86637965e1ff2714d085f2e594c018"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 3,
+      "run_fingerprint": "f139bd31f964de23815e465e3fcda3f4e1df4c924fcb51506c3cb9d3676a3a61",
+      "cache_sha256": "3847e49bc33005f283bfebf0559a5d7a0118f720151fe16fa08520206a985616"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolov8n",
+      "seed": 4,
+      "run_fingerprint": "036d32436076ecc0e3bd534d7ce42f3799f321e009afcb08b4869da0fda3cfa5",
+      "cache_sha256": "54fc7b4e8a4474edbf6426567f8ff905aa52cb588bbc14c22fbaabda532ba152"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11n",
+      "seed": 1,
+      "run_fingerprint": "6eda82b2378464c4a74ec7cac4cb220af8569af4be2f29af5ee89a29e67cead7",
+      "cache_sha256": "de049dc6912340bd065c631790c38ad8dccae47c0f5c09ab66c20616b34c00a6"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 0,
+      "run_fingerprint": "edafafb9b500e21103dd86ef4fd147ed0726fcc75aca326f9567ca2f3ded388a",
+      "cache_sha256": "6dc0ff4ad226d833d544e7f993b88d0f719f10b0e961a152cbe9ae6a0ffe5c16"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 1,
+      "run_fingerprint": "d6c0dad3adc39a47a88e38c5e1ceb54f31aff2604c3c8ca3d8734fcf34dc3fc0",
+      "cache_sha256": "26b25d6fb4b83fa4ce59e5032c8b32e793b1de81eac603f74bdf21cdcc7cfeaf"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 2,
+      "run_fingerprint": "fd982cd95567df86067c066fd174bad2df5043ccaa6b65a8bae200b24450cdfc",
+      "cache_sha256": "9931c4b944a9e923e7b282df8dedb1067203851ee5ccebc84f447b7f9a5f6985"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 3,
+      "run_fingerprint": "5f8c3350fd8472aecf2063bca25ebda7f697c73b4132a9c556b22b8b0470ae54",
+      "cache_sha256": "595cf9c19467d33bd8887f142e7c50f62d0d7fec22423664e4e5a3a39b3cf2ae"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11n",
+      "seed": 4,
+      "run_fingerprint": "134d44638132647a602ceb9ed849a61d556330e0bb2319d0c21bf1ed9ef7e1be",
+      "cache_sha256": "ca940bda79246fc2712032b2ade83e6d63124f7c0b34ff25d261575d2e582c63"
+    },
+    {
+      "dataset": "mscoco",
+      "model": "yolo11s",
+      "seed": 0,
+      "run_fingerprint": "efd8861c63c207c97965cbd1afe89fb39bf0318ce1b617dcd7b0ef24f0df6aee",
+      "cache_sha256": "71f6ed6853910cdb1b18b5a1987778ced525c872c101fa893a2caf41f14e54a1"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 0,
+      "run_fingerprint": "305b73c5241204b4c60020b6427daa8c65c179dbba619ad772e75504ab6832b0",
+      "cache_sha256": "1ca60a5d6bc5d5f81c684ea25a5050ab8ed7fb15ffd5935eaf19ab17949af3e3"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 1,
+      "run_fingerprint": "eb3394b08fef957b17d4cbb96c8edebd1aa9f4646996efc36434b66c2b2f1c75",
+      "cache_sha256": "e900bd988ec5c4f9fce981f421e8943002a7f006db15859a401f68af791cbbe9"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 2,
+      "run_fingerprint": "d5bbbc6779f09361832740cf1310c755782ec5630fa0599e7b987d01c1d4606c",
+      "cache_sha256": "aecddf092541b175362aa8ff6508524a18d7c95611fcbb22cdd3b9378665033d"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 3,
+      "run_fingerprint": "93946ae72d52c1341c821ac82516f461b6b4ed5dae768eaa4b6b3fbf93f59baa",
+      "cache_sha256": "4023e6bca0f1f3fe3e0b9aed473a5586c51645e47a54a7a296fe2a2ee267593f"
+    },
+    {
+      "dataset": "visdrone",
+      "model": "yolo11s",
+      "seed": 4,
+      "run_fingerprint": "1c7cc32b16ebc3bb5a2da042ced9871de998df5ce16498c3b294aa6e9634855d",
+      "cache_sha256": "2de00579f08e9d4c765dc6bdc6d09fe78bd1c00a5883505d455bf98cd0032e59"
+    }
+  ],
+  "primary_theta": 0.25,
+  "attack_grids": {
+    "shrink_scales": [
+      1.0,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.71,
+      0.65,
+      0.6,
+      0.5
+    ],
+    "expand_scales": [
+      1.0,
+      1.05,
+      1.1,
+      1.2,
+      1.3,
+      1.41,
+      1.6,
+      1.8,
+      2.0,
+      3.0
+    ],
+    "duplicate_factors": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "diagnostic_ap_levels": [
+    [
+      "baseline",
+      "unmodified",
+      1.0
+    ],
+    [
+      "shrink",
+      "center_scale",
+      1.0
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.95
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.9
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.85
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.8
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.75
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.71
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.65
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.6
+    ],
+    [
+      "shrink",
+      "center_scale",
+      0.5
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.0
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.05
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.1
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.2
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.3
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.41
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.6
+    ],
+    [
+      "expand",
+      "center_scale",
+      1.8
+    ],
+    [
+      "expand",
+      "center_scale",
+      2.0
+    ],
+    [
+      "expand",
+      "center_scale",
+      3.0
+    ],
+    [
+      "duplicate",
+      "exact",
+      1
+    ],
+    [
+      "duplicate",
+      "exact",
+      2
+    ],
+    [
+      "duplicate",
+      "exact",
+      4
+    ],
+    [
+      "duplicate",
+      "exact",
+      8
+    ],
+    [
+      "duplicate",
+      "exact",
+      16
+    ],
+    [
+      "duplicate",
+      "controlled_jitter_2pct_center_1pct_size",
+      1
+    ],
+    [
+      "duplicate",
+      "controlled_jitter_2pct_center_1pct_size",
+      2
+    ],
+    [
+      "duplicate",
+      "controlled_jitter_2pct_center_1pct_size",
+      4
+    ],
+    [
+      "duplicate",
+      "controlled_jitter_2pct_center_1pct_size",
+      8
+    ],
+    [
+      "duplicate",
+      "controlled_jitter_2pct_center_1pct_size",
+      16
+    ]
+  ],
+  "diagnostic_ap_role": "diagnostic AP under the same fixed theta and manipulated post-NMS predictions; not official dataset AP",
+  "completion_strategy": "reuse audited formal rows and recompute only missing AP levels, plus the baseline AP needed for normalization",
+  "training": false,
+  "inference": false,
+  "protocol_fingerprint": "3ae6341a53580779ce3e4de4c351147e7800e055f0da9eada768142ddd8aa167"
+}

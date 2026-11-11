@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "dataset": "synthetic_geometry_only",
+    "split": "analytic_cases",
+    "model_id": "hand_constructed",
+    "checkpoint_id": "none",
+    "coordinate_frame": "original_image_xyxy",
+    "ignore_crowd_policy": "already_filtered",
+    "class_ids": [
+      0,
+      1
+    ],
+    "postprocessing": {
+      "stage": "synthetic",
+      "confidence_floor": 0,
+      "nms_iou": null,
+      "max_det": 500
+    }
+  },
+  "images": [
+    {
+      "image_id": "perfect",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "fragment",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p1",
+          "xyxy": [
+            0,
+            0,
+            5,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        },
+        {
+          "id": "p2",
+          "xyxy": [
+            5,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "oversized",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            20,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "translation",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            5,
+            0,
+            15,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "orphan",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        },
+        {
+          "id": "orphan",
+          "xyxy": [
+            20,
+            0,
+            30,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "span_adjacent",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g1",
+          "xyxy": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "class_id": 0
+        },
+        {
+          "id": "g2",
+          "xyxy": [
+            1,
+            0,
+            2,
+            1
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "miss_tiny",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "large",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        },
+        {
+          "id": "tiny",
+          "xyxy": [
+            20,
+            0,
+            21,
+            1
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "wrong_class",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 1,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "no_predictions",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": []
+    },
+    {
+      "image_id": "prediction_only",
+      "width": 100,
+      "height": 100,
+      "gts": [],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "image_id": "both_empty",
+      "width": 100,
+      "height": 100,
+      "gts": [],
+      "predictions": []
+    },
+    {
+      "image_id": "full_image",
+      "width": 100,
+      "height": 100,
+      "gts": [
+        {
+          "id": "g",
+          "xyxy": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "class_id": 0
+        }
+      ],
+      "predictions": [
+        {
+          "id": "p",
+          "xyxy": [
+            0,
+            0,
+            100,
+            100
+          ],
+          "class_id": 0,
+          "score": 0.9
+        }
+      ]
+    }
+  ]
+}

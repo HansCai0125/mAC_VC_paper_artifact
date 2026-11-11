@@ -1,0 +1,53 @@
+{
+  "status": "implementation_checks_passed",
+  "unit_tests_passed": 28,
+  "unit_tests_skipped": 0,
+  "synthetic_end_to_end": "calibration, mock mask inference, resume, mask AP, bootstrap, figures, cross-model selection passed",
+  "real_data_check": {
+    "status": "passed",
+    "source": "yolov8n_seed0",
+    "annotation_images_checked": 5000,
+    "metric_parity_calibration_images": 24,
+    "parameter_settings": 9,
+    "max_absolute_metric_error": 2.220446049250313e-16,
+    "mask_annotation_audit": {
+      "ignore_policy": "same_class_ignore_pixels_except_positive_target",
+      "ignored_bbox_fallback_count": 0,
+      "ignored_bbox_fallback_annotation_ids": [],
+      "zero_rasterized_positive_count": 0,
+      "zero_rasterized_positive_annotation_ids": []
+    },
+    "detector_inference": false,
+    "SAM_inference": false
+  },
+  "source_preflight": "15 complete COCO caches, content hashes checked, 5000 image files present",
+  "installed_environment_import_check": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "pycocotools": "2.0.11",
+    "segment_anything": true,
+    "CUDA_available": true
+  },
+  "SAM_weights_downloaded": false,
+  "real_SAM_inference_executed": false,
+  "formal_experiment_executed": false,
+  "source_sha256": {
+    "downstream\\__init__.py": "138942541bf50a6a0ebbd3495b1d7410cae9c06792a2522be617d667d6744b2e",
+    "downstream\\common.py": "fa84f2930de2463745cdf19f52c2d471f2dab301ebb7f5e275d55a16a867a98e",
+    "downstream\\masks.py": "a4b06537178bb9f3ae6d0ab56f589b96cc612ba0901b6bb41e4fc25b1dadd734",
+    "downstream\\pipeline.py": "f8204224d58f8cdc8867e28b1a1d4dbd87cebfa28b28bcc5f41c615b16fd5942",
+    "downstream\\protocol.py": "bb1a5a3182a842ccaca54fc7dd8d452e9e87297a835082ac5fe18b557320e68d",
+    "downstream\\reporting.py": "16ce5e51a6184f2f7524b3ed4d6e581e38cfd88330b2e7727a1ecf31709b507a",
+    "downstream\\selection.py": "f09069b8909c4be7a5560feca537b635e0368effbaabdf6e60ee5522f1c8fbd0",
+    "downstream\\setup_runtime.py": "a7829adc3c4a3c9255dad35921cae3d74898a87b5403dd282b32d3a443e45afd",
+    "downstream\\storage.py": "6f672d67e4716db5acf689ce676f0ea9e259d4cd7387c21981a0337a6ea38f90",
+    "prepare_environment.py": "5fe72951e9e8dd57f1e6ef951e839972cf76830420c54f5c4483208d16996d3e",
+    "run_checks.py": "6234e972b3a88b432ce744a494263f87ddc352e145ec250bdb98791b66d8fc1e",
+    "run_experiment.py": "5859bf1a83a5011fcf96f8075adfd43993512fe22cd9449207fab1984fb594ba",
+    "tests\\test_masks.py": "ea8225a677a0d8a3f00dce79e7b30182cd651539e1d0af7a39dd239fd34318b8",
+    "tests\\test_pipeline.py": "9eb391dc1e0c9258cedfbf21bff207252860a78223776b2afb8d7a11410951d6",
+    "tests\\test_reporting.py": "4300368343abd0d4c2c1c5c9a8281c4a5227a7b259781dd90314d9e705c2f928",
+    "tests\\test_selection.py": "2020d94cccb51382978672b92876a0fe04260992a79a81e37b660d0a78cf5aa0",
+    "tests\\validate_cached_slice.py": "09dc20ce87bf825d04c9140338e0b652fbf6aee4c878f0e770d4686a9c8a9ca5"
+  }
+}

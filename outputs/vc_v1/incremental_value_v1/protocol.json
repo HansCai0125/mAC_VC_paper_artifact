@@ -1,0 +1,52 @@
+{
+  "incremental_value_version": "vc-v1-incremental-value-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "primary_theta": 0.25,
+  "source_matrix": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1",
+  "source_matrix_fingerprint": "5f9ffe1de006edadf171a8bc3de1210bd90fe709a86e098cf8b629dfd8284525",
+  "scale_grid": [
+    0.5,
+    0.71,
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.25,
+    1.41,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "orphan_counts": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "orphan_ratios": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "gap_ratios": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "geometry": "continuous axis-aligned rectangles",
+  "source_code": {
+    "vc_incremental_value.py": "1a4ad6582be527e03a3bcfe52f083185d12695162119f237c4e147e143a7354e",
+    "vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+    "responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181"
+  },
+  "training": false,
+  "inference": false,
+  "protocol_fingerprint": "2dae762a3b0a807fbd6daaa50a498850d53e8e6fc56b98a7029cf2ed6b725687"
+}

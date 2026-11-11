@@ -1,0 +1,16 @@
+﻿calibration_bbox_AP50_95,calibration_bbox_AP50,protocol,run_id,model,seed
+0.36325992957700265,0.5067946351510887,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolov8n_seed0,yolov8n,0
+0.34398362595705184,0.47957417029753857,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolov8n_seed1,yolov8n,1
+0.34081449565221883,0.47989663772721125,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolov8n_seed2,yolov8n,2
+0.34597901104812334,0.4838662411751899,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolov8n_seed3,yolov8n,3
+0.3452421085380642,0.48321926848197416,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolov8n_seed4,yolov8n,4
+0.3638047569207264,0.5065330742826893,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11n_seed0,yolo11n,0
+0.3793786452144575,0.5282781113902288,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11n_seed1,yolo11n,1
+0.3793786452144575,0.5282781113902288,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11n_seed2,yolo11n,2
+0.3638047569207264,0.5065330742826893,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11n_seed3,yolo11n,3
+0.3590865278398601,0.49963212514869515,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11n_seed4,yolo11n,4
+0.4472832078082839,0.6022875075632405,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11s_seed0,yolo11s,0
+0.4108603586594376,0.5641664578687444,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11s_seed1,yolo11s,1
+0.4108603586594376,0.5641664578687444,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11s_seed2,yolo11s,2
+0.4108603586594376,0.5641664578687444,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11s_seed3,yolo11s,3
+0.4108603586594376,0.5641664578687444,COCOeval bbox maxDets=100; original saved confidence ranking; upstream crowd filtering retained,yolo11s_seed4,yolo11s,4

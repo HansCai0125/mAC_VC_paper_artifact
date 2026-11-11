@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tests": {
+    "tests": 14,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.03200000000651926
+  },
+  "smoke_tasks": {
+    "AB_D2": 72,
+    "C": 36
+  },
+  "primary_tests": 12,
+  "fold_records": 72,
+  "shared_train_test_images": 0,
+  "completed_run_skips_recomputation": true,
+  "formal_run_started": false
+}

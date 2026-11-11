@@ -1,0 +1,7 @@
+{
+  "ignore_policy": "same_class_ignore_pixels_except_positive_target",
+  "ignored_bbox_fallback_count": 0,
+  "ignored_bbox_fallback_annotation_ids": [],
+  "zero_rasterized_positive_count": 0,
+  "zero_rasterized_positive_annotation_ids": []
+}

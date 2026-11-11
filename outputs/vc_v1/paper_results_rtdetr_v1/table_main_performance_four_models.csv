@@ -1,0 +1,9 @@
+﻿dataset,model,uncertainty,checkpoint,VC,mAC,standard_F1,standard_LRP,diagnostic_AP50_95
+MSCOCO2017,yolov8n,fixed checkpoint; image-bootstrap 95% CI,seed 0,"0.3906 [0.3830, 0.3986]","0.5023 [0.4925, 0.5122]","0.5493 [0.5415, 0.5572]","0.7348 [0.7291, 0.7403]",0.3469
+MSCOCO2017,yolo11n,fixed checkpoint; image-bootstrap 95% CI,seed 1,"0.4001 [0.3921, 0.4083]","0.5115 [0.5015, 0.5219]","0.5594 [0.5514, 0.5675]","0.7260 [0.7202, 0.7318]",0.3620
+MSCOCO2017,yolo11s,fixed checkpoint; image-bootstrap 95% CI,seed 0,"0.4595 [0.4512, 0.4681]","0.5838 [0.5735, 0.5944]","0.6129 [0.6054, 0.6207]","0.6830 [0.6767, 0.6890]",0.4258
+MSCOCO2017,rtdetr_l,fixed checkpoint; image-bootstrap 95% CI,seed 0,"0.3989 [0.3914, 0.4064]","0.7068 [0.6966, 0.7168]","0.5014 [0.4948, 0.5081]","0.7707 [0.7662, 0.7751]",0.4407
+VisDrone2019-DET,yolov8n,five training seeds; sample standard deviation,seeds 0-4,0.3481 ± 0.0010,0.4317 ± 0.0017,0.5242 ± 0.0009,0.7876 ± 0.0005,0.1729 ± 0.0009
+VisDrone2019-DET,yolo11n,five training seeds; sample standard deviation,seeds 0-4,0.3490 ± 0.0015,0.4332 ± 0.0020,0.5246 ± 0.0026,0.7868 ± 0.0015,0.1735 ± 0.0012
+VisDrone2019-DET,yolo11s,five training seeds; sample standard deviation,seeds 0-4,0.3942 ± 0.0017,0.4929 ± 0.0022,0.5757 ± 0.0017,0.7534 ± 0.0011,0.2124 ± 0.0010
+VisDrone2019-DET,rtdetr_l,five training seeds; sample standard deviation,seeds 0-4,0.4605 ± 0.0024,0.7009 ± 0.0031,0.6129 ± 0.0026,0.7447 ± 0.0021,0.2785 ± 0.0011

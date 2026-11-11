@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "analysis_version": "vc-v1-natural-collective-gain-0.1.0",
+  "registry_version": "vc-v1-cache-registry-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "theta": 0.25,
+  "n_runs": 35,
+  "n_model_groups": 7,
+  "training": false,
+  "inference": false,
+  "completed_at": "2026-09-21T21:54:08.831085+00:00",
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\natural_collective_gain_v1"
+}

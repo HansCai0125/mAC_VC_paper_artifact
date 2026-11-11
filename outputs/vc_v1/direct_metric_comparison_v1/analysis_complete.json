@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "comparison_version": "vc-v1-direct-metric-comparison-0.1.2",
+  "natural_analysis_version": "vc-v1-natural-collective-gain-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "theta": 0.25,
+  "n_runs": 35,
+  "n_model_groups": 7,
+  "n_qualitative_cases": 4,
+  "training": false,
+  "inference": false,
+  "completed_at": "2026-09-21T22:52:37.909673+00:00",
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\direct_metric_comparison_v1"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "sources": 30,
+  "coco_runs": 15,
+  "visdrone_runs": 15,
+  "settings": {
+    "theta": 0.25,
+    "budget": 20,
+    "bootstrap": 2000,
+    "translations": 200,
+    "cv_folds": 5,
+    "cv_repeats": 10,
+    "random_seed": 20261027,
+    "gain_threshold": 0.05,
+    "area_relative_epsilon": 1e-09,
+    "min_stratum_images": 20,
+    "min_stratum_targets": 60,
+    "coarsening_deltas": [
+      0.0,
+      0.25,
+      0.5
+    ],
+    "smoke": false,
+    "smoke_images": 12
+  },
+  "source_files": 95,
+  "sam_cache_tables": {
+    "detections": 75000,
+    "inferred": 4000,
+    "evaluated": 60000
+  },
+  "crowd_annotations": 446,
+  "crowd_images": 411,
+  "D1_status": "not_run: registered prediction caches already apply crowd filtering; D2 is the prespecified substitute",
+  "sam_protocol_fingerprint": "bbaff58b395480d06fa9e12b4b75c480071d4e25c77c4a92905f8fb49acd92b3"
+}

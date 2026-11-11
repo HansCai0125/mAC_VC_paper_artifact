@@ -1,0 +1,22 @@
+{
+  "n_images": 5000,
+  "n_gt": 36335,
+  "n_pred": 28180,
+  "n_assigned": 23699,
+  "n_orphan": 4481,
+  "n_ambiguous": 9572,
+  "n_owner_changed": 830,
+  "owner_change_rate_ambiguous": 0.08671124111993314,
+  "owner_change_rate_assigned": 0.035022574792185325,
+  "VC_max_iou": 0.4380260150454944,
+  "VC_max_intersection": 0.4285791069514761,
+  "dataset": "mscoco",
+  "model": "yolo11s",
+  "seed": 3,
+  "theta": 0.25,
+  "source_sha256": "20061deacdd6c6a6ad9a70824d41f6783b14e6ee1b711ad605a6fc1e3f42a659",
+  "source_bytes": 165807021,
+  "delta_VC": -0.00944690809401827,
+  "absolute_delta_VC": 0.00944690809401827,
+  "version": "reviewer-robustness-1.0.0"
+}

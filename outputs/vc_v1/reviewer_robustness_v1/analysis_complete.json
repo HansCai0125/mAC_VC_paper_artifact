@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "version": "reviewer-robustness-1.0.0",
+  "n_ownership_runs": 35,
+  "n_settings": 7,
+  "theta": 0.25,
+  "owner_change_rate_denominator": "predictions with >=2 positive-overlap same-class candidate GTs",
+  "operating_point_selection": "highest mean F1 across five seeds on the 19-point validation sweep; lower theta breaks exact ties",
+  "selection_interpretation": "post-hoc descriptive robustness on the same validation split, not an unbiased retuned benchmark",
+  "no_training_or_inference": true,
+  "ownership_rank_changed": [],
+  "operating_rank_changed": {
+    "F1": [],
+    "mAC": [],
+    "VC": []
+  }
+}

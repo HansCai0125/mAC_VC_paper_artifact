@@ -1,0 +1,1058 @@
+{
+  "status": "started",
+  "created_at": "2026-09-11T14:24:33.277062+00:00",
+  "matrix_version": "vc-v1-formal-matrix-0.1.0",
+  "full_run_version": "vc-v1-full-cache-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "primary_theta": 0.25,
+  "theta_grid": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "inference": {
+    "device": "auto",
+    "imgsz": 640,
+    "confidence_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 1000
+  },
+  "specifications": [
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo8n\\yolov8n_s0\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolov8n",
+      "seed": 0,
+      "model_id": "YOLOv8n_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_0",
+      "reuse_existing": false,
+      "weights_sha256": "ba9610e6cff60114a303925d80a74945d5ca92f8b2740c2ee265659dbd13eb26",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo8n\\yolov8n_s0\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolov8n",
+      "seed": 0,
+      "model_id": "YOLOv8n_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_0",
+      "reuse_existing": false,
+      "weights_sha256": "06a1c17db6bc8e9ee4f5523ef14dc2e8dfc4a65c5b0d1b2f91230944b85248cf",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo8n\\yolov8n_s1\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolov8n",
+      "seed": 1,
+      "model_id": "YOLOv8n_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "37b3b297b0e747d5c3d958046f3080a60aecf9d2372d5157eb1781d3cb08c2fb",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo8n\\yolov8n_s1\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolov8n",
+      "seed": 1,
+      "model_id": "YOLOv8n_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "8a4bf9218eabb5e54a9c655c3e9a250505a4661b54ad01613ac9385b37d5dd9a",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo8n\\yolov8n_s2\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolov8n",
+      "seed": 2,
+      "model_id": "YOLOv8n_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "4943aa1159818a8b62781d96412bc4fec21c44b27e6a1a978a23309fdea24efe",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo8n\\yolov8n_s2\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolov8n",
+      "seed": 2,
+      "model_id": "YOLOv8n_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "b81f25d28fe1456cc2c9fd8fa7e32c98c646dbb01835db372a2578065cbf4dbd",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo8n\\yolov8n_s3\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolov8n",
+      "seed": 3,
+      "model_id": "YOLOv8n_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "09301364bafe7e5e720fe7167179cd15cd9acf194167716a26ae8b12fbc09d0b",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo8n\\yolov8n_s3\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolov8n",
+      "seed": 3,
+      "model_id": "YOLOv8n_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "a22741baa5600ab7611d48c203f3ed6bbea45c66b5f3a366da6b144e9aa483c1",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo8n\\yolov8n_s4\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolov8n",
+      "seed": 4,
+      "model_id": "YOLOv8n_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolov8n\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "68094c36e79f4f3ba2ccc0bdb5a557d7dbabc794cdd341d9200eb645eea7cb17",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo8n\\yolov8n_s4\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolov8n",
+      "seed": 4,
+      "model_id": "YOLOv8n_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolov8n\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "cac3e4e05d2fe2b5407fc2ef420d3f53d3273b93989ccc8b45056cbb3f9b0432",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11n\\yolo11n_s0\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11n",
+      "seed": 0,
+      "model_id": "YOLO11n_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\mscoco",
+      "reuse_existing": true,
+      "weights_sha256": "ebae024f03ebd1bcc7ed99183b203072cae685f7496176299a2270e890bd2311",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11n\\yolo11n_s0\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11n",
+      "seed": 0,
+      "model_id": "YOLO11n_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\full_seed0_v1\\visdrone",
+      "reuse_existing": true,
+      "weights_sha256": "b76492a41361b8cb96d64f9964bbf7ac2caad77c120ed055fb2b43285cbc1025",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11n\\yolo11n_s1\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11n",
+      "seed": 1,
+      "model_id": "YOLO11n_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "dbe249e3a4d34571875fab2e15ff09d398d2817d04de38413a5c3e4ad6e4ea11",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11n\\yolo11n_s1\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11n",
+      "seed": 1,
+      "model_id": "YOLO11n_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "befecb7a42e4f29caf2480ed9b81feb022baeaa2b5c75a8470cf65c553f2044c",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11n\\yolo11n_s2\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11n",
+      "seed": 2,
+      "model_id": "YOLO11n_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "eccbd81711770dd8de6e75814e14d9e432969fe7819cfcdd0ebded66a2005dcd",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11n\\yolo11n_s2\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11n",
+      "seed": 2,
+      "model_id": "YOLO11n_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "e9e9ab381f6b5197c6c7967b1385a2ef151f9196180a915b08e41c96fb5704d5",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11n\\yolo11n_s3\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11n",
+      "seed": 3,
+      "model_id": "YOLO11n_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "4e95e0075a86dc6e03b1ff992d2f0d259f7bcc7da807cef9001c7558eac6d75b",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11n\\yolo11n_s3\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11n",
+      "seed": 3,
+      "model_id": "YOLO11n_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "536cd8e87494471e1d7d52d0686f59b79c401c32d7d80372599cc6e1b678d944",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11n\\yolo11n_s4\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11n",
+      "seed": 4,
+      "model_id": "YOLO11n_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11n\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "8d5e1679f67fcadce9c8982894cbfdc829906925fdcd2da4850dfd907b91fa77",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11n\\yolo11n_s4\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11n",
+      "seed": 4,
+      "model_id": "YOLO11n_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11n\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "cf55d78b061be971d269c2513bb550c6312242d8c84a4446cab9eeae131dd4e0",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11s\\yolo11s_s0\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11s",
+      "seed": 0,
+      "model_id": "YOLO11s_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_0",
+      "reuse_existing": false,
+      "weights_sha256": "274e7c493a19d1fdaff316ae5148b404870447447a5d7dc30fd441798bda08a6",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11s\\yolo11s_s0\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11s",
+      "seed": 0,
+      "model_id": "YOLO11s_seed0",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_0",
+      "reuse_existing": false,
+      "weights_sha256": "6843793f6adf45ac1fb9d59ca26714c4c1514aadffdf816cb0e7aed25fdad3f2",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11s\\yolo11s_s1\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11s",
+      "seed": 1,
+      "model_id": "YOLO11s_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "370957830f0435fa781fe44f79bba91af4142bdb125e2369f0f2a39daf03d135",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11s\\yolo11s_s1\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11s",
+      "seed": 1,
+      "model_id": "YOLO11s_seed1",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_1",
+      "reuse_existing": false,
+      "weights_sha256": "f38cd72ae2635bc3c888180ecac4876dc2eae9863ee23cf82c0a4aeb13f0078e",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11s\\yolo11s_s2\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11s",
+      "seed": 2,
+      "model_id": "YOLO11s_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "82c41cfe0f44d63cc2ac1f0cc6852834f57258672171148752061315bab6ea4d",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11s\\yolo11s_s2\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11s",
+      "seed": 2,
+      "model_id": "YOLO11s_seed2",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_2",
+      "reuse_existing": false,
+      "weights_sha256": "bef1b8efd3974714ecd0783149e79d9648640724772cab05b9a0e2ce9a7c157b",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11s\\yolo11s_s3\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11s",
+      "seed": 3,
+      "model_id": "YOLO11s_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "f2034b7c33c080fef77eedd453b25d82c211df06eaaa61a0055388e58ceef9a0",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11s\\yolo11s_s3\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11s",
+      "seed": 3,
+      "model_id": "YOLO11s_seed3",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_3",
+      "reuse_existing": false,
+      "weights_sha256": "f86df723ead152dbdc77ad2d5b1be651f9c800890a7e428b7e95c3e921485d32",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "mscoco",
+      "dataset_root": "E:\\Project\\Database\\MS-COCO",
+      "weights": "E:\\Project\\Database\\MS-COCO\\yolo11s\\yolo11s_s4\\weights\\best.pt",
+      "sample_count": 5000,
+      "model": "yolo11s",
+      "seed": 4,
+      "model_id": "YOLO11s_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\mscoco\\yolo11s\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "ca93707d17c71c575876048d32bbc4fdc8bb609fda39a1ec1aea5bb8cee5f597",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "d9ee6d88bfe88fe6ded4ce9cd177908d4381f7fdddde244de4d66285f54f8422",
+        "annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+        "images": {
+          "count": 5000,
+          "sha256": "2fc9f472bf0db69f95cb028c9fcaa61261fa6685be82f33cd521d7b763223ff3"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    },
+    {
+      "kind": "visdrone",
+      "dataset_root": "E:\\Project\\Database\\VisDrone",
+      "weights": "E:\\Project\\mAC\\plot\\VisDrone\\yolo11s\\yolo11s_s4\\weights\\best.pt",
+      "sample_count": 548,
+      "model": "yolo11s",
+      "seed": 4,
+      "model_id": "YOLO11s_seed4",
+      "output": "E:\\Project\\mAC\\outputs\\vc_v1\\formal_matrix_v1\\runs\\visdrone\\yolo11s\\seed_4",
+      "reuse_existing": false,
+      "weights_sha256": "f5652d52aa2a3b1ba8dfb491139a0768ccde61909b74ca8e7fe12ae65375657d",
+      "dataset_source_signature": {
+        "dataset_yaml_sha256": "9860ea280b521d95b0423850037a616adbcfb6dad8d1c5cfc0872301fcf1a57f",
+        "annotations": {
+          "count": 548,
+          "sha256": "a2689651538d372f2ce89455d6cd012441b9d379cfb32ab6fe6b19ff89cdd688"
+        },
+        "images": {
+          "count": 548,
+          "sha256": "6d02333ffe627d4a1822eac086d2776a6901b8176ca26e2d9253cef9df491f55"
+        }
+      },
+      "source_sha256": {
+        "region_eval/coco.py": "ba90028953c43372c3bd6f6d26a19fd3551354dc0b065556d8dce0483a6f4885",
+        "region_eval/diagnostics.py": "a1cf57ee8c25497cb5274e2ef186220850a310c021afd80bdf49d5c3e181dcc6",
+        "region_eval/geometry.py": "83656d4edded66029ea075f12152cecbdd5da29705690b280a24c70b52689d2b",
+        "region_eval/matching_analysis.py": "c32c787692f2fe76818aec376b5d901a1a3bbc3b0791f2d7fe7b6a2b34f83828",
+        "region_eval/offline.py": "2c59d1269e9793596e080327af256253169893eb19237a2476944f01d6a60616",
+        "region_eval/responsibility_analysis.py": "b4b22d2632ac84bc95a0772639a9a0f8515ab8a3225b85478ce0c4693c828181",
+        "region_eval/vc_full.py": "aee06d97be5839cc3c569cde7282ce9151d3a23a8237596b9d5429e4e21a87b3",
+        "region_eval/vc_smoke.py": "f94c14938e6572240a9a22a4bb6101972930a3a55bc21345fadc01860cd23ef0",
+        "region_eval/vc_v1.py": "31901d8a2350bb47b7a310ee3e09838c962524139815017ede27da5f0646b334",
+        "region_eval/visdrone.py": "789fa69f86ef0d51a962fb8cbe6169211a4097b2e53876b06eeb17e8fd0e5e64"
+      }
+    }
+  ],
+  "matrix_fingerprint": "916baa3f128416d7f82a8bd680511a11e8586944669af951b5811aa67deb5141",
+  "preflight": {
+    "status": "passed",
+    "combinations": 30,
+    "reused_combinations": 2,
+    "pending_combinations": 28,
+    "dataset_image_counts": {
+      "mscoco": 5000,
+      "visdrone": 548
+    },
+    "distinct_checkpoint_hashes": 30,
+    "estimated_remaining_bytes": 11083802310,
+    "free_bytes": 1304874029056,
+    "checkpoint_class_mapping_verified": true
+  }
+}

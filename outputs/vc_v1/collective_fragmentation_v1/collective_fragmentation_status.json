@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "fragmentation_version": "vc-v1-collective-fragmentation-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "protocol_fingerprint": "5883e4535901516f90bbc9ddd3b3171d18c8e274d87cc8765a6dcac29d2cb76c",
+  "completed_runs": 18,
+  "run_rows": 162,
+  "aggregate_rows": 54,
+  "training": false,
+  "inference": false,
+  "result_files": {
+    "protocol.json": "12342263974084680f63b5022870eeb7d7c9de664bc49f5ad938c7c38e5f3e92",
+    "fragmentation_runs.csv": "fd13876c02f41f6e45516023cfd3269abcbfcff26cac707bf3f305d760a77fcb",
+    "fragmentation_aggregate.csv": "016e4d1cab794f84dbbeac617e0bb7ebab977cbe75f9e6868c398fb07da51606",
+    "README.md": "fe71347e86d4e5b3d9dd4e8addd57058a77958129a380c3fe28ff7feca15a33a"
+  },
+  "completed_at": "2026-09-19T22:59:03.106012+00:00"
+}

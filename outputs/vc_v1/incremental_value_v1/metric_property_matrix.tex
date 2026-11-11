@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Expected and observed roles of the complementary metrics.}
+\label{tab:metric_property_matrix}
+\begin{tabular}{lccc}
+\hline
+Controlled change & $mAC$ & $VC$ & Instance metrics \\
+\hline
+Reduce retained target support & Decreases & Decreases & May saturate after matching fails \\
+Fragment a fixed prediction union & Invariant & Invariant & Penalize fragment multiplicity \\
+Add area outside a fully covered target & Invariant & Decreases & Threshold-dependent \\
+Add predictions with no valid owner & Invariant & Decreases & Penalize false positives \\
+Duplicate an owned box exactly & Invariant & Invariant & Penalize duplicates \\
+\hline
+\end{tabular}
+\end{table*}

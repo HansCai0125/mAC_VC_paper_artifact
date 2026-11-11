@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "validity_version": "vc-v1-mask-grounded-validity-0.1.0",
+  "natural_analysis_version": "vc-v1-natural-collective-gain-0.1.0",
+  "vc_version": "vc-candidate-1.0.0",
+  "theta": 0.25,
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "n_runs": 15,
+  "n_models": 3,
+  "n_seeds_per_model": 5,
+  "mask_cache_count": 36335,
+  "mask_cache_packed_bytes": 95035501,
+  "training": false,
+  "inference": false,
+  "completed_at": "2026-09-22T01:39:31.997811+00:00",
+  "output": "E:\\Project\\mAC\\outputs\\vc_v1\\mask_grounded_validity_v1"
+}

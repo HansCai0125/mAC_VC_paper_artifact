@@ -1,0 +1,22 @@
+{
+  "n_images": 548,
+  "n_gt": 38602,
+  "n_pred": 26384,
+  "n_assigned": 21958,
+  "n_orphan": 4426,
+  "n_ambiguous": 8931,
+  "n_owner_changed": 214,
+  "owner_change_rate_ambiguous": 0.02396148247676632,
+  "owner_change_rate_assigned": 0.009745878495309227,
+  "VC_max_iou": 0.39167605811512446,
+  "VC_max_intersection": 0.3909590705242856,
+  "dataset": "visdrone",
+  "model": "yolo11s",
+  "seed": 2,
+  "theta": 0.25,
+  "source_sha256": "aecddf092541b175362aa8ff6508524a18d7c95611fcbb22cdd3b9378665033d",
+  "source_bytes": 57866953,
+  "delta_VC": -0.0007169875908388801,
+  "absolute_delta_VC": 0.0007169875908388801,
+  "version": "reviewer-robustness-1.0.0"
+}
