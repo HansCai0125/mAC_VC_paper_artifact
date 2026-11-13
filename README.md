@@ -16,7 +16,7 @@ The reference implementation is `region_eval/vc_v1.py`, which matches Eqs. (1)-(
 
 > **Note on earlier versions.** Earlier, unpublished versions of this project, including the previous contents of this repository and the `mac-vc-epi` package, defined "VC" as the harmonic mean of mAP and mAC and also included an EPI metric. **That definition is not the one used in the paper.** Only the ownership-aware definition above is used.
 
-Historical code and results remain in `mAC/`, `antigaming/`, `BTD/`, `cifar100/`, `MSCOCO/`, `VisDrone/`, `Results/`, and the root `train.py`, `config.py`, and `environment.yml`. They are retained for reference; use `region_eval/` and the entry points below for the current paper.
+Historical code and results from the earlier VC/EPI definition have been removed from the current tree and remain available in Git history. Use `region_eval/` and the entry points below for the current paper.
 
 ## Repository layout
 
