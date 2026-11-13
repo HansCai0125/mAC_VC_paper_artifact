@@ -11,12 +11,12 @@ __pycache__/
 *.sqlite-shm
 *.sqlite-wal
 .run.lock
-experiments/real_output_diagnostics_v1/outputs/formal_v1/reports/C_oof_*.csv
-experiments/downstream_sam_v1/weights/*.pth
-experiments/downstream_sam_v1/third_party/*
-!experiments/downstream_sam_v1/third_party/runtime_manifest.json
-experiments/downstream_sam_v1/_runtime/
-experiments/downstream_sam_v1/_setup_tmp/
+experiments/diagnostics/results/main/reports/C_oof_*.csv
+experiments/segmentation/weights/*.pth
+experiments/segmentation/third_party/*
+!experiments/segmentation/third_party/runtime_manifest.json
+experiments/segmentation/_runtime/
+experiments/segmentation/_setup_tmp/
 
 # datasets
 data/

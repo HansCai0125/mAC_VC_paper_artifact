@@ -48,7 +48,7 @@ def run_visdrone(*, dataset_root, weights, sample_count=50, seed=0, device="auto
     selected, available_names = select_images(split_root / "images", split_root / "annotations",
                                               sample_count, seed)
     # No automatic installation, settings changes in the user's training setup, or downloads.
-    runtime_dir = PROJECT_ROOT / "outputs" / "region_eval" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "region_eval" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"
@@ -124,7 +124,7 @@ def run_visdrone(*, dataset_root, weights, sample_count=50, seed=0, device="auto
         dataset_yaml_file=str(data_yaml), dataset_yaml_sha256=_hash_file(data_yaml),
         runner_sha256=_hash_file(PROJECT_ROOT / "run_region_visdrone.py"),
         purpose="small-sample regional diagnostics; not benchmark AP/AR or final VC")
-    run_root = PROJECT_ROOT / "outputs" / "region_eval" / ("visdrone_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
+    run_root = PROJECT_ROOT / "results" / "region_eval" / ("visdrone_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
     run_root.mkdir(parents=True, exist_ok=False)
     _save_json(run_root / "run_manifest.json", dict(status="started", metadata=metadata))
     raw_images, filtered_images, diagnostics, audit_rows = [], [], [], []

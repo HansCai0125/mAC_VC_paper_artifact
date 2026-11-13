@@ -175,7 +175,7 @@ def main(argv=None):
         document = json.loads(raw.decode("utf-8-sig"), parse_constant=_reject_constant)
         config, images, summary = evaluate_document(document, theta=args.theta, tau=args.tau,
                                                     cg_epsilon=args.cg_epsilon)
-        output = args.output or PROJECT_ROOT / "outputs" / "region_eval" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        output = args.output or PROJECT_ROOT / "results" / "region_eval" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         output = write_report(output, source=args.input, source_bytes=raw, document=document,
                               config=config, images=images, summary=summary)
     except (ValueError, OSError, UnicodeError) as exc:

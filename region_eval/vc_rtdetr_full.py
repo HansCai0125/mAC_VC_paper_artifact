@@ -266,7 +266,7 @@ def preflight_rtdetr_suite(
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
-    existing = PROJECT_ROOT / "outputs" / "vc_v1" / "full_seed0_v1"
+    existing = PROJECT_ROOT / "results" / "full_seed0_v1"
     estimated = 0
     for kind, multiplier in (("mscoco", 1), ("visdrone", 5)):
         reference = existing / kind

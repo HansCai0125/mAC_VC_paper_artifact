@@ -36,7 +36,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION, evaluate_vc
 
 INCREMENTAL_VALUE_VERSION = "vc-v1-incremental-value-0.1.0"
 DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "incremental_value_v1"
+    PROJECT_ROOT / "results" / "vc_components"
 )
 
 SCALE_GRID = (0.50, 0.71, 0.80, 0.90, 1.00, 1.10, 1.25, 1.41, 1.50, 2.00, 3.00)

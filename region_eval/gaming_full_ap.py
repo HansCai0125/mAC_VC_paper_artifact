@@ -43,7 +43,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 
 FULL_AP_VERSION = "vc-v1-full-diagnostic-ap-0.1.0"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "gaming_full_ap_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "perturbations"
 
 AP_FIELDS = (
     "AP50",

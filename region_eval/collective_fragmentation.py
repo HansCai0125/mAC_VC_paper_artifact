@@ -41,7 +41,7 @@ from .vc_v1 import MATCHING_IOU, PRIMARY_THETA, VC_VERSION
 
 FRAGMENTATION_VERSION = "vc-v1-collective-fragmentation-0.1.0"
 DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "collective_fragmentation_v1"
+    PROJECT_ROOT / "results" / "fragmentation"
 )
 
 Q_GRID = (1, 2, 3, 4)

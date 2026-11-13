@@ -108,7 +108,7 @@ def run_rtdetr_coco5_suite(
         confidence_floor=0.001, max_det=1000,
         expected_suite_fingerprint=None):
     """Run or resume five complete COCO validations and VC analyses."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

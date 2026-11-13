@@ -571,7 +571,7 @@ def analyze_responsibility(
         raise ValueError("primary theta must be included in thresholds")
     output = (
         Path(output).resolve() if output else
-        PROJECT_ROOT / "outputs" / "region_eval" /
+        PROJECT_ROOT / "results" / "region_eval" /
         ("responsibility_ablation_" +
          datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
     )

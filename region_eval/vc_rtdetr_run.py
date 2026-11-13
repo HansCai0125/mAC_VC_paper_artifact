@@ -334,7 +334,7 @@ def run_rtdetr_suite(
         configurations, *, output, device="auto", imgsz=640,
         confidence_floor=0.001, max_det=1000):
     """Preflight and run/resume the six full-validation RT-DETR evaluations."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

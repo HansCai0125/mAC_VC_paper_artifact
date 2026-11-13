@@ -525,7 +525,7 @@ def analyze_vc_refinement(
 
     output = (
         Path(output).resolve() if output else
-        PROJECT_ROOT / "outputs" / "region_eval" /
+        PROJECT_ROOT / "results" / "region_eval" /
         ("vc_refinement_" +
          datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
     )

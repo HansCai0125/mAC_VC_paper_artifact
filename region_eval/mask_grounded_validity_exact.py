@@ -34,8 +34,8 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 
 EXACT_VERSION = "vc-v1-mask-grounded-exact-0.2.0"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "mask_grounded_validity_exact_v1"
-OLD_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "mask_grounded_validity_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "mask_polygon"
+OLD_OUTPUT = PROJECT_ROOT / "results" / "mask_raster"
 PAPER_GAIN_THRESHOLDS = (0.02, 0.05, 0.10)
 GAIN_THRESHOLD_GRID = tuple(round(index / 100.0, 2) for index in range(1, 21))
 GEOMETRY_EPSILON = 1e-10

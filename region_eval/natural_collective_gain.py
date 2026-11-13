@@ -39,7 +39,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 ANALYSIS_VERSION = "vc-v1-natural-collective-gain-0.1.0"
 DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "natural_collective_gain_v1"
+    PROJECT_ROOT / "results" / "collective_gain"
 )
 GAIN_EPSILON = 1e-9
 SUBSTANTIAL_MARGINAL_FRACTION = 0.01

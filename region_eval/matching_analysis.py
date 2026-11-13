@@ -743,7 +743,7 @@ def analyze_matching(
         raise ValueError("confidence thresholds must be unique")
     output = (
         Path(output).resolve() if output else
-        PROJECT_ROOT / "outputs" / "region_eval" /
+        PROJECT_ROOT / "results" / "region_eval" /
         ("matching_analysis_" +
          datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
     )

@@ -29,8 +29,8 @@ BOOTSTRAP_REPLICATES = 10000
 BOOTSTRAP_BATCH = 50
 IOU_THRESHOLD = 0.50
 
-MATRIX_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "formal_matrix_v1"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "fixed_checkpoint_analysis_v1"
+MATRIX_ROOT = PROJECT_ROOT / "results" / "detection"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "fixed_checkpoint_analysis_v1"
 COCO_ROOT = Path(r"E:\Project\Database\MS-COCO")
 
 SELECTIONS = (

@@ -31,7 +31,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 
 COMPARISON_VERSION = "vc-v1-direct-metric-comparison-0.1.2"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "direct_metric_comparison_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "metric_comparison"
 MODEL_LABELS = {
     "yolov8n": "YOLOv8n",
     "yolo11n": "YOLO11n",
@@ -58,7 +58,7 @@ def preflight_direct_metric_comparison(
     if not complete_path.is_file():
         raise FileNotFoundError(
             "natural collective-gain analysis is missing; run "
-            "run_vc_v1_natural_collective_gain.py first"
+            "experiments/collective_gain.py first"
         )
     complete = _read_json(complete_path)
     if (

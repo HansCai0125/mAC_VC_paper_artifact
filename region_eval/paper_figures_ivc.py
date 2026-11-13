@@ -1,7 +1,7 @@
 """Draft publication figures for Section IV-C from completed VC results.
 
 Run this file directly in PyCharm or with the project Python interpreter. It
-only reads existing result CSVs and writes PNG/PDF figures under outputs/vc_v1.
+only reads existing result CSVs and writes PNG/PDF figures under results.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "outputs" / "vc_v1" / "paper_figures_ivc_draft"
+OUTPUT = ROOT / "results" / "paper_figures_ivc_draft"
 DATASETS = (
     ("mscoco", "MS COCO", ("yolov8n", "yolo11n", "yolo11s")),
     ("visdrone", "VisDrone", ("yolov8n", "yolo11n", "yolo11s", "rtdetr_l")),
@@ -50,9 +50,9 @@ def _style() -> None:
 
 
 def _primary_rows() -> tuple[dict, dict]:
-    formal = _rows(ROOT / "outputs/vc_v1/formal_matrix_v1/aggregate_primary.csv")
+    formal = _rows(ROOT / "results/detection/aggregate_primary.csv")
     rtdetr = _rows(
-        ROOT / "outputs/vc_v1/paper_results_rtdetr_v1/rtdetr_aggregate_primary.csv"
+        ROOT / "results/paper_tables/rtdetr_aggregate_primary.csv"
     )
     primary = {(row["dataset"], row["model"]): row for row in formal}
     primary[("visdrone", "rtdetr_l")] = next(
@@ -79,9 +79,9 @@ def _primary_rows() -> tuple[dict, dict]:
 
 
 def _theta_rows() -> dict[tuple[str, str], list[dict[str, str]]]:
-    formal = _rows(ROOT / "outputs/vc_v1/formal_matrix_v1/aggregate_thresholds.csv")
+    formal = _rows(ROOT / "results/detection/aggregate_thresholds.csv")
     rtdetr = _rows(
-        ROOT / "outputs/vc_v1/paper_results_rtdetr_v1/rtdetr_aggregate_thresholds.csv"
+        ROOT / "results/paper_tables/rtdetr_aggregate_thresholds.csv"
     )
     grouped: dict[tuple[str, str], list[dict[str, str]]] = {}
     for row in formal:

@@ -18,10 +18,10 @@ from .geometry import area, intersection, union_area
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "outputs" / "vc_v1" / "reviewer_robustness_v1"
-FORMAL = ROOT / "outputs" / "vc_v1" / "formal_matrix_v1"
-RTDETR = ROOT / "outputs" / "vc_v1" / "rtdetr_full_v1"
-RTDETR_REPORT = ROOT / "outputs" / "vc_v1" / "paper_results_rtdetr_v1"
+OUTPUT = ROOT / "results" / "robustness"
+FORMAL = ROOT / "results" / "detection"
+RTDETR = ROOT / "results" / "rtdetr"
+RTDETR_REPORT = ROOT / "results" / "paper_tables"
 VERSION = "reviewer-robustness-1.0.0"
 THETA = 0.25
 THRESHOLDS = tuple(round(i * 0.05, 2) for i in range(1, 20))
@@ -77,7 +77,7 @@ def _summary(values: list[float]) -> tuple[float, float]:
 def run_dir(dataset: str, model: str, seed: int) -> Path:
     # YOLO11n seed 0 was reused in place by the formal matrix.
     if model == "yolo11n" and seed == 0:
-        return ROOT / "outputs" / "vc_v1" / "full_seed0_v1" / dataset
+        return ROOT / "results" / "full_seed0_v1" / dataset
     base = RTDETR if model == "rtdetr_l" else FORMAL
     return base / "runs" / dataset / model / f"seed_{seed}"
 

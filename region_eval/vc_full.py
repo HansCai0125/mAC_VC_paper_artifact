@@ -541,7 +541,7 @@ def run_dataset_full(
 
 def run_full_suite(configurations, *, output):
     """Run/resume each dataset and write a suite completion marker."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

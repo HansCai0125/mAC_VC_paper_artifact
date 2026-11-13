@@ -632,7 +632,7 @@ def analyze_run(source_run, *, thresholds=(0.05, 0.10, 0.25, 0.50, 0.75),
     missing_groups = [name for name in CASE_GROUPS if sum(row["category"] == name for row in cases) < cases_per_group]
     if missing_groups:
         raise ValueError(f"not enough cases for {missing_groups}")
-    output = (Path(output).resolve() if output else PROJECT_ROOT / "outputs" / "region_eval" /
+    output = (Path(output).resolve() if output else PROJECT_ROOT / "results" / "region_eval" /
               ("case_analysis_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")))
     archive = (PROJECT_ROOT / "bin" / "old").resolve()
     if output.exists() or output == archive or output.is_relative_to(archive):

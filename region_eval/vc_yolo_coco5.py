@@ -74,7 +74,7 @@ def run_yolo_coco5_suite(
     if len(hashes) != 15:
         raise ValueError("evaluation checkpoints must have distinct file hashes")
 
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

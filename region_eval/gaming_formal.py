@@ -31,11 +31,11 @@ from .vc_v1 import PRIMARY_THETA, THETA_GRID, VC_VERSION
 
 
 FORMAL_GAMING_VERSION = "vc-v1-formal-gaming-0.1.1"
-MATRIX_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "formal_matrix_v1"
+MATRIX_ROOT = PROJECT_ROOT / "results" / "detection"
 FIXED_ANALYSIS_ROOT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "fixed_checkpoint_analysis_v1"
+    PROJECT_ROOT / "results" / "fixed_checkpoint_analysis_v1"
 )
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "gaming_formal_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "gaming_main"
 EXPECTED_MATRIX_FINGERPRINT = (
     "916baa3f128416d7f82a8bd680511a11e8586944669af951b5811aa67deb5141"
 )

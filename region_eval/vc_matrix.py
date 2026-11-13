@@ -596,7 +596,7 @@ def run_formal_matrix(
         specifications, *, inference, matrix_output, verify_checkpoints=True,
         expected_matrix_fingerprint=None):
     """Preflight, run/resume 30 combinations, then aggregate five seeds."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

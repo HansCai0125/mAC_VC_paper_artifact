@@ -46,10 +46,10 @@ MODEL_LABELS = {
 }
 DATASET_LABELS = {"mscoco": "MS COCO", "visdrone": "VisDrone"}
 
-RTDETR_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "rtdetr_full_v1"
-YOLO_PAPER_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "paper_results_v1"
-YOLO_THETA = PROJECT_ROOT / "outputs" / "vc_v1" / "gaming_formal_v1" / "theta_sensitivity.csv"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "paper_results_rtdetr_v1"
+RTDETR_ROOT = PROJECT_ROOT / "results" / "rtdetr"
+YOLO_PAPER_ROOT = PROJECT_ROOT / "results" / "paper_results_v1"
+YOLO_THETA = PROJECT_ROOT / "results" / "gaming_main" / "theta_sensitivity.csv"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "paper_tables"
 
 PRIMARY_FIELDS = (
     "VC", "mAC", "mean_responsibility_coverage", "mean_spatial_precision",

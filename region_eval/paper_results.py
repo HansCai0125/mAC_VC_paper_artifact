@@ -515,9 +515,9 @@ For MS COCO, each architecture is represented by one checkpoint selected before 
 
 def build_paper_results(project_root: Path | None = None) -> dict[str, object]:
     root = project_root or Path(__file__).resolve().parent.parent
-    gaming_root = root / "outputs" / "vc_v1" / "gaming_formal_v1"
-    fixed_root = root / "outputs" / "vc_v1" / "fixed_checkpoint_analysis_v1"
-    output = root / "outputs" / "vc_v1" / "paper_results_v1"
+    gaming_root = root / "results" / "gaming_main"
+    fixed_root = root / "results" / "fixed_checkpoint_analysis_v1"
+    output = root / "results" / "paper_results_v1"
     output.mkdir(parents=True, exist_ok=True)
 
     source_manifests = _require_complete_sources(gaming_root, fixed_root)

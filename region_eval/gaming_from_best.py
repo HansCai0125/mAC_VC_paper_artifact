@@ -31,7 +31,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 VERSION = "vc-v1-gaming-from-best-0.1.0"
 BEST_ROOT = PROJECT_ROOT / "anti_gaming" / "Best"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "gaming_from_best_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "gaming_from_best_v1"
 DATASET_ROOTS = {
     "mscoco": Path(r"E:\Project\Database\MS-COCO"),
     "visdrone": Path(r"E:\Project\Database\VisDrone"),
@@ -91,17 +91,17 @@ def _reference_manifest(dataset, model):
     """Return the existing cache used for comparison, not as inference input."""
     if model == "rtdetr_l":
         return (
-            PROJECT_ROOT / "outputs" / "vc_v1" / "rtdetr_full_v1" / "runs"
+            PROJECT_ROOT / "results" / "rtdetr" / "runs"
             / dataset / "rtdetr_l" / "seed_0" / "run_manifest.json"
         )
     if model == "yolo11n" and dataset == "visdrone":
         return (
-            PROJECT_ROOT / "outputs" / "vc_v1" / "full_seed0_v1"
+            PROJECT_ROOT / "results" / "full_seed0_v1"
             / dataset / "run_manifest.json"
         )
     seed = 1 if dataset == "mscoco" and model == "yolo11n" else 0
     return (
-        PROJECT_ROOT / "outputs" / "vc_v1" / "formal_matrix_v1" / "runs"
+        PROJECT_ROOT / "results" / "detection" / "runs"
         / dataset / model / f"seed_{seed}" / "run_manifest.json"
     )
 
@@ -376,7 +376,7 @@ def run_best_weight_gaming(*, output=DEFAULT_OUTPUT, device="auto"):
             raise ValueError(f"nonempty output without protocol.json: {output}")
         _write_json(protocol_path, protocol)
 
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"

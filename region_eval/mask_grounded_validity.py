@@ -47,7 +47,7 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 
 VALIDITY_VERSION = "vc-v1-mask-grounded-validity-0.1.0"
-DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "vc_v1" / "mask_grounded_validity_v1"
+DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "mask_raster"
 ANNOTATION_FILE = (
     PROJECT_ROOT.parent / "Database" / "MS-COCO" / "annotations"
     / "instances_val2017.json"
@@ -953,7 +953,7 @@ def preflight_mask_grounded_validity(
     if not natural_complete.is_file():
         raise FileNotFoundError(
             "first-round natural analysis is missing; run "
-            "run_vc_v1_natural_collective_gain.py first"
+            "experiments/collective_gain.py first"
         )
     marker = _read_json(natural_complete)
     if (

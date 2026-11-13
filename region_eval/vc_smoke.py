@@ -401,7 +401,7 @@ def run_dataset_smoke(
 
 def preflight_smoke_configuration(configuration, *, sample_count=2, subset_seed=0):
     """Validate local data, YAML, checkpoint classes, and imports without inference."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"
@@ -433,12 +433,12 @@ def preflight_smoke_configuration(configuration, *, sample_count=2, subset_seed=
 
 def run_smoke_suite(configurations, *, output=None):
     """Run each configured dataset in one timestamped, non-overwriting suite."""
-    runtime_dir = PROJECT_ROOT / "outputs" / "vc_v1" / "runtime"
+    runtime_dir = PROJECT_ROOT / "results" / "runtime"
     runtime_dir.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(runtime_dir)
     os.environ["YOLO_AUTOINSTALL"] = "false"
     output = Path(output).resolve() if output else (
-        PROJECT_ROOT / "outputs" / "vc_v1" /
+        PROJECT_ROOT / "results" /
         ("smoke_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")))
     if output.exists():
         raise ValueError(f"suite output already exists: {output}")

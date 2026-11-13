@@ -22,8 +22,8 @@ from .offline import PROJECT_ROOT
 
 
 REGISTRY_VERSION = "vc-v1-cache-registry-0.1.0"
-MATRIX_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "formal_matrix_v1"
-RTDETR_ROOT = PROJECT_ROOT / "outputs" / "vc_v1" / "rtdetr_full_v1"
+MATRIX_ROOT = PROJECT_ROOT / "results" / "detection"
+RTDETR_ROOT = PROJECT_ROOT / "results" / "rtdetr"
 
 YOLO_MODELS = ("yolov8n", "yolo11n", "yolo11s")
 MODEL_ORDER = (*YOLO_MODELS, "rtdetr_l")
@@ -147,7 +147,7 @@ def paired_yolo_sources(matrix_root=MATRIX_ROOT) -> list[CachedRun]:
             model=model,
             seed=seed,
             run_directory=lookup[(dataset, model, seed)]["output"],
-            source_suite="formal_matrix_v1",
+            source_suite="detection",
         )
         for dataset in DATASETS
         for model in YOLO_MODELS
@@ -179,7 +179,7 @@ def visdrone_rtdetr_sources(root=RTDETR_ROOT) -> list[CachedRun]:
             model="rtdetr_l",
             seed=int(row["training_seed"]),
             run_directory=row["output"],
-            source_suite="rtdetr_full_v1",
+            source_suite="rtdetr",
         )
         for row in selected
     ]

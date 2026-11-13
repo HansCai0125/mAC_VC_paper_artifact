@@ -26,18 +26,18 @@ from .vc_v1 import PRIMARY_THETA, THETA_GRID, VC_VERSION
 
 
 FIVE_SEED_REPORT_VERSION = "vc-v1-five-seed-paper-results-0.1.0"
-YOLO_MATRIX = PROJECT_ROOT / "outputs" / "vc_v1" / "formal_matrix_v1"
+YOLO_MATRIX = PROJECT_ROOT / "results" / "detection"
 YOLO_COCO = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "yolo_coco_5seed_eval_v1"
+    PROJECT_ROOT / "results" / "yolo_coco_5seed_eval_v1"
 )
 RTDETR_COCO = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "rtdetr_coco_5seed_eval_v1"
+    PROJECT_ROOT / "results" / "rtdetr_coco_5seed_eval_v1"
 )
 RTDETR_OLD_REPORT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "paper_results_rtdetr_v1"
+    PROJECT_ROOT / "results" / "paper_tables"
 )
 DEFAULT_OUTPUT = (
-    PROJECT_ROOT / "outputs" / "vc_v1" / "paper_results_five_seed_v1"
+    PROJECT_ROOT / "results" / "paper_results_five_seed_v1"
 )
 
 
