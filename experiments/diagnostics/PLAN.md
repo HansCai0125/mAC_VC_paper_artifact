@@ -1,6 +1,6 @@
 # Frozen analysis specification v1
 
-Source: mAC_VC_补充实验方案_定稿版.docx, supplied by the author. This implementation adds evidence from existing predictions; it does not change mAC/VC definitions or claim a successful result in advance.
+Source: the authors' frozen supplementary-experiment plan. This implementation adds evidence from existing predictions; it does not change mAC/VC definitions or claim a successful result in advance.
 
 ## Sources and populations
 

@@ -33,8 +33,8 @@ VERSION = "vc-v1-gaming-from-best-0.1.0"
 BEST_ROOT = PROJECT_ROOT / "anti_gaming" / "Best"
 DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "gaming_from_best_v1"
 DATASET_ROOTS = {
-    "mscoco": Path(r"E:\Project\Database\MS-COCO"),
-    "visdrone": Path(r"E:\Project\Database\VisDrone"),
+    "mscoco": Path(os.environ.get("MAC_COCO_ROOT", r"E:\Project\Database\MS-COCO")),
+    "visdrone": Path(os.environ.get("MAC_VISDRONE_ROOT", r"E:\Project\Database\VisDrone")),
 }
 DATASET_FOLDERS = {"mscoco": "MSCOCO", "visdrone": "VisDrone"}
 MODEL_FOLDERS = {

@@ -113,7 +113,7 @@ def check_runtime_and_weights(root, *, download_weights=True):
                                  "pycocotools", "segment_anything") if importlib.util.find_spec(name) is None]
     if missing:
         raise RuntimeError("Missing packages: " + ", ".join(missing)
-                           + ". Install requirements.txt in your yolo conda environment; no package was installed automatically.")
+                           + ". Install experiments/segmentation/requirements.txt; no package was installed automatically.")
     sam_root = Path(importlib.util.find_spec("segment_anything").origin).parent
     source_hashes = {str(p.relative_to(sam_root)): sha256_file(p) for p in sorted(sam_root.rglob("*.py"))}
     checkpoint = root / "weights/sam_vit_b_01ec64.pth"

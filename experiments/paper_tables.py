@@ -1,4 +1,4 @@
-"""PyCharm entry point: merge completed RT-DETR results into paper tables."""
+"""Entry point: merge completed RT-DETR results into paper tables."""
 
 from pathlib import Path as _Path
 import sys as _sys

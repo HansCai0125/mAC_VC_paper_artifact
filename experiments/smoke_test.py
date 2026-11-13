@@ -1,5 +1,6 @@
-"""PyCharm: right-click -> Run. Two datasets, existing weights, no training."""
+"""Smoke test: two datasets, existing weights, no training."""
 
+import os as _os
 from pathlib import Path as _Path
 import sys as _sys
 
@@ -21,17 +22,19 @@ IMGSZ = 640
 CONFIDENCE_FLOOR = 0.001
 NMS_IOU = 0.7
 MAX_DET = 1000
+COCO_ROOT = Path(_os.environ.get("MAC_COCO_ROOT", r"E:\Project\Database\MS-COCO"))
+VISDRONE_ROOT = Path(_os.environ.get("MAC_VISDRONE_ROOT", r"E:\Project\Database\VisDrone"))
 
 CONFIGURATIONS = [
     dict(
         kind="mscoco",
-        dataset_root=Path(r"E:\Project\Database\MS-COCO"),
-        weights=Path(r"E:\Project\Database\MS-COCO\yolo11n\yolo11n_s0\weights\best.pt"),
+        dataset_root=COCO_ROOT,
+        weights=COCO_ROOT / "yolo11n" / "yolo11n_s0" / "weights" / "best.pt",
         model_id="YOLO11n_seed0",
     ),
     dict(
         kind="visdrone",
-        dataset_root=Path(r"E:\Project\Database\VisDrone"),
+        dataset_root=VISDRONE_ROOT,
         weights=PROJECT_ROOT / "training_logs" / "VisDrone" / "yolo11n" / "yolo11n_s0" / "weights" / "best.pt",
         model_id="YOLO11n_seed0",
     ),

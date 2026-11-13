@@ -1,4 +1,4 @@
-"""PyCharm entry point for the collective-fragmentation experiment."""
+"""Entry point for the collective-fragmentation experiment."""
 
 from pathlib import Path as _Path
 import sys as _sys

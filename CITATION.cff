@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below. Publication details will be added once available."
+title: "Mean Area Coverage (mAC) and Visual Completeness (VC): paper artifact"
+type: software
+license: MIT
+repository-code: "https://github.com/HansCai0125/mAC_VC_paper_artifact"
+authors:
+  - family-names: Cai
+    given-names: Han
+  - family-names: Zhan
+    given-names: Huiyu
+  - family-names: Kermani
+    given-names: Mehrdad R.
+preferred-citation:
+  type: unpublished
+  title: "Complementing Instance Matching with Collective Regional Coverage: Mean Area Coverage and Visual Completeness"
+  authors:
+    - family-names: Cai
+      given-names: Han
+    - family-names: Zhan
+      given-names: Huiyu
+    - family-names: Kermani
+      given-names: Mehrdad R.
+  year: 2026

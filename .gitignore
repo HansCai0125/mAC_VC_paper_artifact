@@ -25,3 +25,6 @@ datasets/
 # Local environments and credentials
 .env
 .venv/
+
+# output of the quick-start example
+results/region_eval/

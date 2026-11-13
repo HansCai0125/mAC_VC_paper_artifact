@@ -1,6 +1,6 @@
 """Non-destructive densification of manuscript Figures 5 and 6.
 
-Run with the yolo environment Python. All writes stay in a new output folder.
+All writes stay in a new output folder.
 No model, GPU, training, or inference is used. Original files are read-only.
 """
 from __future__ import annotations
@@ -12,6 +12,7 @@ import csv
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import statistics
 import sys
@@ -199,10 +200,13 @@ def protected():
            'gaming.py','vc_v1.py','matching_analysis.py','responsibility_analysis.py','geometry.py')]
     for folder in (OLD5,OLD6,ROOT/'results/fragmentation_figure'):
         paths.extend(p for p in folder.rglob('*') if p.is_file())
-    paper=Path(r'D:\Desktop\Paper\Draft\Beyond mAP\mac_latex')
-    paths.extend([paper/'mac_final.tex',paper/'mac_final.pdf',
-        paper/'Figure/collective_fragmentation_response.pdf',
-        paper/'Figure/vc_incremental_value_response.pdf'])
+    # Optional: also protect a local manuscript checkout (set MAC_PAPER_DIR).
+    paper_dir=os.environ.get('MAC_PAPER_DIR')
+    if paper_dir:
+        paper=Path(paper_dir)
+        paths.extend([paper/'mac_final.tex',paper/'mac_final.pdf',
+            paper/'Figure/collective_fragmentation_response.pdf',
+            paper/'Figure/vc_incremental_value_response.pdf'])
     return {str(p):digest(p) for p in paths}
 
 

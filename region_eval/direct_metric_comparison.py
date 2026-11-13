@@ -11,6 +11,7 @@ from collections import defaultdict
 import csv
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 import statistics
 
@@ -40,8 +41,8 @@ MODEL_LABELS = {
 }
 DATASET_LABELS = {"mscoco": "MS COCO", "visdrone": "VisDrone"}
 IMAGE_ROOTS = {
-    "mscoco": PROJECT_ROOT.parent / "Database" / "MS-COCO" / "images" / "val",
-    "visdrone": PROJECT_ROOT.parent / "Database" / "VisDrone" / "images" / "val",
+    "mscoco": Path(os.environ.get("MAC_COCO_ROOT", PROJECT_ROOT.parent / "Database" / "MS-COCO")) / "images" / "val",
+    "visdrone": Path(os.environ.get("MAC_VISDRONE_ROOT", PROJECT_ROOT.parent / "Database" / "VisDrone")) / "images" / "val",
 }
 HISTOGRAM_BINS = np.linspace(0.0, 1.0, 61)
 EPSILON = 1e-12

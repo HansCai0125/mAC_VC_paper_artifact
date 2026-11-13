@@ -6,7 +6,7 @@ cannot be connected without adding measurements. The prediction caches are
 complete; the missing values can be calculated offline without retraining or
 model inference.
 
-## PyCharm run
+## Run
 
 Open and run:
 

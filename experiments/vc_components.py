@@ -1,4 +1,4 @@
-"""PyCharm entry point for the VC incremental-value experiment."""
+"""Entry point for the VC incremental-value experiment."""
 
 from pathlib import Path as _Path
 import sys as _sys

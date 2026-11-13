@@ -1,4 +1,4 @@
-"""PyCharm entry point for ownership and F1-operating-point robustness.
+"""Entry point for ownership and F1-operating-point robustness.
 
 Reads existing full-validation prediction caches and completed threshold CSVs.
 No training, model loading, or inference is performed.  Results go to a new

@@ -7,7 +7,7 @@ fragmented matching-failure regime.
 It reads the completed formal prediction caches. It does not train a model,
 load a checkpoint, or run model inference.
 
-## Run in PyCharm
+## Run
 
 Open and run:
 

@@ -1,6 +1,6 @@
 # Reviewer robustness analyses
 
-Run from E:\Project\mAC with C:\Users\hansc\anaconda3\envs\yolo\python.exe experiments/robustness.py.
+Run `python experiments/robustness.py` from the repository root.
 The script reuses 35 full-validation post-NMS prediction caches and completed 19-threshold CSVs. It performs no training or inference. Re-running resumes any completed ownership seed without overwriting the source results.
 
 ## 1. Ownership-rule ablation

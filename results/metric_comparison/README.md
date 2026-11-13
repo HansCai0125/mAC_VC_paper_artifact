@@ -18,6 +18,6 @@ All values are computed from saved full-validation predictions. No training or i
 
 - `direct_metric_relationships.pdf`: paired ground-truth density plots.
 - `paired_disagreement_rates.pdf`: five-seed disagreement rates.
-- `qualitative_collective_cases.pdf`: VC-retained and VC-attenuated cases.
+- `qualitative_collective_cases.pdf`: VC-retained and VC-attenuated cases (not included: contains dataset image crops).
 - `direct_metric_comparison_table.tex`: paper-ready table source.
 - `per_run_comparison.csv` and `model_comparison.csv`: auditable values.

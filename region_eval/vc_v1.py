@@ -1,4 +1,4 @@
-"""VC v1.0 candidate metric for cached, post-NMS object detections.
+"""Visual Completeness (VC) for cached, post-NMS object detections.
 
 The metric is deliberately evaluation-only.  Predictions are first filtered by
 confidence and class.  Each prediction with positive same-class overlap is
@@ -23,6 +23,7 @@ from .offline import evaluate_document
 from .responsibility_analysis import score_document
 
 
+# Recorded in the archived result files; kept unchanged so they stay comparable.
 VC_VERSION = "vc-candidate-1.0.0"
 PRIMARY_THETA = 0.25
 THETA_GRID = tuple(round(index * 0.05, 2) for index in range(1, 20))
@@ -62,7 +63,7 @@ def _validate_canonical_document(document):
 
 
 def evaluate_vc(document, *, theta=PRIMARY_THETA, tau=0.50):
-    """Evaluate final-candidate VC and separate fixed-threshold diagnostics."""
+    """Evaluate VC and separate fixed-threshold diagnostics."""
     if not 0.0 <= theta <= 1.0 or not 0.0 <= tau <= 1.0:
         raise ValueError("theta and tau must be in [0, 1]")
     _validate_canonical_document(document)

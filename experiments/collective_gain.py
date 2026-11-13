@@ -1,4 +1,4 @@
-"""PyCharm entry point for the offline natural collective-gain analysis."""
+"""Entry point for the offline natural collective-gain analysis."""
 
 from pathlib import Path as _Path
 import sys as _sys
@@ -20,7 +20,7 @@ from region_eval.natural_collective_gain import (
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = PROJECT_ROOT / "results" / "collective_gain"
 
-# Keep False for the normal PyCharm run.  Set True only to validate all 35
+# Keep False for the normal run.  Set True only to validate all 35
 # source caches without loading the large prediction JSON files.
 PREFLIGHT_ONLY = False
 

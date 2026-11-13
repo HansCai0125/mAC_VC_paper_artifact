@@ -1,4 +1,4 @@
-"""PyCharm entry point for the second-round direct metric comparison."""
+"""Entry point for the second-round direct metric comparison."""
 
 from pathlib import Path as _Path
 import sys as _sys
@@ -20,7 +20,7 @@ from region_eval.direct_metric_comparison import (
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = PROJECT_ROOT / "results" / "metric_comparison"
 
-# Keep False for the normal PyCharm run. Set True only to validate inputs.
+# Keep False for the normal run. Set True only to validate inputs.
 PREFLIGHT_ONLY = False
 
 

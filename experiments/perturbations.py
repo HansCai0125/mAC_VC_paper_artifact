@@ -1,4 +1,4 @@
-"""PyCharm entry point for continuous anti-gaming mAP curves.
+"""Entry point for continuous anti-gaming mAP curves.
 
 The normal run fills missing diagnostic AP values from existing prediction
 caches.  It performs no training and no model inference.  Completed source

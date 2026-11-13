@@ -1,4 +1,4 @@
-"""Run in PyCharm using the existing yolo interpreter. Resumes automatically."""
+"""Entry point. Resumes automatically."""
 from pathlib import Path
 import argparse
 import os

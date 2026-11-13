@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 import json
 from math import fsum
+import os
 from pathlib import Path
 import shutil
 from uuid import uuid4
@@ -31,7 +32,7 @@ IOU_THRESHOLD = 0.50
 
 MATRIX_ROOT = PROJECT_ROOT / "results" / "detection"
 DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "fixed_checkpoint_analysis_v1"
-COCO_ROOT = Path(r"E:\Project\Database\MS-COCO")
+COCO_ROOT = Path(os.environ.get("MAC_COCO_ROOT", r"E:\Project\Database\MS-COCO"))
 
 SELECTIONS = (
     dict(

@@ -1,4 +1,4 @@
-"""PyCharm entry point for exact continuous-polygon validation."""
+"""Entry point for exact continuous-polygon validation."""
 
 from pathlib import Path as _Path
 import sys as _sys
@@ -23,7 +23,7 @@ OUTPUT = (
     / "mask_polygon"
 )
 
-# Keep False for the normal PyCharm run. Set True only to validate inputs.
+# Keep False for the normal run. Set True only to validate inputs.
 PREFLIGHT_ONLY = False
 
 

@@ -1,7 +1,6 @@
 # Third-round foreground-mask validity analysis
 
-Run `experiments/mask_raster.py` in PyCharm with the existing
-`yolo` interpreter.
+Run `python experiments/mask_raster.py` from the repository root.
 
 The script evaluates 15 saved MS COCO runs: YOLOv8n, YOLO11n, and YOLO11s,
 each with training seeds 0--4. It uses COCO instance polygons to compare

@@ -18,6 +18,6 @@ Agreement supports the interpretation that box-level AC reflects genuine foregro
 
 - `box_vs_mask_relationships.pdf`: paired box/mask density plots.
 - `mask_validity_rates.pdf`: five-seed collective-case validation rates.
-- `mask_grounded_cases.pdf`: auditable qualitative examples.
+- `mask_grounded_cases.pdf`: auditable qualitative examples (not included: contains dataset image crops).
 - `mask_grounded_validity_table.tex`: paper-ready table.
-- `run_summary.csv`, `model_summary.csv`, and `runs/.../per_gt_mask_validity.csv`: numerical audit trail.
+- `run_summary.csv`, `model_summary.csv`, and `runs/.../per_gt_mask_validity.csv`: numerical audit trail (the per-run files are not included).

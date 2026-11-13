@@ -1,7 +1,6 @@
 # Exact continuous-polygon validity analysis
 
-Run `experiments/mask_polygon.py` in PyCharm with the existing
-`yolo` interpreter.
+Run `python experiments/mask_polygon.py` from the repository root.
 
 This version replaces native-resolution OpenCV rasterization with continuous
 COCO polygon clipping. It evaluates the same 15 saved MS COCO runs and does

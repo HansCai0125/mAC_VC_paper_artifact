@@ -1,4 +1,4 @@
-"""PyCharm entry point for the third-round foreground-mask analysis."""
+"""Entry point for the third-round foreground-mask analysis."""
 
 from pathlib import Path as _Path
 import sys as _sys
@@ -20,7 +20,7 @@ from region_eval.mask_grounded_validity import (
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = PROJECT_ROOT / "results" / "mask_raster"
 
-# Keep False for the normal PyCharm run. Set True only to validate inputs.
+# Keep False for the normal run. Set True only to validate inputs.
 PREFLIGHT_ONLY = False
 
 

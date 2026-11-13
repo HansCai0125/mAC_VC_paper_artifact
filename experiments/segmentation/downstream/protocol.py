@@ -5,6 +5,7 @@ import csv
 from dataclasses import asdict, dataclass
 import hashlib
 import json
+import os
 from pathlib import Path
 
 from .common import atomic_json, digest_json, read_json, sha256_file
@@ -15,7 +16,7 @@ SAM_URL = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth"
 
 @dataclass(frozen=True)
 class Settings:
-    dataset_root: str = "E:/Project/Database/MS-COCO"
+    dataset_root: str = os.environ.get("MAC_COCO_ROOT", "E:/Project/Database/MS-COCO")
     split_seed: int = 20261026
     calibration_images: int = 1000
     expected_images: int = 5000

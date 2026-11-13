@@ -25,6 +25,7 @@ from datetime import datetime, timezone
 import gc
 import hashlib
 import json
+import os
 from math import ceil, floor
 from pathlib import Path
 import statistics
@@ -48,11 +49,9 @@ from .vc_v1 import PRIMARY_THETA, VC_VERSION
 
 VALIDITY_VERSION = "vc-v1-mask-grounded-validity-0.1.0"
 DEFAULT_OUTPUT = PROJECT_ROOT / "results" / "mask_raster"
-ANNOTATION_FILE = (
-    PROJECT_ROOT.parent / "Database" / "MS-COCO" / "annotations"
-    / "instances_val2017.json"
-)
-IMAGE_ROOT = PROJECT_ROOT.parent / "Database" / "MS-COCO" / "images" / "val"
+COCO_ROOT = Path(os.environ.get("MAC_COCO_ROOT", PROJECT_ROOT.parent / "Database" / "MS-COCO"))
+ANNOTATION_FILE = COCO_ROOT / "annotations" / "instances_val2017.json"
+IMAGE_ROOT = COCO_ROOT / "images" / "val"
 MODEL_LABELS = {
     "yolov8n": "YOLOv8n",
     "yolo11n": "YOLO11n",

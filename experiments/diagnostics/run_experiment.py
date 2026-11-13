@@ -1,4 +1,4 @@
-"""PyCharm entry point. Offline only; source predictions/masks are read-only."""
+"""Entry point. Offline only; source predictions/masks are read-only."""
 from pathlib import Path
 import sys
 import os
@@ -13,7 +13,7 @@ sys.dont_write_bytecode = True
 os.environ.setdefault('OMP_NUM_THREADS', '1')
 os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
 
-# Normal PyCharm Run executes all core analyses and controlled coarsening.
+# A normal run executes all core analyses and controlled coarsening.
 MODE = 'formal'  # 'preflight', 'smoke', or 'formal'
 RUN_NAME = 'main'  # Never reuse this name after changing the frozen code/protocol.
 

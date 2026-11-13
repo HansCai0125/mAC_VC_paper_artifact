@@ -1,5 +1,6 @@
-"""PyCharm: run/resume RT-DETR-L on complete COCO and VisDrone val sets."""
+"""Run or resume RT-DETR-L on complete COCO and VisDrone val sets."""
 
+import os as _os
 from pathlib import Path as _Path
 import sys as _sys
 
@@ -22,8 +23,8 @@ IMGSZ = 640
 CONFIDENCE_FLOOR = 0.001
 MAX_DET = 1000
 
-COCO_ROOT = Path(r"E:\Project\Database\MS-COCO")
-VISDRONE_ROOT = Path(r"E:\Project\Database\VisDrone")
+COCO_ROOT = Path(_os.environ.get("MAC_COCO_ROOT", r"E:\Project\Database\MS-COCO"))
+VISDRONE_ROOT = Path(_os.environ.get("MAC_VISDRONE_ROOT", r"E:\Project\Database\VisDrone"))
 
 CONFIGURATIONS = [
     dict(

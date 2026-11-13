@@ -3,6 +3,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 import hashlib
 import json
+import os
 import sqlite3
 import zlib
 import time
@@ -11,7 +12,7 @@ from downstream.common import atomic_json, write_csv, sha256_file, digest_json, 
 
 PROJECT = Path(__file__).resolve().parents[3]
 SAM = PROJECT / 'experiments/segmentation/results/main'
-ANNOTATION = PROJECT.parent / 'Database/MS-COCO/annotations/instances_val2017.json'
+ANNOTATION = Path(os.environ.get('MAC_COCO_ROOT', PROJECT.parent / 'Database/MS-COCO')) / 'annotations/instances_val2017.json'
 NATURAL = PROJECT / 'results/collective_gain/runs'
 EXACT = PROJECT / 'results/mask_polygon/runs'
 MODELS = ('yolov8n', 'yolo11n', 'yolo11s')

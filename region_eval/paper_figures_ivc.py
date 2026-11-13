@@ -1,6 +1,6 @@
 """Draft publication figures for Section IV-C from completed VC results.
 
-Run this file directly in PyCharm or with the project Python interpreter. It
+Run this file directly with the project Python interpreter. It
 only reads existing result CSVs and writes PNG/PDF figures under results.
 """
 

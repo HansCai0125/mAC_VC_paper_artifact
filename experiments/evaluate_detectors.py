@@ -1,5 +1,6 @@
-"""PyCharm: run/resume the formal 3-model x 5-seed x 2-dataset VC matrix."""
+"""Run or resume the formal 3-model x 5-seed x 2-dataset VC matrix."""
 
+import os as _os
 from pathlib import Path as _Path
 import sys as _sys
 
@@ -14,8 +15,8 @@ from region_eval.vc_matrix import run_formal_matrix
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-COCO_ROOT = Path(r"E:\Project\Database\MS-COCO")
-VISDRONE_ROOT = Path(r"E:\Project\Database\VisDrone")
+COCO_ROOT = Path(_os.environ.get("MAC_COCO_ROOT", r"E:\Project\Database\MS-COCO"))
+VISDRONE_ROOT = Path(_os.environ.get("MAC_VISDRONE_ROOT", r"E:\Project\Database\VisDrone"))
 MATRIX_OUTPUT = PROJECT_ROOT / "results" / "detection"
 COMPLETED_SEED0 = PROJECT_ROOT / "results" / "full_seed0_v1"
 
